@@ -20,18 +20,7 @@ description: JS SDK 用于由 HTML 、 Css 及 Javascript 制作成的网站
 
 ### 二、快速开始
 
-集成前，请先下载SDK
-
-   1、将监听接口注册到方舟SDK
-
-```javascript
-// 在方舟JSSDK事件上报方法中添加监听事件，data为上报的数据 Array类型
-if(window.AnalysysModal && typeof(window.AnalysysModal) === 'function') {
-    window.AnalysysModal(data)
-}
-```
-
-   2、 将以下 JS 代码复制到您项目页面中的`<head>`和`</head>`标签之间
+   1、 将以下 JS 代码复制到您项目页面中的`<head>`和`</head>`标签之间
 
 {% hint style="info" %}
 以下初始化JS代码必须放置在方舟SDK初始化代码之前
@@ -39,17 +28,105 @@ if(window.AnalysysModal && typeof(window.AnalysysModal) === 'function') {
 
 ```javascript
 <script>
-(function(config){
-    window.AnalysysAgentModalConfig = config || []
-})({
-    appKey: '/*设置为实际APPKEY*/', //在易达系统中选择要集成的项目，并在项目属性中查看AppKey
-    configURL: '/*设置为实际数据获取地址*/' // 配置您的数据获取地址
-})
+    (function(config){
+        window.AnalysysAgentModalConfig = config || []
+    })({
+        appKey: '/*设置为实际APPKEY*/', //在易达系统中选择要集成的项目，并在项目属性中查看AppKey
+        configURL: '/*设置为实际数据获取地址*/' // 配置您的数据获取地址
+    })
 </script>
 
 //引用JSSDK文件的script标签必须在初始化代码之下
-<script type="text/javascript" src="/*设置为实际SDK存放*/"></script>
+<script type="text/javascript" src="https://ea.analysys.cn/ark/sdk/AnalysysAgentEA_JS_SDK.min.js"></script>
 ```
+
+    2、替换方舟SDK
+
+{% hint style="info" %}
+方舟SDK替换成EA服务器上的方舟SDK，以下代码放在EA初始化代码之后
+{% endhint %}
+
+{% tabs %}
+{% tab title="异步集成" %}
+```javascript
+<script>
+    (function(config) {
+        window.AnalysysAgent = window.AnalysysAgent || [];
+        window.AnalysysAgent.methods = 'identify alias reset track profileSet profileSetOnce profileIncrement profileAppend profileUnset profileDelete registerSuperProperty registerSuperProperties unRegisterSuperProperty clearSuperProperties getSuperProperty getSuperProperties pageView getDistinctId getPresetProperties'.split(' ');
+
+        function factory(b) {
+            return function () {
+                var a = Array.prototype.slice.call(arguments);
+                a.unshift(b);
+                window.AnalysysAgent.push(a);
+                return window.AnalysysAgent;
+            }
+        };
+        for (var i = 0; i < AnalysysAgent.methods.length; i++) {
+            var key = window.AnalysysAgent.methods[i];
+            AnalysysAgent[key] = factory(key);
+        }
+        for (var key in config) {
+            if (!AnalysysAgent[key]) AnalysysAgent[key] = factory(key);
+            AnalysysAgent[key](config[key]);
+        }
+        var date = new Date();
+        var time = new String(date.getFullYear()) + new String(date.getMonth() + 1) + new String(date.getDate());
+
+        var d = document,
+            c = d.createElement('script'),
+            n = d.getElementsByTagName('script')[0];
+        c.type = 'text/javascript';
+        c.async = true;
+        c.id = 'ARK_SDK';
+        c.src = 'https://ea.analysys.cn/ark/sdk/AnalysysAgent_JS_SDK.min.js' +'?v=' +time; //JS SDK存放地址
+        n.parentNode.insertBefore(c, n);
+    })({
+        appkey: '/*设置为实际APPKEY*/', //APPKEY
+        uploadURL: '/*设置为实际地址*/'//上传数据的地址
+    })
+</script>
+```
+{% endtab %}
+
+{% tab title="同步集成" %}
+```javascript
+<script>
+    (function(config) {
+        window.AnalysysAgent = window.AnalysysAgent || [];
+        window.AnalysysAgent.methods = 'identify alias reset track profileSet profileSetOnce profileIncrement profileAppend profileUnset profileDelete registerSuperProperty registerSuperProperties unRegisterSuperProperty clearSuperProperties getSuperProperty getSuperProperties pageView getDistinctId getPresetProperties'.split(' ');
+
+        function factory(b) {
+            return function () {
+                var a = Array.prototype.slice.call(arguments);
+                a.unshift(b);
+                window.AnalysysAgent.push(a);
+                return window.AnalysysAgent;
+            }
+        };
+        for (var i = 0; i < AnalysysAgent.methods.length; i++) {
+            var key = window.AnalysysAgent.methods[i];
+            AnalysysAgent[key] = factory(key);
+        }
+        for (var key in config) {
+            if (!AnalysysAgent[key]) AnalysysAgent[key] = factory(key);
+            AnalysysAgent[key](config[key]);
+        }
+    })({
+        appkey: '/*设置为实际APPKEY*/', //APPKEY
+        uploadURL: '/*设置为实际地址*/'//上传数据的地址
+    })
+</script>
+
+//引用JS SDK文件的script标签必须在初始化代码之下
+
+//建议在script标签设置id为ARK_SDK,该ID用来引导可视化模块与热图模块的加载
+<script type="text/javascript" id="ARK_SDK" src="https://ea.analysys.cn/ark/sdk/AnalysysAgent_JS_SDK.min.js"></script>
+
+
+```
+{% endtab %}
+{% endtabs %}
 
 appKey
 
