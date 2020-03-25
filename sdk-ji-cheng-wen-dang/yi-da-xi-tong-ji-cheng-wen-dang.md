@@ -60,13 +60,19 @@
 
 #### 1、华为推送
 
-登录[华为开发者平台](https://developer.huawei.com/consumer/cn/console#/serviceCards/);
-
-点击开发服务中的push模块；进入应用列表
-
-点击应用列表中的应用（方舟项目的上报应用），查看开发列表，如下图：
+* 登录[华为开发者平台](https://developer.huawei.com/consumer/cn/console#/serviceCards/);
+* 点击开发服务中的push模块；进入应用列表
+* 点击应用列表中的应用（方舟项目的上报应用），查看开发列表，如下图：
 
 ![](../.gitbook/assets/be682d05-d4f6-4af6-90bc-02f1aff45b4a.png)
 
 {% page-ref page="yi-da-xi-tong-ji-cheng-wen-dang.md" %}
+
+#### 2、小米推送
+
+* 登录[小米开发者平台](https://dev.mi.com/console/appservice/push.html)
+* 在应用服务列表中选中消息推送功能；
+* 在**应用列表**中点击相应的应用中的**应用信息**；会应用的相应的推送信息；
+
+
 
