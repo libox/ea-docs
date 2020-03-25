@@ -21,11 +21,3 @@
 * [Android SDK](sdk-ji-cheng-wen-dang/android-sdk.md)
 * [JS SDK](sdk-ji-cheng-wen-dang/js-sdk.md)
 
-## 用户运营方法
-
-* [北极星指标 Playbook（1）](yong-hu-yun-ying-fang-fa/north-star-playbook-1.md)
-
-## 我们的故事
-
-* [我们的 MVP 之路（1）](wo-men-de-gu-shi/way-to-mvp-1.md)
-
