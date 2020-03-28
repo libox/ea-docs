@@ -1,4 +1,4 @@
-# iOS SDK
+# iOS  SDK
 
 * iOS 常见问题
 * iOS 客户端 SDK 下载：[动态库](https://github.com/analysys-ea/EASDK)、[静态库](https://github.com/analysys-ea/EASDK-StaticLib)
@@ -220,6 +220,34 @@ userId：1BCAF1D0-C8C0-46A8-866F-005832024259
 * 方舟 SDK 接口请参考 AnalysysAgent 对应文档
 * 这里只列举易达 EASDK 相关接口
 
+### 获取事件监听对象
+
+**支持的版本**
+
+1.0.0 及以上版本。
+
+**接口说明**
+
+获取事件监听对象，用于监听方舟回调的事件。
+
+**接口定义**
+
+```text
++ (id)getObserverListener;
+```
+
+**参数说明**
+
+无
+
+**接口返回**
+
+返回事件监听代理对象。
+
+**注意事项**
+
+调用方舟 AnalysysAgent 注册事件监听对象的接口时，传入该接口返回对象。
+
 ### 启动 SDK
 
 **支持的版本**
@@ -277,11 +305,40 @@ userId：1BCAF1D0-C8C0-46A8-866F-005832024259
 
 无
 
+### 注册 APNS 远程推送
+
+**支持的版本**
+
+1.1.0 及以上版本。
+
+**接口说明**
+
+注册 APNS 远程推送，封装了系统注册远程推送的 API。
+
+**接口定义**
+
+```text
++ (void)registerForRemoteNotificationWithDelegate:(id)delegate;
+```
+
+**参数说明**
+
+* delegate
+* 实现系统推送回调方法的类，一般为当前 AppDelegate 类对象本身。
+
+**接口返回**
+
+无
+
+**注意事项**
+
+无
+
 ### 注册推送 deviceToken
 
 **支持的版本**
 
-1.0.0 及以上版本。
+1.0.9 及以上版本。
 
 **接口说明**
 
