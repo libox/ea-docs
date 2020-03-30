@@ -125,7 +125,7 @@ AnalysysAgent.setObserverListener(this, AnalysysEaManager.getObserverListener())
 上报用户邮箱：
    AnalysysAgent.profileSet(context, "$EMAIL", email);
 上报微信OPENID：
-    AnalysysAgent.profileSet(context, "$OPENID", openid);
+    AnalysysAgent.profileSet(context, "$WECHATOPENID", openid);
 ```
 
 ### 三、推送功能集成
