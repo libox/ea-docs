@@ -57,11 +57,11 @@ allprojects {
 ```text
 dependencies {
 //如果已经集成方舟SDK，请将analysys-core替换成analysys-core-easytouch:4.4.7,此版本的方舟SDK集成了华为、小米、OPPO、VIVO、魅族推送SDK
-implementation 'cn.com.analysys:analysys-core-easytouch:4.4.5.1'
+implementation 'cn.com.analysys:analysys-core-easytouch:4.4.5.2'
 //检测是否集成了此SDK，没有请添加
 implementation 'cn.com.analysys:analysys-push:latest.release'
 //易达SDK
-implementation 'cn.com.analysys:analysys-easytouch:0.6.0'
+implementation 'cn.com.analysys:analysys-easytouch:1.1.0'
 }
 ```
 
