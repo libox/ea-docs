@@ -17,7 +17,7 @@
 ## SDK 集成文档
 
 * [易达系统集成文档](sdk-ji-cheng-wen-dang/yi-da-xi-tong-ji-cheng-wen-dang.md)
-* [iOS  SDK](sdk-ji-cheng-wen-dang/ios-sdk.md)
+* [iOS SDK](sdk-ji-cheng-wen-dang/ios-sdk.md)
 * [Android SDK](sdk-ji-cheng-wen-dang/android-sdk.md)
 * [JS SDK](sdk-ji-cheng-wen-dang/js-sdk.md)
 
