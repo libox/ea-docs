@@ -146,6 +146,14 @@ AnalysysAgent.setObserverListener(this, AnalysysEaManager.getObserverListener())
 
         e.将agconnect-services.json文件拷贝到应用级根目录下。
 
+* 添加SHA256证书指纹
+
+MAC平台：
+
+用winrar打开待查看的apk，将其中META-INF文件夹解压出来，得到其中的CERT.RSA文件，通过：keytool -printcert -file META-INF/CERT.RSA 
+
+注意：debug安装包和release安装的证书是不同的；
+
 * 配置回执接口
 
 请按照华为推送配置做相应的回调设置，这样可以便于系统统计推送的结果。链接如下： [华为配置推送服务参数](https://developer.huawei.com/consumer/cn/service/hms/catalog/AGCHelp.html?page=AGC_appGalleryConnect_associated_service#openSwitch)
