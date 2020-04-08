@@ -354,3 +354,9 @@ activityId 活动信息
 
 VIVO的状态栏通知默认是关闭的。需要提示用户打开通知栏。
 
+#### 5、华为推送集成报错：907135003: client api invalid <a id="3"></a>
+
+在应用市场搜索：HMS Core、推送服务，更新到最新版本；并在设置—应用—应用管理—搜索HMS Core 和推送服务，清理缓存。
+
+关于token，如果是emui10及以上是getToken直接返回，对于emui10以下则在onNewToken返回token
+
