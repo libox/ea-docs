@@ -6,7 +6,7 @@ description: JS SDK 用于由 HTML 、 Css 及 Javascript 制作成的网站
 
 ### 一、SDK简介
 
-易达系统是易观基于方舟平台一款触达用户的产品，加强了产品的用户体验和提升了产品的转化率，易达的 JS SDK 是此系统中重要的支撑点，它提供了：
+EA系统是易观基于方舟平台一款触达用户的产品，加强了产品的用户体验和提升了产品的转化率，EA的 JS SDK 是此系统中重要的支撑点，它提供了：
 
 * 触达用户的弹窗功能，支持弹窗样式：
 
@@ -31,7 +31,7 @@ description: JS SDK 用于由 HTML 、 Css 及 Javascript 制作成的网站
     (function(config){
         window.AnalysysAgentModalConfig = config || []
     })({
-        appKey: '/*设置为实际APPKEY*/', //在易达系统中选择要集成的项目，并在项目属性中查看AppKey
+        appKey: '/*设置为实际APPKEY*/', //在EA系统中选择要集成的项目，并在项目属性中查看AppKey
         configURL: '/*设置为实际数据获取地址*/' // 配置您的数据获取地址
     })
 </script>
@@ -130,7 +130,7 @@ description: JS SDK 用于由 HTML 、 Css 及 Javascript 制作成的网站
 
 appKey
 
-appkey 为易达系统中集成的项目 AppKey。
+appkey 为EA系统中集成的项目 AppKey。
 
 * 类型:String。取值长度 1 - 255 字符。
 

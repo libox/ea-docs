@@ -5,14 +5,14 @@
 
 ## 一、iOS SDK 简介
 
-易达系统是易观基于方舟平台一款触达用户的产品，加强了产品的用户体验和提升了产品的转化率，易达的 iOS SDK 是此系统中重要的支撑点，它提供了：
+ EA 系统是易观基于方舟平台一款触达用户的产品，加强了产品的用户体验和提升了产品的转化率， EA 的 iOS SDK 是此系统中重要的支撑点，它提供了：
 
 * 提供触达用户的弹窗功能，支持弹窗样式：
 * 图片样式，支持点击事件。
 * 文本样式，支持标题、正文、两个按钮。
 * 图文混合样式，最上面是图片，下面是标题、正文、按钮。
 * H5 样式，支持 HTML 页面。
-* 订阅事件，用户在后台如果创建了基于用户事件的触发行为（弹窗除外），SDK 就会在每次启动的时候根据是否有事件更新来拉取订阅列表，并在有订阅事件产生的时候通知易达系统。
+* 订阅事件，用户在后台如果创建了基于用户事件的触发行为（弹窗除外），SDK 就会在每次启动的时候根据是否有事件更新来拉取订阅列表，并在有订阅事件产生的时候通知 EA 系统。
 
 ### iOS 版本支持
 
@@ -49,16 +49,16 @@ AnalysysEaConfig.h
 
 ### 1、获取项目 AppKey
 
-* 登录[易达系统](https://ea.analysys.cn/app.html#/Login)，创建项目，项目创建完成后自动生成对应的AppKey用以标识该项目（应用）。
+* 登录 EA [系统](https://ea.analysys.cn/app.html#/Login)，创建项目，项目创建完成后自动生成对应的AppKey用以标识该项目（应用）。
 
-### 2、集成易达 SDK
+### 2、集成 EA  SDK
 
 **方式 1：cocoapods 导入动态库**
 
 * 打开 Podfile 文件，添加如下代码
 
 ```text
-pod 'AnalysysEasyTouch' // 易达 SDK
+pod 'AnalysysEasyTouch' //  EA  SDK
 ```
 
 * 如果需要安装指定版本，则按照以下方式
@@ -80,13 +80,13 @@ pod 'AnalysysEasyTouch', '1.1.0' // 示例版本号
 * 如果使用的是动态库，在 AppDelegate.m 中引入以下头文件：
 
 ```text
-#import <AnalysysEasyTouch/AnalysysEaManager.h> // 易达 SDK
+#import <AnalysysEasyTouch/AnalysysEaManager.h> // EA SDK
 ```
 
 * 如果使用的是静态库，在 AppDelegate.m 中引入以下头文件：
 
 ```text
-#import "AnalysysEaManager.h" // 易达 SDK
+#import "AnalysysEaManager.h" // EA SDK
 ```
 
 ### 4、添加初始化代码
@@ -94,9 +94,9 @@ pod 'AnalysysEasyTouch', '1.1.0' // 示例版本号
 * 请将以下代码添加到 - \(BOOL\)application:\(UIApplication \*\)application didFinishLaunchingWithOptions:\(NSDictionary \*\)launchOptions
 
 ```text
-/*********** 易达 SDK 初始化 ***********/
+/*********** EA SDK 初始化 ***********/
 AnalysysEaConfig *config = [AnalysysEaConfig defaultConfiguration];
-config.appKey= @"易达后台创建项目的 AppKey";
+config.appKey= @"EA后台创建项目的 AppKey";
 [AnalysysEaManager startWithConfig:config];
 ```
 
@@ -130,7 +130,7 @@ ntohl(tokenBytes[6]), ntohl(tokenBytes[7])];
 NSLog(@"\n>>>[DeviceToken Success]:%@\n\n", hexToken);
 
 // 上报pushId（解析后的deviceToken）
-// 目前易达 iOS SDK 只支持苹果 APNS 推送通道
+// 目前EA iOS SDK 只支持苹果 APNS 推送通道
 [AnalysysEaManager registerDeviceToken:hexToken];
 ```
 
@@ -195,7 +195,7 @@ self.contentHandler = contentHandler;
 self.bestAttemptContent = [request.content mutableCopy];
 
 // Modify the notification content here...
-self.bestAttemptContent.title = [NSString stringWithFormat:@"%@ [方舟易达]", self.bestAttemptContent.title];
+self.bestAttemptContent.title = [NSString stringWithFormat:@"%@ [方舟EA]", self.bestAttemptContent.title];
 
 [AnalysysEaManager pushTrack:PUSH_RECEIVE msg:self.bestAttemptContent.userInfo];
 
@@ -225,7 +225,7 @@ userId：1BCAF1D0-C8C0-46A8-866F-005832024259
 ## 三、iOS API
 
 * 方舟 SDK 接口请参考 AnalysysAgent 对应文档
-* 这里只列举易达 AnalysysEasyTouch 相关接口
+* 这里只列举 EA  AnalysysEasyTouch 相关接口
 
 ### 获取事件监听对象
 
@@ -263,7 +263,7 @@ userId：1BCAF1D0-C8C0-46A8-866F-005832024259
 
 **接口说明**
 
-启动易达 SDK。
+启动 EA  SDK。
 
 **接口定义**
 
@@ -378,7 +378,7 @@ userId：1BCAF1D0-C8C0-46A8-866F-005832024259
 
 **接口说明**
 
-用户在配置了 APNS 通道后，当APP接收到推送消息及点击了推送消息时，在相应的系统回调方法里调用易达 SDK 追踪推送消息的接口来统计推送到达率和点击率。
+用户在配置了 APNS 通道后，当APP接收到推送消息及点击了推送消息时，在相应的系统回调方法里调用EA SDK 追踪推送消息的接口来统计推送到达率和点击率。
 
 **接口定义**
 
@@ -408,9 +408,9 @@ userId：1BCAF1D0-C8C0-46A8-866F-005832024259
 
 ### APNS 推送
 
-易达 SDK 接通了苹果 APNS 推送服务，并支持统计推送到达率、点击率。
+EA SDK 接通了苹果 APNS 推送服务，并支持统计推送到达率、点击率。
 
-* 登录[易达系统](https://ea.analysys.cn:8088/app.html#/Login)，进行 push 配置，选择  并上传 iOS 生产证书、填写证书秘钥。
+* 登录[EA系统](https://ea.analysys.cn:8088/app.html#/Login)，进行 push 配置，选择  并上传 iOS 生产证书、填写证书秘钥。
 * 对应接口，详细参考 iOS API
 
 ```text

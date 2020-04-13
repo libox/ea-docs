@@ -2,7 +2,7 @@
 
 ### 一、SDK简介
 
-易达系统是易观基于方舟平台一款触达用户的产品，加强了产品的用户体验和提升了产品的转化率， 易达的android SDK是此系统中重要的支撑点，它提供了：
+EA系统是易观基于方舟平台一款触达用户的产品，加强了产品的用户体验和提升了产品的转化率， EA的android SDK是此系统中重要的支撑点，它提供了：
 
 * 提供触达用户的弹窗功能，支持的弹窗样式： 
 
@@ -11,7 +11,7 @@
 3. 图文混合样式，最上面是图片，下面是标题、正文、按钮。
 4. H5样式，支持HTML页面，满足用户不用跳转，就可以快速响应用户事件。
 
-* 订阅事件，用户在后台如果创建了基于用户事件的触发行为（弹窗除外），SDK就会在每次启动的时候拉取订阅列表，并在有订阅事件产生的时候通知给易达系统。
+* 订阅事件，用户在后台如果创建了基于用户事件的触发行为（弹窗除外），SDK就会在每次启动的时候拉取订阅列表，并在有订阅事件产生的时候通知给EA系统。
 
 ### 二、快速开始
 
@@ -19,7 +19,7 @@
 
 #### 1、获取项目AppKey
 
-  在易达系统中选择要集成的项目，并在项目属性中查看项目的appKey，[登录易达系统](https://ea.analysys.cn/app.html#/Login)
+  在EA系统中选择要集成的项目，并在项目属性中查看项目的appKey，[登录EA系统](https://ea.analysys.cn/app.html#/Login)
 
 #### 2、集成SDK
 
@@ -41,7 +41,7 @@ buildscript {
 allprojects {
     repositories {
         ...
-        //易达SDK的maven地址
+        //EA SDK的maven地址
         maven { url 'http://maven.aliyun.com/nexus/content/groups/public/'}
         jcenter { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
         maven { url "http://developer.huawei.com/repo/" }
@@ -60,7 +60,7 @@ dependencies {
 implementation 'cn.com.analysys:analysys-core-easytouch:4.4.5.2'
 //检测是否集成了此SDK，没有请添加
 implementation 'cn.com.analysys:analysys-push:latest.release'
-//易达SDK
+//EA SDK
 implementation 'cn.com.analysys:analysys-easytouch:1.1.0'
 }
 ```
@@ -93,7 +93,7 @@ implementation 'cn.com.analysys:analysys-easytouch:1.1.0'
 apply plugin: 'com.huawei.agconnect'
 ```
 
-#### 3、初始化易达SDK接口
+#### 3、初始化EA SDK接口
 
 ```text
 AnalysysEaConfig builder = new AnalysysEaConfig();
@@ -338,7 +338,7 @@ activityId 活动信息
 
 #### 1、OPPO、vivo、魅族推送发送失败的排查方式： <a id="1oppovivo"></a>
 
-1、先排查是否在易达系统中配置的推送的信息；
+1、先排查是否在EA系统中配置的推送的信息；
 
 2、在方舟系统中，选中接入的项目，然后在左下点管理进入数据接入管理，在埋点管理中事件方案下拉选中用户方案。查看计划外用户属性，如果有如下标识$oppo、$vivo、$meizu，请添加到计划内。
 
