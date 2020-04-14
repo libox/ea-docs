@@ -5,14 +5,14 @@
 
 ## 一、iOS SDK 简介
 
- EA 系统是易观基于方舟平台一款触达用户的产品，加强了产品的用户体验和提升了产品的转化率， EA 的 iOS SDK 是此系统中重要的支撑点，它提供了：
+易达系统是易观基于方舟平台一款触达用户的产品，加强了产品的用户体验和提升了产品的转化率，易达的 iOS SDK 是此系统中重要的支撑点，它提供了：
 
 * 提供触达用户的弹窗功能，支持弹窗样式：
 * 图片样式，支持点击事件。
 * 文本样式，支持标题、正文、两个按钮。
 * 图文混合样式，最上面是图片，下面是标题、正文、按钮。
 * H5 样式，支持 HTML 页面。
-* 订阅事件，用户在后台如果创建了基于用户事件的触发行为（弹窗除外），SDK 就会在每次启动的时候根据是否有事件更新来拉取订阅列表，并在有订阅事件产生的时候通知 EA 系统。
+* 订阅事件，用户在后台如果创建了基于用户事件的触发行为（弹窗除外），SDK 就会在每次启动的时候根据是否有事件更新来拉取订阅列表，并在有订阅事件产生的时候通知易达系统。
 
 ### iOS 版本支持
 
@@ -49,16 +49,16 @@ AnalysysEaConfig.h
 
 ### 1、获取项目 AppKey
 
-* 登录 EA [系统](https://ea.analysys.cn/app.html#/Login)，创建项目，项目创建完成后自动生成对应的AppKey用以标识该项目（应用）。
+* 登录[易达系统](https://ea.analysys.cn/app.html#/Login)，创建项目，项目创建完成后自动生成对应的AppKey用以标识该项目（应用）。
 
-### 2、集成 EA  SDK
+### 2、集成易达 SDK
 
 **方式 1：cocoapods 导入动态库**
 
 * 打开 Podfile 文件，添加如下代码
 
 ```text
-pod 'AnalysysEasyTouch' //  EA  SDK
+pod 'AnalysysEasyTouch' // 易达 SDK
 ```
 
 * 如果需要安装指定版本，则按照以下方式
@@ -80,13 +80,13 @@ pod 'AnalysysEasyTouch', '1.1.0' // 示例版本号
 * 如果使用的是动态库，在 AppDelegate.m 中引入以下头文件：
 
 ```text
-#import <AnalysysEasyTouch/AnalysysEaManager.h> // EA SDK
+#import <AnalysysEasyTouch/AnalysysEaManager.h> // 易达 SDK
 ```
 
 * 如果使用的是静态库，在 AppDelegate.m 中引入以下头文件：
 
 ```text
-#import "AnalysysEaManager.h" // EA SDK
+#import "AnalysysEaManager.h" // 易达 SDK
 ```
 
 ### 4、添加初始化代码
@@ -94,9 +94,9 @@ pod 'AnalysysEasyTouch', '1.1.0' // 示例版本号
 * 请将以下代码添加到 - \(BOOL\)application:\(UIApplication \*\)application didFinishLaunchingWithOptions:\(NSDictionary \*\)launchOptions
 
 ```text
-/*********** EA SDK 初始化 ***********/
+/*********** 易达 SDK 初始化 ***********/
 AnalysysEaConfig *config = [AnalysysEaConfig defaultConfiguration];
-config.appKey= @"EA后台创建项目的 AppKey";
+config.appKey= @"易达后台创建项目的 AppKey";
 [AnalysysEaManager startWithConfig:config];
 ```
 
@@ -130,7 +130,7 @@ ntohl(tokenBytes[6]), ntohl(tokenBytes[7])];
 NSLog(@"\n>>>[DeviceToken Success]:%@\n\n", hexToken);
 
 // 上报pushId（解析后的deviceToken）
-// 目前EA iOS SDK 只支持苹果 APNS 推送通道
+// 目前易达 iOS SDK 只支持苹果 APNS 推送通道
 [AnalysysEaManager registerDeviceToken:hexToken];
 ```
 
@@ -178,7 +178,7 @@ completionHandler(UNNotificationPresentationOptionBadge
 }
 ```
 
-### 5、配置统计推送到达所需的 Notification Service Extension 扩展及 AppGroups （非必须）
+### 5、配置统计推送到达所需的 Notification Service Extension 扩展及 AppGroups
 
 配置这两项，主要针对 APP 支持推送，在进程被杀死的情况下统计推送到达率，若 APP 不支持推送功能，可忽略。若 APP 支持推送功能，不配置扩展和 AppGroups 会导致 APP 在进程被杀死的情况下推送到达无法统计，应用在前、后台的情况不受影响。建议您按照如下步骤进行配置。
 
@@ -195,7 +195,7 @@ self.contentHandler = contentHandler;
 self.bestAttemptContent = [request.content mutableCopy];
 
 // Modify the notification content here...
-self.bestAttemptContent.title = [NSString stringWithFormat:@"%@ [方舟EA]", self.bestAttemptContent.title];
+self.bestAttemptContent.title = [NSString stringWithFormat:@"%@ [方舟易达]", self.bestAttemptContent.title];
 
 [AnalysysEaManager pushTrack:PUSH_RECEIVE msg:self.bestAttemptContent.userInfo];
 
@@ -207,8 +207,8 @@ self.contentHandler(self.bestAttemptContent);
 
 为保证主 APP 进程被杀死的情况下，扩展进程能正常访问主 APP 的某些数据，从而使 SDK 能正常统计推送到达率，APP 客户端需要添加进程间数据共享：
 
-* 选择主 target -》 Capabilities，添加 App Groups，填入分组名 **group.easdk**，若分组名显示为红色，点击下方刷新按钮，直至分组名不再为红色
-* 选择 Notification Service Extension target -》 Capabilities，添加 App Groups，勾选分组 **group.easdk**，若分组名显示为红色，点击下方刷新按钮，直至分组名不再为红色
+* 选择主 target -》 Capabilities，添加 App Groups，填入分组名 **group.xxx**，若分组名显示为红色，点击下方刷新按钮，直至分组名不再为红色
+* 选择 Notification Service Extension target -》 Capabilities，添加 App Groups，勾选分组 **group.xxx**，若分组名显示为红色，点击下方刷新按钮，直至分组名不再为红色
 
 ### 6、成功运行
 
@@ -216,7 +216,7 @@ self.contentHandler(self.bestAttemptContent);
 
 ```text
 ********************** [EALog] *********************
-[EASDKManager.m:216行] AnalysysEasyTouch 启动成功！
+AnalysysEasyTouch 启动成功！
 AppKey：ecaaab42502jgdg9870fd0740ce374daa
 userId：1BCAF1D0-C8C0-46A8-866F-005832024259
 ****************************************************
@@ -225,7 +225,7 @@ userId：1BCAF1D0-C8C0-46A8-866F-005832024259
 ## 三、iOS API
 
 * 方舟 SDK 接口请参考 AnalysysAgent 对应文档
-* 这里只列举 EA  AnalysysEasyTouch 相关接口
+* 这里只列举易达 AnalysysEasyTouch 相关接口
 
 ### 获取事件监听对象
 
@@ -263,7 +263,7 @@ userId：1BCAF1D0-C8C0-46A8-866F-005832024259
 
 **接口说明**
 
-启动 EA  SDK。
+启动易达 SDK。
 
 **接口定义**
 
@@ -378,12 +378,12 @@ userId：1BCAF1D0-C8C0-46A8-866F-005832024259
 
 **接口说明**
 
-用户在配置了 APNS 通道后，当APP接收到推送消息及点击了推送消息时，在相应的系统回调方法里调用EA SDK 追踪推送消息的接口来统计推送到达率和点击率。
+用户在配置了 APNS 通道后，当APP接收到推送消息及点击了推送消息时，在相应的系统回调方法里调用易达 SDK 追踪推送消息的接口来统计推送到达率和点击率。
 
 **接口定义**
 
 ```text
-+ (void)pushTrack:(PushEventType)type msg:(NSDictionary *)msg;
++ (void)pushTrack:(PushEventType)type msg:(NSDictionary *)msg groupIdentifier:(NSString *)groupIdentifier;
 ```
 
 **参数说明**
@@ -395,6 +395,8 @@ userId：1BCAF1D0-C8C0-46A8-866F-005832024259
 * 应用在前台收到推送，点击回调，msg 传 notification.request.content.userInfo
 * 应用在后台收到推送，点击回调，msg 传 response.notification.request.content.userInfo
 * 应用进程被杀死的情况下收到推送，推送到达回调，msg 传 request.content.userInfo
+* groupIdentifier
+* 创建的 App Groups 分组 id 名称 : group.xxx
 
 **接口返回**
 
@@ -408,13 +410,13 @@ userId：1BCAF1D0-C8C0-46A8-866F-005832024259
 
 ### APNS 推送
 
-EA SDK 接通了苹果 APNS 推送服务，并支持统计推送到达率、点击率。
+易达 SDK 接通了苹果 APNS 推送服务，并支持统计推送到达率、点击率。
 
-* 登录[EA系统](https://ea.analysys.cn:8088/app.html#/Login)，进行 push 配置，选择  并上传 iOS 生产证书、填写证书秘钥。
+* 登录[易达系统](https://ea.analysys.cn:8088/app.html#/Login)，进行 push 配置，选择  并上传 iOS 生产证书、填写证书秘钥。
 * 对应接口，详细参考 iOS API
 
 ```text
-+ (void)pushTrack:(PushEventType)type msg:(NSDictionary *)msg;
++ (void)pushTrack:(PushEventType)type msg:(NSDictionary *)msg groupIdentifier:(NSString *)groupIdentifier;
 ```
 
 ## 五、FAQ
@@ -426,11 +428,15 @@ EA SDK 接通了苹果 APNS 推送服务，并支持统计推送到达率、点�
 
 ### 后台统计的推送到达不准或无数据
 
-* 若后台统计不到推送到达，先检查 APP 是否添加了 Notification Service Extension 扩展，且添加了 App Groups 并设置其 Id 为 **group.easdk**
+* 若后台统计不到推送到达，先检查 APP 是否添加了 Notification Service Extension 扩展，且添加了 App Groups 并设置其 Id 为您自定义的名称，推荐以 **group.xxx** 的形式命名
+
+### 添加完 App Groups ，名称一直显示为红色，编译报错
+
+* 检查苹果官网里您的 App Id、证书配置文件是否都包含了对 App Group 功能的支持，若没有的话，需要勾选或者按照相应指示添加
 
 ### 添加 Notification Service Extension 扩展并在相应代理方法中调用 SDK 方法，编译报错
 
-* 若报错提示信息类似如下，可能是添加静态库时没有将其引入到 Notification Service Extension 对应的 target 中，解决办法是重新将静态库拖入工程中并勾选上主 target 和 扩展 target 即可
+* 若报错提示信息类似如下，可能是添加静态库时没有将其引入到 Notification Service Extension 对应的 target 中，解决办法是重新将静态库拖入工程中并勾选上主 target 和 扩展 target 即可；若您使用的是动态库，则需要将 framework 拖拽到扩展 target 对应的 Link Binary With Libraries 中
 
 ```text
 Undefined symbols for architecture arm64:
