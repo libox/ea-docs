@@ -334,6 +334,48 @@ $push\_channel 活动的渠道信息
 
 activityId 活动信息
 
+代码如下所示：
+
+```text
+    public static void pushTrack(Intent intent) {
+        if (intent == null) return;
+        Bundle bundle = intent.getExtras();
+        if (bundle != null) {
+            Set<String> set = bundle.keySet();
+            HashMap<String, Object> hm = new HashMap<>();
+            if (set != null) {
+                for (String key : set) {
+                    if (key.equals("activityId") || key.equals("$push_channel")) {
+                        hm.put(key, bundle.getString(key));
+                    }
+                }
+                if (hm.containsKey("activityId") && hm.containsKey("$push_channel")) {
+                    AnalysysEaManager.pushTrack(AnalysysEaConfig.PushEventType.PUSH_CLICK, hm);
+                }
+            }
+            Log.e("BaseActivity", "json：" + hm.toString());
+        }
+    }
+```
+
+调用示例：
+
+```text
+public class BaseActivity extends AppCompatActivity {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        pushTrack(getIntent());
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        pushTrack(intent);
+    }
+}
+```
+
 ### 六、FAQ
 
 #### 1、OPPO、vivo、魅族推送发送失败的排查方式： <a id="1oppovivo"></a>
