@@ -190,19 +190,3 @@ window.AnalysysModal = function (data) {
 }
 ```
 
-### 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
