@@ -26,6 +26,29 @@ EA系统是易观基于方舟平台一款触达用户的产品，加强了产品
 以下初始化JS代码必须放置在方舟SDK初始化代码之前
 {% endhint %}
 
+{% tabs %}
+{% tab title="异步集成" %}
+```javascript
+<script>
+    (function(config) {
+        window.AnalysysAgentModalConfig = config || []
+
+        var d = document,
+            c = d.createElement('script'),
+            n = d.getElementsByTagName('script')[0];
+        c.type = 'text/javascript';
+        c.async = true;
+        c.src = 'https://ea.analysys.cn/ark/sdk/AnalysysAgentEA_JS_SDK.min.js' +'?v=' + Math.random(); //SDK存放地址
+        n.parentNode.insertBefore(c, n);
+    })({
+        appKey: '/*设置为实际APPKEY*/', //在EA系统中选择要集成的项目，并在项目属性中查看AppKey
+        configURL: '/*设置为实际数据获取地址*/' // 配置您的数据获取地址
+    })
+</script>
+```
+{% endtab %}
+
+{% tab title="同步集成" %}
 ```javascript
 <script>
     (function(config){
@@ -39,6 +62,30 @@ EA系统是易观基于方舟平台一款触达用户的产品，加强了产品
 //引用JSSDK文件的script标签必须在初始化代码之下
 <script type="text/javascript" src="https://ea.analysys.cn/ark/sdk/AnalysysAgentEA_JS_SDK.min.js"></script>
 ```
+{% endtab %}
+{% endtabs %}
+
+### 配置参数
+
+appKey
+
+appkey 为EA系统中集成的项目 AppKey。
+
+* 类型:String。取值长度 1 - 255 字符。
+
+configURL
+
+configURL 为自定义数据获取地址，参数设置后，将从该地址获取数据信息。
+
+* value 类型：String。数据上传地址，格式为 scheme://host + :port\(不包含/后的内容\)。scheme 必须以 http:// 或 https:// 开头，host 只支持域名和 IP，取值长度 1 - 255字符，port 端口号必须携带，eg：[https://ea.analysys.cn:8088](https://ea.analysys.cn:8088) 。
+
+isH5
+
+isH5\(可选，默认为false\) 设置弹窗是否是 H5 模式，false-弹窗 web模式，true-弹窗 H5 模式。 为弹窗设置为H5弹窗，用于页面是嵌入app的情况下使用。如果是页面只是在浏览器的 H5 模式使用，则不需要配置，弹窗可自动识别。
+
+* 类型:Boolean。取值为 true 或者 false 。
+
+
 
     2、替换方舟SDK
 
@@ -127,18 +174,6 @@ EA系统是易观基于方舟平台一款触达用户的产品，加强了产品
 ```
 {% endtab %}
 {% endtabs %}
-
-appKey
-
-appkey 为EA系统中集成的项目 AppKey。
-
-* 类型:String。取值长度 1 - 255 字符。
-
-configURL
-
-configURL 为自定义数据获取地址，参数设置后，将从该地址获取数据信息。
-
-* value 类型：String。数据上传地址，格式为 scheme://host + :port\(不包含/后的内容\)。scheme 必须以 http:// 或 https:// 开头，host 只支持域名和 IP，取值长度 1 - 255字符，port 端口号必须携带，eg：[https://ea.analysys.cn:8088](https://ea.analysys.cn:8088) 。
 
 ### 三、备注
 
