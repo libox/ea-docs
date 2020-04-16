@@ -253,7 +253,7 @@ public void pushTrack(AnalysysEaConfig.PushEventType type, final HashMap<String,
 参数说明：
 
 | 参数 | 说明 | 必填 | 备注 |
-| :--- | :--- | :--- | :--- |
+| :--- | :---: | :--- | :--- |
 | type | push的事件类型 | 是 | 不可为空 |
 | msg | push事件的属性信息 | 是 | push属性说明 |
 
@@ -268,7 +268,34 @@ public void pushTrack(AnalysysEaConfig.PushEventType type, final HashMap<String,
 * OPPO的通知栏点击事件
 * 第三方的PUSH到达、点击的事件
 
-#### 4、释放接口
+#### 4、设置页面别名
+
+接口定义：
+
+```text
+//此接口是为了便于运营在EA的后台方便选中页面信息
+public void setPageTagState(boolean state)
+```
+
+参数说明：
+
+| 参数 | 说明 | 必填 | 备注 |
+| :---: | :---: | :--- | :--- |
+| state | 设置别名的开关状态,true是打开；false是关闭 | 是 |  |
+
+返回值：无
+
+注意事项：
+
+需要在AndroidManifest中添加信息，如下：
+
+```text
+        <activity
+            android:name="com.analysys.easdk.view.tag.TagSettingActivity"
+            android:screenOrientation="portrait"></activity>
+```
+
+#### 5、释放接口
 
 接口定义：
 
