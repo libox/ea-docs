@@ -429,3 +429,21 @@ VIVO的状态栏通知默认是关闭的。需要提示用户打开通知栏。
 
 关于token，如果是emui10及以上是getToken直接返回，对于emui10以下则在onNewToken返回token
 
+#### 6、华为推送打开APP内页面 <a id="3"></a>
+
+在发送推送后，当用户点击通知栏后跳转到APP内的页面，需要把页面在AndroidManifest中添加action定义，如下所示：
+
+```text
+        <activity
+            android:name=".personcenter.message.MessageView"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="包名.personcenter.message.MessageView" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+```
+
+
+
