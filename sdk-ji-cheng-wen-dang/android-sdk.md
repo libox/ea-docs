@@ -445,5 +445,19 @@ VIVO的状态栏通知默认是关闭的。需要提示用户打开通知栏。
         </activity>
 ```
 
+#### 7、小米推送获取KV <a id="3"></a>
+
+```text
+        if (DeviceUtil.isXiaomiDevice()) {
+            MiPushMessageParser parser = new MiPushMessageParser();
+            if (parser.parserMessage(intent)) {
+                Map<String, String> message = parser.getExtra();
+                for (String key : message.keySet()) {
+                    Log.i("BaseActivity", "key = " + key + "; value = " + message.get(key));
+                }
+            }
+        }
+```
+
 
 
