@@ -97,8 +97,6 @@ apply plugin: 'com.huawei.agconnect'
 
 ```text
 AnalysysEaConfig builder = new AnalysysEaConfig();
- //设置环境信息，默认是生产环境
-//builder.setEnvType(AnalysysEaConfig.EnvType.ENV_TEST);
 //填写自己申请的AppKey
 builder.setAppKey("*******");
 AnalysysEaManager.init(getApplicationContext(), builder);
@@ -351,6 +349,14 @@ public class AnalysysEaConfig {
      */
     public void setEnvType(EnvType envType) {
         this.envType = envType;
+    }
+    /**
+     * 设置日志级别 NONE 是无日志
+     *
+     * @param logLevelType
+     */
+    public void setLogLevelType(LogLevel logLevelType) {
+        this.LogLevelType = logLevelType;
     }
 }
 ```
