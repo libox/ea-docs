@@ -57,11 +57,11 @@ allprojects {
 ```text
 dependencies {
 //如果已经集成方舟SDK，请将analysys-core替换成analysys-core-easytouch:4.4.7,此版本的方舟SDK集成了华为、小米、OPPO、VIVO、魅族推送SDK
-implementation 'cn.com.analysys:analysys-core-easytouch:4.4.5.2'
+implementation 'cn.com.analysys:analysys-core-easytouch:4.4.5.7'
 //检测是否集成了此SDK，没有请添加
 implementation 'cn.com.analysys:analysys-push:latest.release'
 //EA SDK
-implementation 'cn.com.analysys:analysys-easytouch:1.1.0'
+implementation 'cn.com.analysys:analysys-easytouch:1.1.1'
 }
 ```
 
@@ -76,8 +76,8 @@ implementation 'cn.com.analysys:analysys-easytouch:1.1.0'
         //如果开通了就输入相关的配置，如果没有开通的请设置""
                 EA_PUSH_PARAM_XIAOMI_APPID:"小米推送的appID",
                 EA_PUSH_PARAM_XIAOMI_APPKEY:"小米推送的appKey",
-                EA_PUSH_PARAM_OPPO_APPID:"OPPO推送的appID",
                 EA_PUSH_PARAM_OPPO_APPKEY:"OPPO推送的appKey",
+                EA_PUSH_PARAM_OPPO_APPSECRET:"OPPO推送的appSecret",
                 EA_PUSH_PARAM_VIVO_APPID:"VIVO推送的appID",
                 EA_PUSH_PARAM_VIVO_APPKEY:"VIVO推送的appID",
                 EA_PUSH_PARAM_MEIZU_APPID:"魅族的appID",
