@@ -56,7 +56,9 @@ allprojects {
 
 ```text
 dependencies {
-//如果已经集成方舟SDK，请将analysys-core替换成analysys-core-easytouch:4.4.7,此版本的方舟SDK集成了华为、小米、OPPO、VIVO、魅族推送SDK
+//如果已经集成方舟SDK，
+//请将analysys-core替换成analysys-core-easytouch:version
+//此版本的方舟SDK集成了华为、小米、OPPO、VIVO、魅族推送SDK
 implementation 'cn.com.analysys:analysys-core-easytouch:4.4.5.7'
 //检测是否集成了此SDK，没有请添加
 implementation 'cn.com.analysys:analysys-push:latest.release'
@@ -204,6 +206,94 @@ lEuZNGC4gl26f1wFK2A9GFnCiQruM+ewWXNMVLg=
 请在魅族的推送后台配置回执接口，地址如下：[http://push.meizu.com/\#/config/callback?appId=16395&\_k=k2zwxs](http://push.meizu.com/#/config/callback?appId=16395&_k=k2zwxs)
 
 回执地址：[http://ea.analysys.cn:9999/push/callback/meizu](http://ea.analysys.cn:9999/push/callback/meizu)
+
+#### 3、OPPO推送
+
+android 8以上版本需要配置通道：
+
+* [登录OPPO推送平台](https://push.oppo.com/top/application-list)
+* 左侧边栏选配置管理下的新建通道，如下图：
+
+![](../.gitbook/assets/d308301c-1be2-4413-9ecf-fe746b76022c.png)
+
+* 在右侧编辑通道信息并提交，如下图：
+
+![](../.gitbook/assets/26be8387-55fb-4154-80c3-d07b38f9a451.png)
+
+通道ID1001，是EA默认的通道，如果已经在OPPO创建过通道，可以在EA的后台的系统设置中配置相关通道信息。如下图：
+
+![](../.gitbook/assets/9daf5d48-0be0-4e3b-af94-a1ca48bc520c.png)
+
+在application中注册通道信息，代码如下：
+
+```text
+    private void createNotifyChannel() {
+        NotificationManager mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        if (null == mNotificationManager) {
+            return;
+        }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationChannel channel = new NotificationChannel("1001",
+                    getResources().getString(R.string.app_name), NotificationManager.IMPORTANCE_HIGH);
+            //是否在桌面icon右上角展示小红点
+            channel.enableLights(true);
+            //小红点颜色
+            channel.setLightColor(Color.RED);
+            //是否在久按桌面图标时显示此渠道的通知
+            channel.setShowBadge(true);
+            mNotificationManager.createNotificationChannel(channel);
+        }
+    }
+```
+
+#### 4、验证推送注册结果
+
+在logcat中过滤日志：
+
+```text
+小米设备：$XIAOMI
+华为设备：$HUAWEI
+OPPO设备：$OPPO
+VIVO设备：$VIVO
+魅族设备：$MEIZU
+极光推送：$JPUSH
+```
+
+如果在设备上过滤相关关键词后有日志，证明此厂商推送注册成功；
+
+如果没有日志，请输入以下关键词过滤：
+
+```text
+registerPush
+```
+
+查看相关日志，看厂商推送注册失败返回的错误码，并将相关信息提供给EA开发者进行分析。
+
+#### 5、厂商推送支持的版本说明
+
+华为推送：
+
+EMUI 10.0.0以上，推送服务App版本为9.1.1.401以上，HMS core版本在4.0.3.316以上
+
+小米推送：
+
+Android支持4.0以上版本；并需要**MIUI7**以上版本支持；
+
+OPPO推送：
+
+目前支持ColorOS3.1及以上的系统。目前只支持通知栏消息。
+
+在Android 8.0 及后续机型上指定通道进行推送，EA的默认通道是1001。
+
+VIVO推送：
+
+SDK仅支持下表中的机型和对应的系统及以上系统:
+
+![](../.gitbook/assets/20191204113508202986.png)
+
+魅族推送：
+
+Flyme系统（4.0，4.5，5）上
 
 ### 四、SDK接口
 
