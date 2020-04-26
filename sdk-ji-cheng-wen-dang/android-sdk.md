@@ -2,7 +2,7 @@
 
 ### 一、SDK简介
 
-EA系统是易观基于方舟平台一款触达用户的产品，加强了产品的用户体验和提升了产品的转化率， EA的android SDK是此系统中重要的支撑点，它提供了：
+EA智能运营系统是易观基于方舟平台设计一款触达用户的产品，加强了产品的用户体验和提升了产品的转化率， EA的android SDK是此系统中重要的支撑点，它提供了：
 
 * 提供触达用户的弹窗功能，支持的弹窗样式： 
 
@@ -23,7 +23,7 @@ EA系统是易观基于方舟平台一款触达用户的产品，加强了产品
 
 #### 2、集成SDK
 
-在项目根目录的build.gradle中添加如下代码：
+        在项目根目录的build.gradle中添加如下代码：
 
 ```text
 buildscript {
@@ -52,7 +52,7 @@ allprojects {
 
 * 集成SDK
 
-在app的Module的build.gradle中添加如下引用：
+        在app的Module的build.gradle中添加如下引用：
 
 ```text
 dependencies {
@@ -67,7 +67,7 @@ implementation 'cn.com.analysys:analysys-easytouch:1.1.1'
 
 * 添加厂商推送依赖
 
-在应用的Module的build.gradle中添加如下引用：
+        在应用的Module的build.gradle中添加如下引用：
 
 ```text
     defaultConfig {
@@ -116,8 +116,8 @@ AnalysysAgent.setObserverListener(this, AnalysysEaManager.getObserverListener())
 通过方舟SDK上报如下的用户属性可以方便APP触达到用户
 
 ```text
-上报pushToken：
-   AnalysysAgent.setPushID(context, PushProvider.HUAWEI, token);
+上报pushToken(非厂商推送需要上报)：
+   AnalysysAgent.setPushID(context, PushProvider.JPUSH, token);
 上报用户手机号：
    AnalysysAgent.profileSet(context, "$PHONE", phone);
 上报用户邮箱：
