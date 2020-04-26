@@ -154,6 +154,18 @@ MAC平台：
 
 注意：debug安装包和release安装的证书是不同的；
 
+* 支持APP内页面跳转
+
+         在AndroidManifest.xml中的页面注册中添加如下设置：
+
+```text
+<intent-filter>
+    <action android:name="包名.personcenter.message.MessageView" />
+    <category android:name="android.intent.category.DEFAULT" />
+    <category android:name="android.intent.category.BROWSABLE"/>
+</intent-filter>
+```
+
 * 配置回执接口
 
 请按照华为推送配置做相应的回调设置，这样可以便于系统统计推送的结果。链接如下： [华为配置推送服务参数](https://developer.huawei.com/consumer/cn/service/hms/catalog/AGCHelp.html?page=AGC_appGalleryConnect_associated_service#openSwitch)
