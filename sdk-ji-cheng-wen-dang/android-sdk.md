@@ -203,7 +203,7 @@ lEuZNGC4gl26f1wFK2A9GFnCiQruM+ewWXNMVLg=
 
 * 配置回执接口
 
-请在魅族的推送后台配置回执接口，地址如下：[http://push.meizu.com/\#/config/callback?appId=16395&\_k=k2zwxs](http://push.meizu.com/#/config/callback?appId=16395&_k=k2zwxs)
+请在魅族的推送后台配置回执接口，魅族地址如下：[http://push.meizu.com/\#/config/callback?appId=16395&\_k=k2zwxs](http://push.meizu.com/#/config/callback?appId=16395&_k=k2zwxs)
 
 回执地址：[http://ea.analysys.cn:9999/push/callback/meizu](http://ea.analysys.cn:9999/push/callback/meizu)
 
@@ -220,11 +220,13 @@ android 8以上版本需要配置通道：
 
 ![](../.gitbook/assets/26be8387-55fb-4154-80c3-d07b38f9a451.png)
 
-通道ID1001，是EA默认的通道，如果已经在OPPO创建过通道，可以在EA的后台的系统设置中配置相关通道信息。如下图：
+通道ID\(1001\)，是EA默认的通道；
+
+如果已经在OPPO创建过通道，可以在EA的后台的系统设置中配置相关通道信息。如下图：
 
 ![](../.gitbook/assets/9daf5d48-0be0-4e3b-af94-a1ca48bc520c.png)
 
-在application中注册通道信息，代码如下：
+在application的派生类中注册通道信息，代码如下：
 
 ```text
     private void createNotifyChannel() {
