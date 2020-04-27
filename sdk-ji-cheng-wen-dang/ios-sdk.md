@@ -141,7 +141,7 @@ NSLog(@"\n>>>[DeviceToken Success]:%@\n\n", hexToken);
 
 // iOS 6 及以前，收到推送
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
-
+// 若实现 Notification Service Extension 扩展，需注释掉，否则可能重复上报
 [AnalysysEaManager pushTrack:PUSH_RECEIVE msg:userInfo];
 }
 
@@ -152,12 +152,12 @@ completionHandler(UIBackgroundFetchResultNewData);
 
 if (application.applicationState == UIApplicationStateActive) {
 
-// App前台 收到推送消息，追踪"App 消息推送"事件
+// App前台 收到推送消息，追踪"App 消息推送"事件，若实现了扩展，需注释掉
 [AnalysysEaManager pushTrack:PUSH_RECEIVE msg:userInfo];
 
 } else if (application.applicationState == UIApplicationStateBackground) {
 
-// App后台 收到推送消息，追踪"App 消息推送"事件
+// App后台 收到推送消息，追踪"App 消息推送"事件，若实现了扩展，需注释掉
 [AnalysysEaManager pushTrack:PUSH_RECEIVE msg:userInfo];
 
 } else {
@@ -170,13 +170,15 @@ if (application.applicationState == UIApplicationStateActive) {
 
 // iOS 10 及以后
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler {
-
+// 若实现了扩展，需注释掉
 [AnalysysEaManager pushTrack:PUSH_RECEIVE msg:notification.request.content.userInfo];
 
 completionHandler(UNNotificationPresentationOptionBadge
 |UNNotificationPresentationOptionAlert);
 }
 ```
+
+* 注意：若实现了 Notification Service Extension 扩展，当收到推送时，除了会执行扩展的回调方法，还会执行以上收到推送的回调方法，为避免重复上报，需要将上述上报 PUSH\_RECEIVE 类型的事件注释掉，或者根据项目需要采用宏定义判断的方式来规避掉重复上报。
 
 ### 5、配置统计推送到达所需的 Notification Service Extension 扩展及 AppGroups
 
@@ -215,11 +217,11 @@ self.contentHandler(self.bestAttemptContent);
 * 真机调试该项目，如果控制台输出如下日志，代表 SDK 集成成功。
 
 ```text
-********************** [EALog] *********************
+******************* [AnalysysEasyTouch][Log] *****************
 AnalysysEasyTouch 启动成功！
 AppKey：ecaaab42502jgdg9870fd0740ce374daa
 userId：1BCAF1D0-C8C0-46A8-866F-005832024259
-****************************************************
+**************************************************************
 ```
 
 ## 三、iOS API
@@ -231,7 +233,7 @@ userId：1BCAF1D0-C8C0-46A8-866F-005832024259
 
 **支持的版本**
 
-1.0.0 及以上版本。
+1.1.1.2 及以上版本。
 
 **接口说明**
 
@@ -240,12 +242,13 @@ userId：1BCAF1D0-C8C0-46A8-866F-005832024259
 **接口定义**
 
 ```text
-+ (id)getObserverListener;
++ (id)getObserverListener:(NSString *)groupIdentifier;
 ```
 
 **参数说明**
 
-无
+* groupIdentifier
+* 由客户端创建的 App Groups 名称。
 
 **接口返回**
 
@@ -374,7 +377,7 @@ userId：1BCAF1D0-C8C0-46A8-866F-005832024259
 
 **支持的版本**
 
-1.0.0 及以上版本。
+1.1.1 及以上版本。
 
 **接口说明**
 
@@ -402,9 +405,34 @@ userId：1BCAF1D0-C8C0-46A8-866F-005832024259
 
 无
 
+### 开启/关闭别名设置功能
+
+**支持的版本**
+
+1.1.1.1 及以上版本。
+
+**接口说明**
+
+开启或关闭别名设置功能，若开启，则可以给APP内任何页面设置具体名称。
+
+**接口定义**
+
+```text
++ (void)setPageTagState:(BOOL)state;
+```
+
+**参数说明**
+
+* state
+* state 为 YES 时开启别名设置功能，为 NO 则关闭别名设置功能。
+
+**接口返回**
+
+无
+
 **注意事项**
 
-需要在对应的系统回调方法里调用，并根据具体消息事件类型（收到推送/点击推送）传入对应的参数。详细见下方备注。
+无
 
 ## 四、备注
 
@@ -444,6 +472,33 @@ Undefined symbols for architecture arm64:
 objc-class-ref in NotificationService.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
+```
+
+### release 模式下编译报错
+
+* 若报错提示信息类似如下，则需要检查扩展 target 对应的 bitcode 设置是否关闭。默认为 Yes，设置为 No 即可
+
+```text
+ld: '/Users/guoyongqing/code/ea-ios-sdk/eaApp/AnalysysEasyTouch.framework/AnalysysEasyTouch' does not contain bitcode. You must rebuild it with bitcode enabled (Xcode setting ENABLE_BITCODE), obtain an updated library from the vendor, or disable bitcode for this target. file '/Users/guoyongqing/code/ea-ios-sdk/eaApp/AnalysysEasyTouch.framework/AnalysysEasyTouch' for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+```
+
+### Archive 之后打包发布的时候报错，提示 IPA processing failed
+
+* 若出现这种错误，一般是因为引入的三方库中包含了 i386 x86\_64 armv7 arm64 四种架构，iOS 13 之后不支持 32 位架构，需要将 framework 中对应的 32 位架构删除即可，在命令行执行以下命令：
+
+```text
+1.使用终端进入到SDK内部
+cd /Users/xxx/xxx/xxx/AnalysysEasyTouch.framework
+
+2.查看当前支持的架构
+lipo -info AnalysysEasyTouch
+可以看到AnalysysEasyTouch当前支持的架构：
+Architectures in the fat file: AnalysysEasyTouch are: i386 x86\_64 armv7 arm64
+
+3.删掉i386，x86\_86架构
+lipo -remove i386 AnalysysEasyTouch -o AnalysysEasyTouch
+lipo -remove x86\_64 AnalysysEasyTouch -o AnalysysEasyTouch
 ```
 
 ## 六、技术支持
