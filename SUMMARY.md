@@ -21,3 +21,7 @@
 * [Android SDK](sdk-ji-cheng-wen-dang/android-sdk.md)
 * [JS SDK](sdk-ji-cheng-wen-dang/js-sdk.md)
 
+## 其它
+
+* [名词解释](qi-ta/ming-ci-jie-shi.md)
+

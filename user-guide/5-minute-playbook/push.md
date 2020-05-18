@@ -2,7 +2,7 @@
 
 ### 一、设置活动信息
 
-![&#x7B2C;&#x4E00;&#x6B65;&#xFF1A;&#x8BBE;&#x7F6E;&#x6D3B;&#x52A8;&#x4FE1;&#x606F;](../../.gitbook/assets/image%20%2810%29.png)
+![&#x7B2C;&#x4E00;&#x6B65;&#xFF1A;&#x8BBE;&#x7F6E;&#x6D3B;&#x52A8;&#x4FE1;&#x606F;](../../.gitbook/assets/image%20%2811%29.png)
 
 填写活动名称以及是否开启转化跟踪功能。
 
@@ -14,7 +14,7 @@
 
 ### 三、设置活动的触发条件
 
-![&#x7B2C;&#x4E09;&#x6B65;&#xFF1A;&#x8BBE;&#x7F6E;&#x6D3B;&#x52A8;&#x89E6;&#x53D1;&#x6761;&#x4EF6;](../../.gitbook/assets/image%20%2822%29.png)
+![&#x7B2C;&#x4E09;&#x6B65;&#xFF1A;&#x8BBE;&#x7F6E;&#x6D3B;&#x52A8;&#x89E6;&#x53D1;&#x6761;&#x4EF6;](../../.gitbook/assets/image%20%2823%29.png)
 
 通过设置好的触发条件，当用户满足条件时，系统自动触发活动并将 Push 消息推送给用户。
 
@@ -34,7 +34,7 @@
 
 ### 四、设置 Push 消息内容
 
-![&#x7B2C;&#x56DB;&#x6B65;&#xFF1A;&#x8BBE;&#x7F6E;&#x6D88;&#x606F;&#x5185;&#x5BB9;](../../.gitbook/assets/image%20%2830%29.png)
+![&#x7B2C;&#x56DB;&#x6B65;&#xFF1A;&#x8BBE;&#x7F6E;&#x6D88;&#x606F;&#x5185;&#x5BB9;](../../.gitbook/assets/image%20%2831%29.png)
 
 填写 Push 消息的标题和内容，以及用户点击 Push 消息后触发的操作：
 
