@@ -23,5 +23,6 @@
 
 ## 其它
 
+* [如何配置阿里云短信通道](qi-ta/ru-he-pei-zhieli-yun-duan-xin-tong-dao.md)
 * [名词解释](qi-ta/ming-ci-jie-shi.md)
 
