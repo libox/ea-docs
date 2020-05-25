@@ -63,7 +63,7 @@ implementation 'cn.com.analysys:analysys-core-easytouch:4.4.5.7'
 //检测是否集成了此SDK，没有请添加
 implementation 'cn.com.analysys:analysys-push:latest.release'
 //EA SDK
-implementation 'cn.com.analysys:analysys-easytouch:1.1.1'
+implementation 'cn.com.analysys:analysys-easytouch:1.1.3'
 }
 ```
 
