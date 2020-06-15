@@ -14,7 +14,7 @@
 1、下载小程序 SDK。
 
 {% hint style="info" %}
-SDK下载地址：[https://github.com/analysys-easyTouch/easy-touch-sdk](https://github.com/analysys-easyTouch/easy-touch-sdk)
+SDK下载地址：[https://github.com/analysys-easyTouch/easy-touch-sdk/releases](https://github.com/analysys-easyTouch/easy-touch-sdk/releases)
 {% endhint %}
 
 2、必要参数配置。

@@ -16,7 +16,7 @@ EA系统是易观基于方舟平台一款触达用户的产品，加强了产品
 
 ####  JS SDK 浏览器版本支持
 
-支持IE 7 以上所有浏览器
+支持IE 9 以上所有浏览器
 
 ### 二、快速开始
 
@@ -27,27 +27,6 @@ EA系统是易观基于方舟平台一款触达用户的产品，加强了产品
 {% endhint %}
 
 {% tabs %}
-{% tab title="异步集成" %}
-```javascript
-<script>
-    (function(config) {
-        window.AnalysysAgentModalConfig = config || []
-
-        var d = document,
-            c = d.createElement('script'),
-            n = d.getElementsByTagName('script')[0];
-        c.type = 'text/javascript';
-        c.async = true;
-        c.src = 'https://ea.analysys.cn/ark/sdk/AnalysysAgentEA_JS_SDK.min.js' +'?v=' + Math.random(); //SDK存放地址
-        n.parentNode.insertBefore(c, n);
-    })({
-        appKey: '/*设置为实际APPKEY*/', //在EA系统中选择要集成的项目，并在项目属性中查看AppKey
-        configURL: '/*设置为实际数据获取地址*/' // 配置您的数据获取地址
-    })
-</script>
-```
-{% endtab %}
-
 {% tab title="同步集成" %}
 ```javascript
 <script>
