@@ -2,19 +2,19 @@
 
 ### 一、设置活动信息
 
-![&#x7B2C;&#x4E00;&#x6B65;&#xFF1A;&#x8BBE;&#x7F6E;&#x6D3B;&#x52A8;&#x4FE1;&#x606F;](../../.gitbook/assets/image%20%2810%29.png)
+![&#x7B2C;&#x4E00;&#x6B65;&#xFF1A;&#x8BBE;&#x7F6E;&#x6D3B;&#x52A8;&#x4FE1;&#x606F;](../../.gitbook/assets/image%20%289%29.png)
 
 填写活动名称、活动有效期以及是否开启转化跟踪功能。
 
 ### 二、选择目标人群
 
-![&#x7B2C;&#x4E8C;&#x6B65;&#xFF1A;&#x9009;&#x62E9;&#x76EE;&#x6807;&#x4EBA;&#x7FA4;](../../.gitbook/assets/image%20%2816%29.png)
+![&#x7B2C;&#x4E8C;&#x6B65;&#xFF1A;&#x9009;&#x62E9;&#x76EE;&#x6807;&#x4EBA;&#x7FA4;](../../.gitbook/assets/image%20%2815%29.png)
 
 通过下拉菜单选择本次 App 弹窗活动将要触达的人群，这些人群可以来自“用户行为分析系统”、“用户标签系统”、“CDP 系统”、“CRM 系统”等。
 
 ### 三、设置活动的触发条件
 
-![&#x7B2C;&#x4E09;&#x6B65;&#xFF1A;&#x8BBE;&#x7F6E;&#x6D3B;&#x52A8;&#x89E6;&#x53D1;&#x6761;&#x4EF6;](../../.gitbook/assets/image%20%2814%29.png)
+![&#x7B2C;&#x4E09;&#x6B65;&#xFF1A;&#x8BBE;&#x7F6E;&#x6D3B;&#x52A8;&#x89E6;&#x53D1;&#x6761;&#x4EF6;](../../.gitbook/assets/image%20%2813%29.png)
 
 通过设置好的触发条件，当用户满足条件时，系统自动触发活动并将 App 弹窗推送给用户。
 
@@ -27,7 +27,7 @@
 
 ### 四、设置 App 弹窗的内容及样式
 
-![&#x7B2C;&#x56DB;&#x6B65;&#xFF1A;&#x8BBE;&#x7F6E; App &#x5F39;&#x7A97;&#x7684;&#x6837;&#x5F0F;](../../.gitbook/assets/image%20%2824%29.png)
+![&#x7B2C;&#x56DB;&#x6B65;&#xFF1A;&#x8BBE;&#x7F6E; App &#x5F39;&#x7A97;&#x7684;&#x6837;&#x5F0F;](../../.gitbook/assets/image%20%2823%29.png)
 
 选择 App 样式模板并填写相关内容信息：
 

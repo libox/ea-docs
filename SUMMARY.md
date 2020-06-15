@@ -20,6 +20,7 @@
 * [iOS SDK](sdk-ji-cheng-wen-dang/ios-sdk.md)
 * [Android SDK](sdk-ji-cheng-wen-dang/android-sdk.md)
 * [JS SDK](sdk-ji-cheng-wen-dang/js-sdk.md)
+* [微信小程序 SDK](sdk-ji-cheng-wen-dang/wei-xin-xiao-cheng-xu-sdk.md)
 
 ## 其它
 
