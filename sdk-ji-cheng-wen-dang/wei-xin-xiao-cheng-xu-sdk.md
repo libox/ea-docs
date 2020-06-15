@@ -19,8 +19,6 @@ SDK下载地址：[https://github.com/analysys-easyTouch/easy-touch-sdk](https:/
 npm 下载：npm i easy-touch-sdk
 {% endhint %}
 
-
-
 2、必要参数配置。
 
 ```javascript
