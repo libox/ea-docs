@@ -16,3 +16,9 @@
 
 ![](../.gitbook/assets/image%20%2836%29.png)
 
+## 三、在阿里云短信配置 EA 系统的回调地址
+
+回调地址：[https://ea.analysys.cn/push/sms/alisms/callback](https://ea.analysys.cn/push/sms/alisms/callback)
+
+![](../.gitbook/assets/image%20%2840%29.png)
+
