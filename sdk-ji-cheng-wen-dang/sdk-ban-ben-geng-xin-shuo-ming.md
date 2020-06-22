@@ -251,17 +251,50 @@
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">1.0.4</td>
+      <td style="text-align:left">1.1.0</td>
       <td style="text-align:left">
         <p><b>&#x65B0;&#x589E;:</b>
         </p>
-        <p>1&#x3001;&#x5F39;&#x7A97;&#x529F;&#x80FD;&#xFF1B;</p>
+        <p>1&#x3001;web &#x5F39;&#x7A97;&#x529F;&#x80FD;&#xFF1B;</p>
         <p><b>&#x4FEE;&#x590D;:</b>
         </p>
         <p>&#x65E0;</p>
         <p><b>&#x4F18;&#x5316;:</b>
         </p>
         <p>&#x65E0;</p>
+      </td>
+      <td style="text-align:left">18</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">1.1.2</td>
+      <td style="text-align:left">
+        <p><b>&#x65B0;&#x589E;:</b>
+        </p>
+        <p>1&#x3001;&#x5BF9; $url_domain &#x8FDB;&#x884C;&#x4E0D;&#x542B;&#x53C2;&#x5339;&#x914D;&#xFF1B;</p>
+        <p><b>&#x4FEE;&#x590D;:</b>
+        </p>
+        <p>&#x65E0;</p>
+        <p><b>&#x4F18;&#x5316;:</b>
+        </p>
+        <p>&#x65E0;</p>
+      </td>
+      <td style="text-align:left">18</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">1.1.14</td>
+      <td style="text-align:left">
+        <p><b>&#x65B0;&#x589E;:</b>
+        </p>
+        <p>1&#x3001;&#x652F;&#x6301;&#x795E;&#x7B56;&#x6570;&#x636E;&#x5E73;&#x53F0;&#x7684;&#x5F39;&#x7A97;&#xFF1B;</p>
+        <p>2&#x3001;&#x652F;&#x6301;&#x65B0;&#x6A21;&#x677F;&#x3001;&#x5B57;&#x4F53;&#x989C;&#x8272;&#x3001;&#x6309;&#x94AE;&#x5927;&#x5C0F;&#x3001;&#x7B49;&#x914D;&#x7F6E;&#xFF1B;</p>
+        <p>3&#x3001;&#x652F;&#x6301;&#x6D4F;&#x89C8;&#x9875;&#x9762; * &#x901A;&#x914D;&#x7B26;&#x5339;&#x914D;&#xFF1B;</p>
+        <p>4&#x3001;&#x652F;&#x6301;&#x6309;&#x94AE;&#x4E0D;&#x94FE;&#x63A5;&#x8DF3;&#x8F6C;&#xFF0C;&#x53EA;&#x5173;&#x95ED;&#x5F39;&#x7A97;&#xFF1B;</p>
+        <p><b>&#x4FEE;&#x590D;:</b>
+        </p>
+        <p>&#x65E0;</p>
+        <p><b>&#x4F18;&#x5316;:</b>
+        </p>
+        <p>1&#x3001;&#x4F18;&#x5316;&#x65E5;&#x5FD7;&#x8F93;&#x51FA;&#x683C;&#x5F0F;&#xFF1B;</p>
       </td>
       <td style="text-align:left">18K</td>
     </tr>
@@ -280,7 +313,7 @@
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">1.0.0</td>
+      <td style="text-align:left">1.1.13</td>
       <td style="text-align:left">
         <p><b>&#x65B0;&#x589E;:</b>
         </p>
@@ -298,6 +331,8 @@
 </table>
 {% endtab %}
 {% endtabs %}
+
+
 
 
 
