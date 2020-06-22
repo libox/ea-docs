@@ -263,7 +263,7 @@
         </p>
         <p>&#x65E0;</p>
       </td>
-      <td style="text-align:left">18</td>
+      <td style="text-align:left">18K</td>
     </tr>
     <tr>
       <td style="text-align:left">1.1.2</td>
@@ -278,7 +278,7 @@
         </p>
         <p>&#x65E0;</p>
       </td>
-      <td style="text-align:left">18</td>
+      <td style="text-align:left">18K</td>
     </tr>
     <tr>
       <td style="text-align:left">1.1.14</td>
