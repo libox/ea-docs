@@ -265,8 +265,9 @@
         <p><b>&#x4F18;&#x5316;:</b>
         </p>
         <p>1&#x3001;&#x4F18;&#x5316;&#x65E5;&#x5FD7;&#x8F93;&#x51FA;&#x683C;&#x5F0F;&#xFF1B;</p>
+        <p>2&#x3001;&#x5355;&#x4E2A;&#x4E8B;&#x4EF6;&#x4E00;&#x6B21;&#x89E6;&#x53D1;&#x591A;&#x4E2A;&#x5F39;&#x7A97;&#xFF0C;&#x4F9D;&#x6B21;&#x5F39;&#x51FA;&#xFF1B;</p>
       </td>
-      <td style="text-align:left">18K</td>
+      <td style="text-align:left">19K</td>
     </tr>
     <tr>
       <td style="text-align:left">1.1.2</td>
