@@ -127,6 +127,22 @@
   </thead>
   <tbody>
     <tr>
+      <td style="text-align:left">1.1.5</td>
+      <td style="text-align:left">
+        <p><b>&#x65B0;&#x589E;:</b>
+        </p>
+        <p>1&#x3001;&#x8BBE;&#x7F6E;&#x4E3B;&#x9875;&#x7684;&#x529F;&#x80FD;&#xFF1B;</p>
+        <p>2&#x3001;&#x589E;&#x52A0;&#x4E0A;&#x62A5;&#x5382;&#x5546;&#x63A8;&#x9001;token&#x7684;&#x63A5;&#x53E3;&#xFF1B;</p>
+        <p><b>&#x4FEE;&#x590D;:</b>
+        </p>
+        <p>&#x65E0;</p>
+        <p><b>&#x4F18;&#x5316;:</b>
+        </p>
+        <p>1&#x3001;&#x4F18;&#x5316;&#x91CD;&#x8BD5;&#x673A;&#x5236;&#xFF1B;</p>
+      </td>
+      <td style="text-align:left">282K</td>
+    </tr>
+    <tr>
       <td style="text-align:left">1.1.4.2</td>
       <td style="text-align:left">
         <p><b>&#x65B0;&#x589E;:</b>
@@ -235,6 +251,35 @@
         <p>&#x65E0;</p>
       </td>
       <td style="text-align:left">215K</td>
+    </tr>
+  </tbody>
+</table>
+{% endtab %}
+
+{% tab title="android pushSDK" %}
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">&#x7248;&#x672C;</th>
+      <th style="text-align:left">&#x63CF;&#x8FF0;</th>
+      <th style="text-align:left">&#x5927;&#x5C0F;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">0.3.0</td>
+      <td style="text-align:left">
+        <p><b>&#x65B0;&#x589E;:</b>
+        </p>
+        <p>1&#x3001;&#x96C6;&#x6210;&#x5C0F;&#x7C73;&#x3001;&#x534E;&#x4E3A;&#x3001;OPPO&#x3001;VIVO&#x3001;&#x9B45;&#x65CF;&#x63A8;&#x9001;SDK</p>
+        <p><b>&#x4FEE;&#x590D;:</b>
+        </p>
+        <p>&#x65E0;</p>
+        <p><b>&#x4F18;&#x5316;:</b>
+        </p>
+        <p>&#x65E0;</p>
+      </td>
+      <td style="text-align:left">825K</td>
     </tr>
   </tbody>
 </table>
