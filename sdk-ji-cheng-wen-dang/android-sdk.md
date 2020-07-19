@@ -57,13 +57,12 @@ allprojects {
 ```text
 dependencies {
 //如果已经集成方舟SDK，
-//请将analysys-core替换成analysys-core-easytouch:version
-//此版本的方舟SDK集成了华为、小米、OPPO、VIVO、魅族推送SDK
-implementation 'cn.com.analysys:analysys-core-easytouch:4.4.5.7'
-//检测是否集成了此SDK，没有请添加
-implementation 'cn.com.analysys:analysys-push:latest.release'
+//analysys-core的版本要大于4.4.12
+implementation 'cn.com.analysys:analysys-core:4.4.12'
+//EA push SDK集成了华为、小米、OPPO、VIVO、魅族推送SDK
+implementation 'cn.com.analysys:analysys-easytouch-push:0.3.0'
 //EA SDK
-implementation 'cn.com.analysys:analysys-easytouch:1.1.3'
+implementation 'cn.com.analysys:analysys-easytouch:1.1.5'
 }
 ```
 
@@ -119,7 +118,7 @@ AnalysysAgent.setObserverListener(this, AnalysysEaManager.getObserverListener())
 
 ```text
 上报pushToken(非厂商推送需要上报)：
-   AnalysysAgent.setPushID(context, PushProvider.JPUSH, token);
+   AnalysysEaManager.pushToken(AnalysysEaConfig.pushTokenType.JPUSH, token);
 上报用户手机号：
    AnalysysAgent.profileSet(context, "$PHONE", phone);
 上报用户邮箱：
@@ -238,7 +237,7 @@ android 8以上版本需要配置通道：
 
 ![](../.gitbook/assets/9daf5d48-0be0-4e3b-af94-a1ca48bc520c.png)
 
-在application的派生类中注册通道信息，代码如下：
+在application的派生类中注册通道信息，代码如下（如果使用默认通道，就不需要注册了）：
 
 ```text
     private void createNotifyChannel() {
@@ -265,12 +264,12 @@ android 8以上版本需要配置通道：
 在logcat中过滤日志：
 
 ```text
-小米设备：$XIAOMI
-华为设备：$HUAWEI
-OPPO设备：$OPPO
-VIVO设备：$VIVO
-魅族设备：$MEIZU
-极光推送：$JPUSH
+小米设备：xiaomi
+华为设备：huawei
+OPPO设备：oppo
+VIVO设备：vivo
+魅族设备：meizu
+极光推送：jpush
 ```
 
 如果在设备上过滤相关关键词后有日志，证明此厂商推送注册成功；
@@ -344,7 +343,30 @@ public ObserverListener getObserverListener()
 
 注意事项：
 
-#### 3、上报push事件
+#### 3、上报push的token
+
+接口定义：
+
+```text
+    /**
+     * 上报推送token
+     *
+     * @param type  token的厂商类型
+     * @param token token值
+     */
+    public void pushToken(AnalysysEaConfig.pushTokenType type, String token)
+```
+
+参数说明：
+
+| 参数 | 说明 | 必填 | 备注 |
+| :--- | :--- | :--- | :--- |
+| type | 厂商的类型 | 是 |  |
+| token | 厂商的推送token | 是 |  |
+
+
+
+#### 4、上报push事件
 
 接口定义：
 
@@ -370,7 +392,7 @@ public void pushTrack(AnalysysEaConfig.PushEventType type, final HashMap<String,
 * OPPO的通知栏点击事件
 * 第三方的PUSH到达、点击的事件
 
-#### 4、设置页面别名
+#### 5、设置页面别名
 
 接口定义：
 
@@ -387,17 +409,7 @@ public void setPageTagState(boolean state)
 
 返回值：无
 
-注意事项：
-
-需要在AndroidManifest中添加信息，如下：
-
-```text
-        <activity
-            android:name="com.analysys.easdk.view.tag.TagSettingActivity"
-            android:screenOrientation="portrait"></activity>
-```
-
-#### 5、释放接口
+#### 6、释放接口
 
 接口定义：
 
@@ -461,6 +473,15 @@ public class AnalysysEaConfig {
      */
     public void setLogLevelType(LogLevel logLevelType) {
         this.LogLevelType = logLevelType;
+    }
+    
+    /**
+     * 设置应用中的主页，对应活动中的立即弹窗功能；
+     *
+     * @param mainPage 主页的完整的url地址,包括包名的;
+     */
+    public void setMainPage(String mainPage) {
+        this.mainPage = mainPage;
     }
 }
 ```
