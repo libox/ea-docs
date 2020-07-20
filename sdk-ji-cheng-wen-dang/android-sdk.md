@@ -1,6 +1,6 @@
 # Android SDK
 
-### 一、SDK简介
+## 一、SDK简介
 
 EA智能运营系统是易观基于方舟平台设计一款触达用户的产品，加强了产品的用户体验和提升了产品的转化率， EA的android SDK是此系统中重要的支撑点，它提供了：
 
@@ -13,15 +13,15 @@ EA智能运营系统是易观基于方舟平台设计一款触达用户的产品
 
 * 订阅事件，用户在后台如果创建了基于用户事件的触发行为（弹窗除外），SDK就会在每次启动的时候拉取订阅列表，并在有订阅事件产生的时候通知给EA系统。
 
-### 二、快速开始
+## 二、快速开始
 
 为了快速的接入厂商推送通道，我们在方舟的SDK中集成了华为、小米、OPPO、VIOV、魅族厂商推送SDK。如果现在你的应用已经接入了某些厂商的通道，你需要把相关接入代码删除。
 
-#### 1、获取项目AppKey
+### 1、获取项目AppKey
 
   在EA系统中选择要集成的项目，并在项目属性中查看项目的appKey，[登录EA系统](https://ea.analysys.cn/app.html#/Login)
 
-#### 2、集成SDK
+### 2、集成SDK
 
         在项目根目录的build.gradle中添加如下代码：
 
@@ -94,7 +94,7 @@ implementation 'cn.com.analysys:analysys-easytouch:1.1.5'
 apply plugin: 'com.huawei.agconnect'
 ```
 
-#### 3、初始化EA SDK接口
+### 3、初始化EA SDK接口
 
 ```text
 AnalysysEaConfig builder = new AnalysysEaConfig();
@@ -103,7 +103,7 @@ builder.setAppKey("*******");
 AnalysysEaManager.init(getApplicationContext(), builder);
 ```
 
-#### 4、将监听接口注册到方舟SDK中
+### 4、将监听接口注册到方舟SDK中
 
 ```text
 //mode设置为2，保证上报的数据是存库
@@ -112,7 +112,7 @@ AnalysysAgent.setDebugMode(this, 2);
 AnalysysAgent.setObserverListener(this, AnalysysEaManager.getObserverListener());
 ```
 
-#### 5、上报相关用户属性
+### 5、上报相关用户属性
 
 通过方舟SDK上报如下的用户属性可以方便APP触达到用户
 
@@ -127,9 +127,9 @@ AnalysysAgent.setObserverListener(this, AnalysysEaManager.getObserverListener())
     AnalysysAgent.profileSet(context, "$WECHATOPENID", openid);
 ```
 
-### 三、推送功能集成
+## 三、推送功能集成
 
-#### 1、华为推送
+### 1、华为推送
 
 * 配置文件集成：
 
@@ -210,7 +210,7 @@ lEuZNGC4gl26f1wFK2A9GFnCiQruM+ewWXNMVLg=
 -----END CERTIFICATE-----
 ```
 
-#### 2、魅族推送
+### 2、魅族推送
 
 * 配置回执接口
 
@@ -218,7 +218,7 @@ lEuZNGC4gl26f1wFK2A9GFnCiQruM+ewWXNMVLg=
 
 回执地址：[http://ea.analysys.cn:9999/push/callback/meizu](http://ea.analysys.cn:9999/push/callback/meizu)
 
-#### 3、OPPO推送
+### 3、OPPO推送
 
 android 8以上版本需要配置通道：
 
@@ -259,7 +259,7 @@ android 8以上版本需要配置通道：
     }
 ```
 
-#### 4、验证推送注册结果
+### 4、验证推送注册结果
 
 在logcat中过滤日志：
 
@@ -282,7 +282,7 @@ registerPush
 
 查看相关日志，看厂商推送注册失败返回的错误码，并将相关信息提供给EA开发者进行分析。
 
-#### 5、厂商推送支持的版本说明
+### 5、厂商推送支持的版本说明
 
 华为推送：
 
@@ -308,9 +308,9 @@ SDK仅支持下表中的机型和对应的系统及以上系统:
 
 Flyme系统（4.0，4.5，5）上
 
-### 四、SDK接口
+## 四、SDK接口
 
-#### 1、SDK初始化接口
+### 1、SDK初始化接口
 
 接口定义：
 
@@ -329,7 +329,7 @@ void init(Context context, AnalysysEaConfig config)；
 
 注意事项：无
 
-#### 2、获取事件通知接口
+### 2、获取事件通知接口
 
 接口定义：
 
@@ -343,7 +343,7 @@ public ObserverListener getObserverListener()
 
 注意事项：
 
-#### 3、上报push的token
+### 3、上报推送token
 
 接口定义：
 
@@ -364,9 +364,7 @@ public ObserverListener getObserverListener()
 | type | 厂商的类型 | 是 |  |
 | token | 厂商的推送token | 是 |  |
 
-
-
-#### 4、上报push事件
+### 4、上报push事件
 
 接口定义：
 
@@ -392,7 +390,7 @@ public void pushTrack(AnalysysEaConfig.PushEventType type, final HashMap<String,
 * OPPO的通知栏点击事件
 * 第三方的PUSH到达、点击的事件
 
-#### 5、设置页面别名
+### 5、设置页面别名
 
 接口定义：
 
@@ -409,7 +407,7 @@ public void setPageTagState(boolean state)
 
 返回值：无
 
-#### 6、释放接口
+### 6、释放接口
 
 接口定义：
 
@@ -421,9 +419,9 @@ public void release()
 
 返回值：无
 
-### 五、备注
+## 五、备注
 
-#### 1、EaConfigBuilder说明
+### 1、EaConfigBuilder说明
 
 ```text
 public class AnalysysEaConfig {
@@ -486,7 +484,7 @@ public class AnalysysEaConfig {
 }
 ```
 
-#### 2、push属性说明
+### 2、push属性说明
 
 $push\_channel 活动的渠道信息
 
@@ -534,33 +532,33 @@ public class BaseActivity extends AppCompatActivity {
 }
 ```
 
-### 六、FAQ
+## 六、FAQ
 
-#### 1、OPPO、vivo、魅族推送发送失败的排查方式： <a id="1oppovivo"></a>
+### 1、OPPO、vivo、魅族推送发送失败的排查方式：
 
 1、先排查是否在EA系统中配置的推送的信息；
 
 2、在方舟系统中，选中接入的项目，然后在左下点管理进入数据接入管理，在埋点管理中事件方案下拉选中用户方案。查看计划外用户属性，如果有如下标识$oppo、$vivo、$meizu，请添加到计划内。
 
-#### 2、如何开通小米的锁屏通知 <a id="2"></a>
+### 2、如何开通小米的锁屏通知
 
 小米手机安装APP后默认是开启通知栏PUSH功能，但是锁屏通知需要在通知管理中开启。
 
-#### 3、华为推送通知栏功能 <a id="3"></a>
+### 3、华为推送通知栏功能
 
 华为通知栏消息的样式只能是系统默认样式，通知栏消息的声音、样式和振动等不可以自定义。 [https://developer.huawei.com/consumer/cn/doc/help/100602](https://developer.huawei.com/consumer/cn/doc/help/100602)
 
-#### 4、VIVO推送通知栏功能 <a id="4vivo"></a>
+### 4、VIVO推送通知栏功能
 
 VIVO的状态栏通知默认是关闭的。需要提示用户打开通知栏。
 
-#### 5、华为推送集成报错：907135003: client api invalid <a id="3"></a>
+### 5、华为推送集成报错：907135003: client api invalid
 
 在应用市场搜索：HMS Core、推送服务，更新到最新版本；并在设置—应用—应用管理—搜索HMS Core 和推送服务，清理缓存。
 
 关于token，如果是emui10及以上是getToken直接返回，对于emui10以下则在onNewToken返回token
 
-#### 6、华为推送打开APP内页面 <a id="3"></a>
+### 6、华为推送打开APP内页面
 
 在发送推送后，当用户点击通知栏后跳转到APP内的页面，需要把页面在AndroidManifest中添加action定义，如下所示：
 
@@ -576,7 +574,7 @@ VIVO的状态栏通知默认是关闭的。需要提示用户打开通知栏。
         </activity>
 ```
 
-#### 7、小米推送获取KV <a id="3"></a>
+### 7、小米推送获取KV
 
 ```text
         if (DeviceUtil.isXiaomiDevice()) {
