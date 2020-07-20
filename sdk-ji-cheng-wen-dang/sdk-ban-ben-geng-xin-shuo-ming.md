@@ -1,5 +1,7 @@
 # SDK版本更新说明
 
+
+
 {% tabs %}
 {% tab title="IOS SDK" %}
 <table>
@@ -11,6 +13,22 @@
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td style="text-align:center">1.1.5.3</td>
+      <td style="text-align:left">
+        <p><b>&#x65B0;&#x589E;:</b>
+        </p>
+        <p>1&#x3001;&#x589E;&#x52A0;&#x4E0A;&#x62A5;&#x63A8;&#x9001;token&#x7684;&#x63A5;&#x53E3;&#xFF1B;</p>
+        <p><b>&#x4FEE;&#x590D;:</b>
+        </p>
+        <p>1&#x3001;&#x4FEE;&#x590D;token&#x4E0D;&#x80FD;&#x53CA;&#x65F6;&#x66F4;&#x65B0;&#x5BFC;&#x81F4;&#x63A8;&#x9001;&#x6709;&#x65F6;&#x6536;&#x4E0D;&#x5230;&#x7684;&#x95EE;&#x9898;&#xFF1B;</p>
+        <p><b>&#x4F18;&#x5316;:</b>
+        </p>
+        <p>1&#x3001;&#x767B;&#x5F55;&#x63A5;&#x53E3;&#x589E;&#x52A0;&#x91CD;&#x8BD5;&#x673A;&#x5236;&#xFF1B;</p>
+        <p>2&#x3001;framework&#x53D6;&#x6D88;&#x5BF9;&#x6A21;&#x62DF;&#x5668;32&#x4F4D;i386&#x67B6;&#x6784;&#x652F;&#x6301;&#xFF1B;</p>
+      </td>
+      <td style="text-align:left">2.1M</td>
+    </tr>
     <tr>
       <td style="text-align:center">1.1.4</td>
       <td style="text-align:left">
