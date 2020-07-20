@@ -296,6 +296,21 @@
   </thead>
   <tbody>
     <tr>
+      <td style="text-align:left">1.1.5</td>
+      <td style="text-align:left">
+        <p><b>&#x65B0;&#x589E;&#xFF1A;</b>
+        </p>
+        <p>1&#x3001;&#x652F;&#x6301;&#x6240;&#x6709;&#x7528;&#x6237;&#x548C;&#x65B0;&#x8BBF;&#x95EE;&#x7528;&#x6237;&#x5F39;&#x7A97;&#xFF1B;
+          <br
+          />2&#x3001;&#x652F;&#x6301;&#x57FA;&#x4E8E;&#x6D4F;&#x89C8;&#x9875;&#x9762;&#x589E;&#x52A0;&#x8FC7;&#x6EE4;&#x6761;&#x4EF6;&#xFF1B;</p>
+        <p><b>&#x4FEE;&#x590D;&#xFF1A;</b>
+        </p>
+        <p>1&#x3001;IE11&#x4E0D;&#x517C;&#x5BB9;assign&#x65B9;&#x6CD5;bug&#x3002;</p>
+        <p><b>&#x4F18;&#x5316;&#xFF1A;<br /></b>&#x65E0;</p>
+      </td>
+      <td style="text-align:left">20</td>
+    </tr>
+    <tr>
       <td style="text-align:left">1.1.4</td>
       <td style="text-align:left">
         <p><b>&#x65B0;&#x589E;:</b>
@@ -358,6 +373,21 @@
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td style="text-align:left">1.1.5</td>
+      <td style="text-align:left">
+        <p><b>&#x65B0;&#x589E;:</b>
+        </p>
+        <p>1&#x3001;&#x652F;&#x6301;&#x6240;&#x6709;&#x7528;&#x6237;&#x548C;&#x65B0;&#x8BBF;&#x95EE;&#x7528;&#x6237;&#x5F39;&#x7A97;&#xFF1B;</p>
+        <p><b>&#x4FEE;&#x590D;:</b>
+        </p>
+        <p>1&#x3001;&#x4FEE;&#x590D;&#x5F39;&#x7A97;&#x6D3B;&#x52A8;IOS&#x4F4E;&#x7248;&#x672C;&#x56FE;&#x7247;&#x5C55;&#x793A;bug&#xFF1B;</p>
+        <p><b>&#x4F18;&#x5316;:</b>
+        </p>
+        <p>&#x65E0;</p>
+      </td>
+      <td style="text-align:left">15K</td>
+    </tr>
     <tr>
       <td style="text-align:left">1.1.3</td>
       <td style="text-align:left">
