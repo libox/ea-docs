@@ -18,7 +18,7 @@
 
 支持的 iOS 系统版本为 8.0 及以上版本。
 
-### 组成
+#### 组成
 
 SDK 目录。
 
@@ -41,7 +41,7 @@ AnalysysEaManager.h
 AnalysysEaConfig.h
 ```
 
-### 注意事项
+#### 注意事项
 
 集成易达 SDK 前，需要先集成埋点与数据采集 SDK，方舟易达目前支持：
 
@@ -123,8 +123,6 @@ config.applicationGroupIdentifier = @"App 创建的 App Groups ID";
 // 目前易达 iOS SDK 只支持苹果 APNS 推送通道
 [AnalysysEaManager pushToken:hexToken];
 ```
-
-
 
 * 若 APP 支持推送功能，在收到推送及点击推送的系统回调方法中，添加对应的方法：
 
