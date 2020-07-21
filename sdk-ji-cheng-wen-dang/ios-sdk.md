@@ -28,12 +28,6 @@ SDK 目录。
 AnalysysEasyTouch.framework
 ```
 
-* 包含的 framework：
-
-```text
-.framEeEeeee
-```
-
 * 包含的头文件：
 
 ```text
@@ -66,7 +60,7 @@ pod 'AnalysysEasyTouch' // 易达 SDK
 * 如果需要安装指定版本，则按照以下方式
 
 ```text
-pod 'AnalysysEasyTouch', '1.1.5.3' // 示例版本号
+pod 'AnalysysEasyTouch', '1.1.5.5' // 示例版本号
 ```
 
 * 特别注意：由于iOS 10以后苹果系统增加的 NSNotification Service Extension 扩展能够用于统计推送到达率，如果在 APP 中添加了该扩展而无法引入第三方的类文件，则需要使用以下“选择2”方式手动下载静态库并导入项目。将静态库及相关头文件添加到项目中的时候，需要同时勾选项目主 target 和 NSNotification Service Extension 扩展target，否则编译会报错。
@@ -91,7 +85,7 @@ pod 'AnalysysEasyTouch', '1.1.5.3' // 示例版本号
 
 ```text
 /*********** 易达 SDK 初始化 ***********/
-// 以下两项为毕传参数，更多属性请参考 AnalysysEaConfig 头文件
+// 以下两项为必传参数，更多属性请参考 AnalysysEaConfig 头文件
 AnalysysEaConfig *config = [AnalysysEaConfig defaultConfiguration];
 config.appKey= @"易达后台创建项目的 AppKey";
 config.applicationGroupIdentifier = @"App 创建的 App Groups ID";
@@ -285,11 +279,11 @@ userId：1BCAF1D0-C8C0-46A8-866F-005832024259
 
 **注意事项：**无
 
-### 4、注册推送 deviceToken
+### 4、上报推送 deviceToken
 
-**支持的版本：**1.1.5.3 
+**支持的版本：**1.1.5.5
 
-**接口说明：**注册 APP 启动后由系统返回的 deviceToken。
+**接口说明：**上报注册 APP 启动后由系统返回的推送deviceToken。
 
 **接口定义：**
 
@@ -331,7 +325,7 @@ userId：1BCAF1D0-C8C0-46A8-866F-005832024259
 
 **接口返回：**无
 
-### 6、开启/关闭别名设置功能
+### 6、设置页面别名
 
 **支持的版本：**1.1.1.1 
 
