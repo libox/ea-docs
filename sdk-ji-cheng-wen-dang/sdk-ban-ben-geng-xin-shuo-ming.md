@@ -14,7 +14,7 @@
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:center">1.1.5.3</td>
+      <td style="text-align:center">1.1.5.5</td>
       <td style="text-align:left">
         <p><b>&#x65B0;&#x589E;:</b>
         </p>
@@ -27,7 +27,7 @@
         <p>1&#x3001;&#x767B;&#x5F55;&#x63A5;&#x53E3;&#x589E;&#x52A0;&#x91CD;&#x8BD5;&#x673A;&#x5236;&#xFF1B;</p>
         <p>2&#x3001;framework&#x53D6;&#x6D88;&#x5BF9;&#x6A21;&#x62DF;&#x5668;32&#x4F4D;i386&#x67B6;&#x6784;&#x652F;&#x6301;&#xFF1B;</p>
       </td>
-      <td style="text-align:left">2.1M</td>
+      <td style="text-align:left">1.8M</td>
     </tr>
     <tr>
       <td style="text-align:center">1.1.4</td>
