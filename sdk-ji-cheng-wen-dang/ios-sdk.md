@@ -281,14 +281,14 @@ userId：1BCAF1D0-C8C0-46A8-866F-005832024259
 
 ### 4、上报推送 deviceToken
 
-**支持的版本：**1.1.5.5
+**支持的版本：**1.1.5.6
 
 **接口说明：**上报注册 APP 启动后由系统返回的推送deviceToken。
 
 **接口定义：**
 
 ```text
-+ (void)pushToken:(NSData *)deviceToken;
++ (void)pushToken:(NSData *)deviceToken groupIdentifier:(NSString *)groupIdentifier;
 ```
 
 **参数说明：**
@@ -296,6 +296,7 @@ userId：1BCAF1D0-C8C0-46A8-866F-005832024259
 | 参数 | 说明 | 必填 | 备注 |
 | :--- | :--- | :--- | :--- |
 | deviceToken | app 启动后由系统返回的用于推送的 NSData 类型的 deviceToken | 是 | 直接传系统回调的 deviceToken ，无需解析 |
+| groupIdentifiler | 创建的 App Groups 分组 id 名称 : group.xxx | 是 |  |
 
 **接口返回：**无
 
@@ -321,7 +322,7 @@ userId：1BCAF1D0-C8C0-46A8-866F-005832024259
 | :--- | :--- | :--- | :--- |
 | type | push的事件类型 | 是 |  |
 | msg | push事件的属性信息 | 是 | push属性说明 |
-| groupIdentifier | 创建的 App Groups 分组 id 名称 : group.xxx | 否 |  |
+| groupIdentifier | 创建的 App Groups 分组 id 名称 : group.xxx | 是 |  |
 
 **接口返回：**无
 
