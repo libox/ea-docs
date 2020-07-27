@@ -100,7 +100,11 @@ apply plugin: 'com.huawei.agconnect'
 AnalysysEaConfig builder = new AnalysysEaConfig();
 //填写自己申请的AppKey
 builder.setAppKey("*******");
+//设置APP的首页地址；包括包名的完整的路径
+builder.setMainPage("*******");
 AnalysysEaManager.init(getApplicationContext(), builder);
+//推送厂商的token上报SDK
+AnalysysEaPushManager.getInstance().init(getApplicationContext());
 ```
 
 ### 4、将监听接口注册到方舟SDK中
