@@ -146,6 +146,22 @@
   </thead>
   <tbody>
     <tr>
+      <td style="text-align:left">1.1.6</td>
+      <td style="text-align:left">
+        <p><b>&#x65B0;&#x589E;:</b>
+        </p>
+        <p>1&#x3001;&#x6587;&#x672C;&#x5F39;&#x7A97;&#x652F;&#x6301;&#x4E00;&#x4E2A;&#x6309;&#x94AE;&#xFF1B;</p>
+        <p><b>&#x4FEE;&#x590D;:</b>
+        </p>
+        <p>1&#x3001;android 4.4.4 &#x4EE5;&#x524D;&#x7684;&#x7248;&#x672C;&#x62A5;&#x9519;&#xFF1A;okHttp3
+          java.lang.noclassdeffounderror</p>
+        <p><b>&#x4F18;&#x5316;:</b>
+        </p>
+        <p>&#x65E0;</p>
+      </td>
+      <td style="text-align:left">283K</td>
+    </tr>
+    <tr>
       <td style="text-align:left">1.1.5</td>
       <td style="text-align:left">
         <p><b>&#x65B0;&#x589E;:</b>
