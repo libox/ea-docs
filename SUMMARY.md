@@ -8,6 +8,8 @@
   * [创建 Push 活动](user-guide/5-minute-playbook/push.md)
   * [创建 App 弹窗活动](user-guide/5-minute-playbook/in-app.md)
   * [创建微信模板消息活动](user-guide/5-minute-playbook/wechat.md)
+  * [创建微信小程序活动](user-guide/5-minute-playbook/chuang-jian-wei-xin-xiao-cheng-xu-huo-dong.md)
+  * [创建微信客服消息活动](user-guide/5-minute-playbook/chuang-jian-wei-xin-ke-fu-xiao-xi-huo-dong.md)
   * [创建短信活动](user-guide/5-minute-playbook/sms.md)
   * [创建 web 弹窗活动](user-guide/5-minute-playbook/web.md)
 
@@ -15,8 +17,11 @@
 
 * [创建 Push 活动的 FAQ](push-faq.md)
 * [创建微信模板消息活动的 FAQ](wechat-faq.md)
+* [创建微信小程序活动的FAQ](chuang-jian-wei-xin-xiao-cheng-xu-huo-dong-de-faq.md)
+* [创建微信客服消息活动的FAQ](chuang-jian-wei-xin-ke-fu-xiao-xi-huo-dong-de-faq.md)
 * [自动化工作流](workflow/README.md)
   * [基本组件介绍](workflow/basic-components.md)
+* [扫码绑定微信](sao-ma-bang-ding-wei-xin.md)
 
 ## SDK 集成文档
 
