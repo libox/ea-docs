@@ -146,22 +146,6 @@
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">1.1.6</td>
-      <td style="text-align:left">
-        <p><b>&#x65B0;&#x589E;:</b>
-        </p>
-        <p>1&#x3001;&#x6587;&#x672C;&#x5F39;&#x7A97;&#x652F;&#x6301;&#x4E00;&#x4E2A;&#x6309;&#x94AE;&#xFF1B;</p>
-        <p><b>&#x4FEE;&#x590D;:</b>
-        </p>
-        <p>1&#x3001;android 4.4.4 &#x4EE5;&#x524D;&#x7684;&#x7248;&#x672C;&#x62A5;&#x9519;&#xFF1A;okHttp3
-          java.lang.noclassdeffounderror</p>
-        <p><b>&#x4F18;&#x5316;:</b>
-        </p>
-        <p>&#x65E0;</p>
-      </td>
-      <td style="text-align:left">283K</td>
-    </tr>
-    <tr>
       <td style="text-align:left">1.1.5</td>
       <td style="text-align:left">
         <p><b>&#x65B0;&#x589E;:</b>
@@ -331,6 +315,22 @@
   </thead>
   <tbody>
     <tr>
+      <td style="text-align:left">1.1.6</td>
+      <td style="text-align:left">
+        <p><b>&#x65B0;&#x589E;&#xFF1A;</b>
+          <br />1&#x3001;&#x652F;&#x6301;&#x591A;&#x4E8B;&#x4EF6;&#x89E6;&#x53D1;&#x4E00;&#x6B21;&#x5F39;&#x7A97;&#xFF1B;
+          <br
+          />2&#x3001;&#x652F;&#x6301;&#x53D1;&#x9001;&#x6D4B;&#x8BD5;&#x8BBE;&#x5907;&#x6D3B;&#x52A8;&#x4E0D;&#x53D7;&#x5F39;&#x7A97;&#x6B21;&#x6570;&#x63A7;&#x5236;&#xFF1B;
+          <br
+          /><b>&#x4FEE;&#x590D;&#xFF1A;</b>
+          <br />&#x65E0;
+          <br />&#x4F18;&#x5316;&#xFF1A;</p>
+        <p>&#x65E0;</p>
+        <p></p>
+      </td>
+      <td style="text-align:left">21K</td>
+    </tr>
+    <tr>
       <td style="text-align:left">1.1.5</td>
       <td style="text-align:left">
         <p><b>&#x65B0;&#x589E;&#xFF1A;</b>
@@ -343,7 +343,7 @@
         <p>1&#x3001;IE11&#x4E0D;&#x517C;&#x5BB9;assign&#x65B9;&#x6CD5;bug&#x3002;</p>
         <p><b>&#x4F18;&#x5316;&#xFF1A;<br /></b>&#x65E0;</p>
       </td>
-      <td style="text-align:left">20</td>
+      <td style="text-align:left">20K</td>
     </tr>
     <tr>
       <td style="text-align:left">1.1.4</td>
@@ -409,6 +409,21 @@
   </thead>
   <tbody>
     <tr>
+      <td style="text-align:left">1.1.6</td>
+      <td style="text-align:left">
+        <p><b>&#x65B0;&#x589E;&#xFF1A;</b>
+        </p>
+        <p>1&#x3001;&#x652F;&#x6301;&#x591A;&#x4E8B;&#x4EF6;&#x89E6;&#x53D1;&#x4E00;&#x6B21;&#x5F39;&#x7A97;&#xFF1B;</p>
+        <p><b>&#x4FEE;&#x590D;&#xFF1A;</b>
+        </p>
+        <p>&#x65E0;</p>
+        <p><b>&#x4F18;&#x5316;&#xFF1A;</b>
+        </p>
+        <p>&#x65E0;</p>
+      </td>
+      <td style="text-align:left">15</td>
+    </tr>
+    <tr>
       <td style="text-align:left">1.1.5</td>
       <td style="text-align:left">
         <p><b>&#x65B0;&#x589E;:</b>
@@ -442,6 +457,10 @@
 </table>
 {% endtab %}
 {% endtabs %}
+
+
+
+
 
 
 
