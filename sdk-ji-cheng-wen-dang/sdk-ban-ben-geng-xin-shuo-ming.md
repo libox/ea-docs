@@ -18,7 +18,7 @@
       <td style="text-align:left">
         <p><b>&#x65B0;&#x589E;:</b>
         </p>
-        <p>1&#x3001;&#x589E;&#x52A0;&#x6587;&#x672C;&#x5F39;&#x7A97;&#x52A8;&#x6001;&#x6309;&#x94AE;&#x6570;&#x91CF;&#x63A7;&#x5236;&#xFF1B;</p>
+        <p>1&#x3001;&#x6587;&#x672C;&#x5F39;&#x7A97;&#x652F;&#x6301;&#x4E00;&#x4E2A;&#x6309;&#x94AE;&#x7684;&#x6837;&#x5F0F;&#xFF1B;</p>
         <p><b>&#x4FEE;&#x590D;:</b>
         </p>
         <p>1&#x3001;&#x4F18;&#x5316;&#x63A8;&#x9001; deviceToken &#x4E0A;&#x62A5;&#x903B;&#x8F91;&#xFF0C;&#x53BB;&#x9664;&#x4E0A;&#x62A5;&#x4E3A;&#x7A7A;&#x7684;&#x60C5;&#x51B5;&#xFF1B;</p>
@@ -160,6 +160,21 @@
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td style="text-align:left">1.1.6</td>
+      <td style="text-align:left">
+        <p><b>&#x65B0;&#x589E;:</b>
+        </p>
+        <p>1&#x3001;&#x6587;&#x672C;&#x5F39;&#x7A97;&#x652F;&#x6301;&#x4E00;&#x4E2A;&#x6309;&#x94AE;&#x7684;&#x6837;&#x5F0F;&#xFF1B;</p>
+        <p><b>&#x4FEE;&#x590D;:</b>
+        </p>
+        <p>&#x65E0;</p>
+        <p><b>&#x4F18;&#x5316;:</b>
+        </p>
+        <p>&#x65E0;</p>
+      </td>
+      <td style="text-align:left">283K</td>
+    </tr>
     <tr>
       <td style="text-align:left">1.1.5</td>
       <td style="text-align:left">
