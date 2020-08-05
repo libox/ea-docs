@@ -139,15 +139,13 @@ AnalysysAgent.setObserverListener(this, AnalysysEaManager.getObserverListener())
 
  针对AndroidStudio开发环境，华为提供了maven仓集成方式的HMS SDK包。在开始开发前，您需要将HMS SDK集成到您的AndroidStudio开发环境中。 在AndroidStudio开发环境中添加当前应用的AppGallery Connect配置文件。 
 
-       a.登录 [AppGallery Connect 网站](https://developer.huawei.com/consumer/cn/service/josp/agc/index.html)，选择“我的应用”。
+       a.登录 [AppGallery Connect 网站](https://developer.huawei.com/consumer/cn/service/josp/agc/index.html)，选择“我的项目”。
 
-        b.在名称列表中找到应用所在的产品，点击对应的应用名称。
+        b.在项目列表中找到您的项目。
 
-        c.选择“开发 &gt; 概览”。
+        c.单击“应用”栏下的“agconnect-services.json”下载配置文件。
 
-        d.单击“应用”栏下的“agconnect-services.json”下载配置文件。
-
-        e.将agconnect-services.json文件拷贝到应用级根目录下。
+        d.将agconnect-services.json文件拷贝到应用级根目录下。
 
 * 添加SHA256证书指纹
 
