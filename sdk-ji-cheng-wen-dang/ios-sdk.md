@@ -60,7 +60,7 @@ pod 'AnalysysEasyTouch' // 易达 SDK
 * 如果需要安装指定版本，则按照以下方式
 
 ```text
-pod 'AnalysysEasyTouch', '1.1.5.5' // 示例版本号
+pod 'AnalysysEasyTouch', '1.1.6' // 示例版本号
 ```
 
 * 特别注意：由于iOS 10以后苹果系统增加的 NSNotification Service Extension 扩展能够用于统计推送到达率，如果在 APP 中添加了该扩展而无法引入第三方的类文件，则需要使用以下“选择2”方式手动下载静态库并导入项目。将静态库及相关头文件添加到项目中的时候，需要同时勾选项目主 target 和 NSNotification Service Extension 扩展target，否则编译会报错。
@@ -103,19 +103,11 @@ config.applicationGroupIdentifier = @"App 创建的 App Groups ID";
 [AnalysysAgent profileSet:@"$WECHATOPENID" propertyValue:value];
 ```
 
-* 若您的 APP 支持远程推送功能，SDK 为您封装了苹果原生 APNS 远程推送注册接口
+* 在收到 deviceToken 的系统回调方法 - \(void\)application:\(UIApplication \*\)application didRegisterForRemoteNotificationsWithDeviceToken:\(NSData \*\)deviceToken 中上报 deviceToken
 
 ```text
-// 注册 APNS 远程推送
-[AnalysysEasyTouch registerRemoteNotificationWithDelegate:self];
-```
-
-* 在成功注册推送并收到 deviceToken 的系统回调方法 - \(void\)application:\(UIApplication \*\)application didRegisterForRemoteNotificationsWithDeviceToken:\(NSData \*\)deviceToken 中上报 deviceToken
-
-```text
-// 上报pushId（解析后的deviceToken）
-// 目前易达 iOS SDK 只支持苹果 APNS 推送通道
-[AnalysysEaManager pushToken:hexToken];
+// 上报deviceToken,目前易达 iOS SDK 只支持苹果 APNS 推送通道
+[AnalysysEaManager pushToken:deviceToken];
 ```
 
 * 若 APP 支持推送功能，在收到推送及点击推送的系统回调方法中，添加对应的方法：
@@ -257,29 +249,7 @@ userId：1BCAF1D0-C8C0-46A8-866F-005832024259
 
 **注意事项：**无
 
-### 3、注册 APNS 远程推送
-
-**支持的版本：**1.1.0 
-
-**接口说明：**注册 APNS 远程推送，封装了系统注册远程推送的 API。
-
-**接口定义：**
-
-```text
-+ (void)registerForRemoteNotificationWithDelegate:(id)delegate;
-```
-
-**参数说明：**
-
-| 参数 | 说明 | 必填 | 备注 |
-| :--- | :--- | :--- | :--- |
-| delegate | 实现系统推送回调方法的类，一般为当前 AppDelegate 类对象本身 | 是 |  |
-
-**接口返回：**无
-
-**注意事项：**无
-
-### 4、上报推送 deviceToken
+### 3、上报推送 deviceToken
 
 **支持的版本：**1.1.5.6
 
@@ -302,7 +272,7 @@ userId：1BCAF1D0-C8C0-46A8-866F-005832024259
 
 **注意事项：无**
 
-### 5、上报推送事件
+### 4、上报推送事件
 
 **支持的版本：**1.1.1 
 
@@ -326,7 +296,7 @@ userId：1BCAF1D0-C8C0-46A8-866F-005832024259
 
 **接口返回：**无
 
-### 6、设置页面别名
+### 5、设置页面别名
 
 **支持的版本：**1.1.1.1 
 
