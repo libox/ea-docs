@@ -429,7 +429,9 @@ public void release()
 public class AnalysysEaConfig {
     private String appKey;
     private EnvType envType;
-
+    private String mainPage = "";
+    private String url = "";
+    
     public enum EnvType {
         /**
          * 开发环境
@@ -482,6 +484,15 @@ public class AnalysysEaConfig {
      */
     public void setMainPage(String mainPage) {
         this.mainPage = mainPage;
+    }
+
+    /**
+     * 设置EA服务的地址URL；
+     *
+     * @param url 主页的url地址;
+     */
+    public void setUrl(String url) {
+        this.url = url;
     }
 }
 ```
