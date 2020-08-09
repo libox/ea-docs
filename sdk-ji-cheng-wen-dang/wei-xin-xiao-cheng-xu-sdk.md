@@ -129,7 +129,22 @@ class Index extends Component {
 </config>
 ```
 
-## 四、接入问题排查
+## 四、上报相关用户属性
+
+通过方舟SDK上报如下的用户属性可以打通绑定在同一开放平台的小程序和公众号。
+
+```javascript
+AnalysysAgent.profileSet({
+  unionId: '/* 设置为小程序用户的 unionId */',
+  openId: '/* 设置为小程序用户的 openId */'
+})
+```
+
+#### 如何获取微信小程序用户的openId 与 unionId ？
+
+#### [https://developers.weixin.qq.com/miniprogram/dev/api-backend/open-api/login/auth.code2Session.html](https://developers.weixin.qq.com/miniprogram/dev/api-backend/open-api/login/auth.code2Session.html)
+
+## 五、接入问题排查
 
 1、怎么查看 appKey 和 configURL 是否配置成功？
 
