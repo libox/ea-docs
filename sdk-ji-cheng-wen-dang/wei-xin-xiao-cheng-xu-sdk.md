@@ -136,7 +136,8 @@ class Index extends Component {
 ```javascript
 AnalysysAgent.profileSet({
   unionId: '/* 设置为小程序用户的 unionId */',
-  openId: '/* 设置为小程序用户的 openId */'
+  openId: '/* 设置为小程序用户的 openId */',
+  appId: '* 设置为小程序的 appId */'
 })
 ```
 
