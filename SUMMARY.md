@@ -21,6 +21,7 @@
 * [创建微信客服消息活动的FAQ](chuang-jian-wei-xin-ke-fu-xiao-xi-huo-dong-de-faq.md)
 * [自动化工作流](workflow/README.md)
   * [基本组件介绍](workflow/basic-components.md)
+* [微信粉丝管理](wei-xin-fen-si-guan-li.md)
 * [扫码绑定微信](sao-ma-bang-ding-wei-xin.md)
 
 ## SDK 集成文档

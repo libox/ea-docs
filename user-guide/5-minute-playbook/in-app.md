@@ -14,41 +14,36 @@
 
 ### 三、设置活动的触发条件
 
-![&#x7B2C;&#x4E09;&#x6B65;&#xFF1A;&#x8BBE;&#x7F6E;&#x6D3B;&#x52A8;&#x89E6;&#x53D1;&#x6761;&#x4EF6;](../../.gitbook/assets/image%20%2813%29.png)
+![&#x7B2C;&#x4E09;&#x6B65;&#xFF1A;&#x8BBE;&#x7F6E;&#x6D3B;&#x52A8;&#x89E6;&#x53D1;&#x6761;&#x4EF6;](../../.gitbook/assets/ping-mu-kuai-zhao-20200806-xia-wu-4.41.53.png)
 
 通过设置好的触发条件，当用户满足条件时，系统自动触发活动并将 App 弹窗推送给用户。
 
-* 基于 App 启动事件触发：在 App 启动后，弹窗显示在指定的 App 内页面
-* 基于用户行为触发：每次触发设定的事件时，弹窗立即显示在当前页面或者后续指定的 App 内页面
+* 基于 App 启动事件触发：在 App 启动后，弹窗可以立即弹出或在指定的 App 内页面弹出
+* 基于用户行为触发：每次触发设定的事件时，弹窗立即显示在当前页面或者后续指定的 App 内页面（用户最多可以同时添加6个行为属性）
 
 同时，App 弹窗支持用户体验相关的设置：
 
-* 最大弹窗次数：在活动期间内，达到设置的数值时，不再向用户显示弹窗
+* 当用户关闭弹窗后，可以在活动期间都不再显示弹窗或者当日不再显示弹窗
+* 可以在活动期间，不限制弹窗显示次数，弹窗会在活动结束后停止弹出
+* 可以填写最大弹窗次数：在活动期间内，达到设置的数值时，不再向用户显示弹窗
 
 ### 四、设置 App 弹窗的内容及样式
 
-![&#x7B2C;&#x56DB;&#x6B65;&#xFF1A;&#x8BBE;&#x7F6E; App &#x5F39;&#x7A97;&#x7684;&#x6837;&#x5F0F;](../../.gitbook/assets/image%20%2823%29.png)
+![&#x7B2C;&#x56DB;&#x6B65;&#xFF1A;&#x53D1;&#x9001;&#x4EC0;&#x4E48;&#x5185;&#x5BB9;](../../.gitbook/assets/ping-mu-kuai-zhao-20200806-xia-wu-4.57.31.png)
 
 选择 App 样式模板并填写相关内容信息：
 
 * 图片模板：填写图片的 URL 地址，触发弹窗后，会在 App 内弹出一个图片，用户点击图片可以跳转到指定的落地页
 * 图文模板：相比图片模板，额外可以增加一些文字信息，例如活动标题和描述
 * 文本模板：单纯的文本弹窗，支持点击不同的按钮跳转到不同的位置
+* H5模板：填写H5页面的URL地址，触发弹窗后，会弹出一个包含H5页面的弹窗，用户可以弹窗内进行一系列的操作
 
-{% hint style="info" %}
+{% hint style="warning" %}
 如何正确填写弹窗的跳转地址？
 
-目前 EA 支持 2 类页面地址表达方式：
+如果使用 DeepLink ，需要 App 本身已经能够支持 DeepLink 跳转链接，可以是任何 URI 地址 \(eg. myapp://productdetails/itemabc\)
 
-1. 页面原始地址：
-
-   Android：com.analysys.easytouch.FeedbackActivity
-
-   iOS：EAMineController
-
-2. DeepLink：analysys://android/open\_webview?url=https://ark.analysys.cn
-
-使用 DeepLink 时，需要 App 本身已经能够支持 DeepLink 跳转链接。
+如果使用 URL，可以是任何 http 或 https\(eg. https://www.abc.com\)
 {% endhint %}
 
 ### 五、预览并执行
