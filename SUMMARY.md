@@ -5,7 +5,7 @@
 ## 智能运营产品使用手册 <a id="user-guide"></a>
 
 * [5 分钟快速上手](user-guide/5-minute-playbook/README.md)
-  * [创建 Push 活动](user-guide/5-minute-playbook/push.md)
+  * [创建 Push 消息活动](user-guide/5-minute-playbook/push.md)
   * [创建 App 弹窗活动](user-guide/5-minute-playbook/in-app.md)
   * [创建微信模板消息活动](user-guide/5-minute-playbook/wechat.md)
   * [创建微信小程序活动](user-guide/5-minute-playbook/chuang-jian-wei-xin-xiao-cheng-xu-huo-dong.md)
