@@ -159,7 +159,62 @@ AnalysysAgent.profileSet({
 
 ![](../.gitbook/assets/yong-hu-id.jpg)
 
+## 六、如何支持小程序弹窗跳转到公众号文章
 
+#### 添加四个文件 webView.js、webView.json、webView.wxml、webView.wxss
+
+**webView.js**
+
+```text
+  Page({
+    data: {
+      url: ''
+    },
+    onLoad(option) {
+      option.url && this.setData({
+        url: option.url
+      })
+      wx.setNavigationBarTitle({
+        title: '公众号文章'
+      })
+    }
+  })
+```
+
+**webView.wxml**
+
+```text
+ <view>
+     <web-view src="{{url}}"></web-view>
+ </view>
+```
+
+#### 在app.json中添加对应的路径
+
+例如 pages/webView/webView，保证可以正常访问这个页面
+
+```text
+  "pages": [
+    "pages/index/index",
+    "pages/log/log",
+    "pages/home/home",
+    "pages/print_photo/index",
+    "pages/webView/webView"
+  ],
+```
+
+#### 在配置sdk的appkey的地方 同时配置publicWebviewUrl 为上面的路径
+
+```text
+import AnalysysAgentModal from '../../components/index.js'
+
+AnalysysAgentModal.appKey = '56749d656f408c5254de6af249e0c61a'
+AnalysysAgentModal.configURL = 'https://eatest.analysys.cn:28088/'
+// 如果需要跳转公众号功能的话 需要配置一个页面容器
+AnalysysAgentModal.publicWebviewUrl = '/pages/webView/webView'
+```
+
+#### 
 
 
 
