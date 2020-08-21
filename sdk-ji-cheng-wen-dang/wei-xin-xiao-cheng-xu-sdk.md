@@ -198,19 +198,20 @@ AnalysysAgent.profileSet({
     "pages/index/index",
     "pages/log/log",
     "pages/home/home",
-    "pages/print_photo/index",
     "pages/webView/webView"
   ],
 ```
 
-#### 在配置sdk的appkey的地方 同时配置publicWebviewUrl 为上面的路径
+#### 在必要参数配置地方同时配置 publicWebviewUrl 为上面的路径
 
 ```text
-import AnalysysAgentModal from '../../components/index.js'
+import AnalysysAgentModal from './components/index.js'
 
-AnalysysAgentModal.appKey = '56749d656f408c5254de6af249e0c61a'
-AnalysysAgentModal.configURL = 'https://eatest.analysys.cn:28088/'
-// 如果需要跳转公众号功能的话 需要配置一个页面容器
+AnalysysAgentModal.appKey = '/*设置为实际APPKEY*/'//在EA系统中选择要集成的项目，并在项目属性中查看AppKey
+AnalysysAgentModal.configURL = '/*设置为实际数据获取地址*/'// 配置您的数据获取地址
+
+
+// 跳转公众号文章功能，配置的页面容器
 AnalysysAgentModal.publicWebviewUrl = '/pages/webView/webView'
 ```
 
