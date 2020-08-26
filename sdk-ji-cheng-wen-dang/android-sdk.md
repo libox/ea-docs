@@ -62,7 +62,7 @@ implementation 'cn.com.analysys:analysys-core:4.4.12'
 //EA push SDK集成了华为、小米、OPPO、VIVO、魅族推送SDK
 implementation 'cn.com.analysys:analysys-easytouch-push:0.3.0'
 //EA SDK
-implementation 'cn.com.analysys:analysys-easytouch:1.1.5'
+implementation 'cn.com.analysys:analysys-easytouch:1.1.7'
 }
 ```
 
@@ -112,7 +112,7 @@ AnalysysEaPushManager.getInstance().init(getApplicationContext());
 ```text
 //mode设置为2，保证上报的数据是存库
 AnalysysAgent.setDebugMode(this, 2);
-//先要初始化方舟SDK的接口，在注册监听
+//先要初始化方舟SDK和EA SDK后在注册监听
 AnalysysAgent.setObserverListener(this, AnalysysEaManager.getObserverListener());
 ```
 
@@ -266,19 +266,6 @@ android 8以上版本需要配置通道：
 在logcat中过滤日志：
 
 ```text
-小米设备：xiaomi
-华为设备：huawei
-OPPO设备：oppo
-VIVO设备：vivo
-魅族设备：meizu
-极光推送：jpush
-```
-
-如果在设备上过滤相关关键词后有日志，证明此厂商推送注册成功；
-
-如果没有日志，请输入以下关键词过滤：
-
-```text
 registerPush
 ```
 
@@ -288,7 +275,7 @@ registerPush
 
 华为推送：
 
-EMUI 10.0.0以上，推送服务App版本为9.1.1.401以上，HMS core版本在4.0.3.316以上
+EMUI 10.0.0以上或者推送服务App版本为9.1.1.401以上，HMS core版本在4.0.3.316以上
 
 小米推送：
 
@@ -599,5 +586,7 @@ VIVO的状态栏通知默认是关闭的。需要提示用户打开通知栏。
         }
 ```
 
+### 8、华为接入Cordova框架的方式
 
+地址：[https://developer.huawei.com/consumer/en/doc/development/HMS-Plugin-Guides/push-integrating-cordova-sdk-0000001050135717](https://developer.huawei.com/consumer/en/doc/development/HMS-Plugin-Guides/push-integrating-cordova-sdk-0000001050135717)
 
