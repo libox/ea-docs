@@ -14,14 +14,52 @@
   </thead>
   <tbody>
     <tr>
+      <td style="text-align:center">1.1.9</td>
+      <td style="text-align:left">
+        <p><b>&#x65B0;&#x589E;</b>
+        </p>
+        <p>1.&#x6CE8;&#x518C;&#x8FDC;&#x7A0B;&#x63A8;&#x9001;&#x53EF;&#x914D;&#x7F6E;&#xFF1B;</p>
+        <p>2.&#x65F6;&#x95F4;&#x6821;&#x9A8C;&#x903B;&#x8F91;&#xFF1B;</p>
+        <p>3.&#x63A5;&#x6536;&#x4E8B;&#x4EF6;&#x56DE;&#x8C03;&#x63A5;&#x53E3;&#x4FEE;&#x6539;&#xFF0C;&#x517C;&#x5BB9;&#x65E7;&#x7248;&#x65B9;&#x821F;
+          SDK&#xFF1B;</p>
+      </td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:center">1.1.8</td>
+      <td style="text-align:left">
+        <p><b>&#x4FEE;&#x590D;</b>
+        </p>
+        <p>1.&#x4FEE;&#x590D; iPhone6 &#x4E0D;&#x5F39;&#x7A97;&#x95EE;&#x9898;&#xFF1B;</p>
+      </td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:center">1.1.7</td>
+      <td style="text-align:left">
+        <p><b>&#x65B0;&#x589E;</b>
+        </p>
+        <p>1.AnalyaysEaConfig &#x589E;&#x52A0;&#x53EF;&#x914D;&#x7F6E; url &#x53C2;&#x6570;&#xFF1B;</p>
+        <p></p>
+        <p><b>&#x4FEE;&#x590D;</b>
+        </p>
+        <p>1.&#x4FEE;&#x6539;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x6A21;&#x5F0F;&#xFF0C;groupIdentifier
+          &#x53C2;&#x6570;&#x53EF;&#x4E3A;&#x7A7A;&#xFF1B;</p>
+        <p>2.&#x4F18;&#x5316;&#x5F39;&#x7A97;&#x5185;&#x90E8;&#x5224;&#x65AD;&#x903B;&#x8F91;&#xFF0C;&#x589E;&#x52A0;&#x7CFB;&#x7EDF;&#x7A33;&#x5B9A;&#x6027;&#xFF1B;</p>
+      </td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
       <td style="text-align:center">1.1.6</td>
       <td style="text-align:left">
         <p><b>&#x65B0;&#x589E;:</b>
         </p>
         <p>1&#x3001;&#x6587;&#x672C;&#x5F39;&#x7A97;&#x652F;&#x6301;&#x4E00;&#x4E2A;&#x6309;&#x94AE;&#x7684;&#x6837;&#x5F0F;&#xFF1B;</p>
+        <p></p>
         <p><b>&#x4FEE;&#x590D;:</b>
         </p>
         <p>1&#x3001;&#x4F18;&#x5316;&#x63A8;&#x9001; deviceToken &#x4E0A;&#x62A5;&#x903B;&#x8F91;&#xFF0C;&#x53BB;&#x9664;&#x4E0A;&#x62A5;&#x4E3A;&#x7A7A;&#x7684;&#x60C5;&#x51B5;&#xFF1B;</p>
+        <p></p>
         <p><b>&#x4F18;&#x5316;:</b>
         </p>
         <p>1&#x3001;&#x79FB;&#x9664;&#x5BF9;&#x5916;&#x63A5;&#x53E3; registerForRemoteNotificationWithDelegate&#xFF0C;&#x96C6;&#x6210;&#x5230;SDK&#x5185;&#x90E8;&#xFF1B;</p>
@@ -34,10 +72,12 @@
         <p><b>&#x65B0;&#x589E;:</b>
         </p>
         <p>1&#x3001;&#x589E;&#x52A0;&#x4E0A;&#x62A5;&#x63A8;&#x9001;token&#x7684;&#x63A5;&#x53E3;&#xFF1B;</p>
+        <p></p>
         <p><b>&#x4FEE;&#x590D;:</b>
         </p>
         <p>1&#x3001;&#x4FEE;&#x590D;token&#x4E0D;&#x80FD;&#x53CA;&#x65F6;&#x66F4;&#x65B0;&#x5BFC;&#x81F4;&#x63A8;&#x9001;&#x6709;&#x65F6;&#x6536;&#x4E0D;&#x5230;&#x7684;&#x95EE;&#x9898;&#xFF1B;</p>
         <p>2&#x3001;&#x4FEE;&#x590D;&#x4E0A;&#x62A5;&#x63A8;&#x9001;token&#x65F6;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x4E0D;&#x5168;&#x7684;&#x95EE;&#x9898;&#xFF1B;</p>
+        <p></p>
         <p><b>&#x4F18;&#x5316;:</b>
         </p>
         <p>1&#x3001;&#x767B;&#x5F55;&#x63A5;&#x53E3;&#x589E;&#x52A0;&#x91CD;&#x8BD5;&#x673A;&#x5236;&#xFF1B;</p>
@@ -48,12 +88,6 @@
     <tr>
       <td style="text-align:center">1.1.4</td>
       <td style="text-align:left">
-        <p><b>&#x65B0;&#x589E;:</b>
-        </p>
-        <p>&#x65E0;</p>
-        <p><b>&#x4FEE;&#x590D;:</b>
-        </p>
-        <p>&#x65E0;</p>
         <p><b>&#x4F18;&#x5316;:</b>
         </p>
         <p>1&#x3001;&#x53D6;&#x6D88;&#x5BF9; UIWebView &#x652F;&#x6301;&#xFF1B;</p>
@@ -68,9 +102,11 @@
         </p>
         <p>1&#x3001;&#x6DFB;&#x52A0;&#x672C;&#x5730;&#x7F13;&#x5B58;&#x652F;&#x6301;&#xFF1B;</p>
         <p>2&#x3001;&#x6DFB;&#x52A0;HTTP&#x8BF7;&#x6C42;&#x5931;&#x8D25;&#x540E;&#x91CD;&#x8BD5;&#x673A;&#x5236;&#xFF1B;</p>
+        <p></p>
         <p><b>&#x4FEE;&#x590D;:</b>
         </p>
         <p>1&#x3001;&#x53BB;&#x9664;&#x6587;&#x672C;&#x80CC;&#x666F;&#x8272;&#x5BFC;&#x81F4;&#x7684;&#x5F39;&#x7A97;&#x8FB9;&#x6846;&#x989C;&#x8272;&#x4E0D;&#x7EDF;&#x4E00;&#x7684;&#x95EE;&#x9898;</p>
+        <p></p>
         <p><b>&#x4F18;&#x5316;:</b>
         </p>
         <p>1&#x3001;push &#x4E8B;&#x4EF6;&#x4E0A;&#x62A5;&#x3001;&#x5F39;&#x7A97;&#x5339;&#x914D;&#x7684;&#x673A;&#x5236;&#xFF1B;</p>
@@ -83,13 +119,11 @@
         <p><b>&#x65B0;&#x589E;:</b>
         </p>
         <p>1&#x3001;&#x65E5;&#x5FD7;&#x7684;&#x5206;&#x7EA7;&#x7BA1;&#x7406;&#xFF1B;&#x63A5;&#x53E3;&#x589E;&#x52A0;&#x65E5;&#x5FD7;&#x5F00;&#x5173;&#x529F;&#x80FD;&#xFF1B;</p>
+        <p></p>
         <p><b>&#x4FEE;&#x590D;:</b>
         </p>
         <p>1&#x3001;&#x6253;&#x5305;&#x7F16;&#x8BD1;&#x9879;&#x8BBE;&#x7F6E;&#xFF1B;</p>
         <p>2&#x3001;push&#x5230;&#x8FBE;&#x3001;&#x70B9;&#x51FB;&#x4E8B;&#x4EF6;&#x7684;&#x4E0A;&#x62A5;&#x95EE;&#x9898;&#xFF1B;</p>
-        <p><b>&#x4F18;&#x5316;:</b>
-        </p>
-        <p>&#x65E0;</p>
       </td>
       <td style="text-align:left">2.4M</td>
     </tr>
@@ -100,10 +134,12 @@
         </p>
         <p>1&#x3001;&#x652F;&#x6301;&#x591A;&#x4E8B;&#x4EF6;&#x89E6;&#x53D1;&#x5F39;&#x7A97;&#xFF1B;</p>
         <p>2&#x3001;&#x8BBE;&#x7F6E;&#x9875;&#x9762;&#x522B;&#x540D;&#x7684;&#x529F;&#x80FD;&#xFF1B;</p>
+        <p></p>
         <p><b>&#x4FEE;&#x590D;:</b>
         </p>
         <p>1&#x3001;&#x5F39;&#x7A97;&#x7684;&#x80CC;&#x666F;&#x8272;&#x7684;&#x95EE;&#x9898;&#xFF1B;</p>
         <p>2&#x3001;&#x5F39;&#x7A97;&#x8DF3;&#x8F6C;&#x4E2D;URL&#x4E2D;&#x7A7A;&#x683C;&#x7684;&#x95EE;&#x9898;&#xFF1B;</p>
+        <p></p>
         <p><b>&#x4F18;&#x5316;:</b>
         </p>
         <p>1&#x3001;&#x4F18;&#x5316;&#x7ACB;&#x5373;&#x5F39;&#x7A97;&#x7684;&#x9875;&#x9762;&#x8BA1;&#x6570;&#x673A;&#x5236;&#xFF1B;</p>
@@ -118,11 +154,13 @@
         </p>
         <p>1&#x3001;&#x5F39;&#x7A97;&#x529F;&#x80FD;&#xFF1B;</p>
         <p>2&#x3001;&#x63A8;&#x9001;&#x529F;&#x80FD;&#xFF1B;</p>
+        <p></p>
         <p><b>&#x4FEE;&#x590D;:</b>
         </p>
         <p>1&#x3001;&#x5F39;&#x7A97;&#x529F;&#x80FD;APP &#x9875;&#x9762;&#x5185;&#x8DF3;&#x8F6C;&#x95EE;&#x9898;&#xFF1B;</p>
         <p>2&#x3001;&#x4FEE;&#x590D;&#x6253;&#x5305;&#x53D1;&#x5E03;&#x65F6;Found
           an unexpected Mach -O header code:0x72613c21&#x9519;&#x8BEF;&#xFF1B;</p>
+        <p></p>
         <p><b>&#x4F18;&#x5316;:</b>
         </p>
         <p>1&#x3001;&#x4F18;&#x5316;SDK&#x62C9;&#x53D6;&#x6D3B;&#x52A8;&#x5217;&#x8868;&#x5224;&#x65AD;&#xFF1B;</p>
@@ -137,12 +175,6 @@
         </p>
         <p>1&#x3001;&#x5F39;&#x7A97;&#x529F;&#x80FD;&#xFF1B;</p>
         <p>2&#x3001;&#x63A8;&#x9001;&#x529F;&#x80FD;&#xFF1B;</p>
-        <p><b>&#x4FEE;&#x590D;:</b>
-        </p>
-        <p>&#x65E0;</p>
-        <p><b>&#x4F18;&#x5316;:</b>
-        </p>
-        <p>&#x65E0;</p>
       </td>
       <td style="text-align:left">2.7M</td>
     </tr>
