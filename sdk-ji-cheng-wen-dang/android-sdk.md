@@ -131,6 +131,16 @@ AnalysysAgent.setObserverListener(this, AnalysysEaManager.getObserverListener())
     AnalysysAgent.profileSet(context, "$WECHATOPENID", openid);
 ```
 
+### 6、添加混淆设置
+
+如果APP在打包的时候开启了混淆，请在proguard-rules.pro中添加如下设置
+
+```text
+-keep class com.analysys.easdk.**{*;}
+-keep class * extends com.raizlabs.android.dbflow.config.DatabaseHolder { *; }
+-keep class com.flyco.** {*;}
+```
+
 ## 三、推送功能集成
 
 ### 1、华为推送
