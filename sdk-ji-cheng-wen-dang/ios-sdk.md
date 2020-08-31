@@ -60,10 +60,10 @@ pod 'AnalysysEasyTouch' // 易达 SDK
 * 如果需要安装指定版本，则按照以下方式
 
 ```text
-pod 'AnalysysEasyTouch', '1.1.6' // 示例版本号
+pod 'AnalysysEasyTouch', '1.1.9' // 示例版本号
 ```
 
-* 特别注意：由于iOS 10以后苹果系统增加的 NSNotification Service Extension 扩展能够用于统计推送到达率，如果在 APP 中添加了该扩展而无法引入第三方的类文件，则需要使用以下“选择2”方式手动下载静态库并导入项目。将静态库及相关头文件添加到项目中的时候，需要同时勾选项目主 target 和 NSNotification Service Extension 扩展target，否则编译会报错。
+* 特别注意：由于iOS 10以后苹果系统增加的 NSNotification Service Extension 扩展能够用于统计推送到达率，如果在 APP 中添加了该扩展而无法引入第三方的类文件，则需要使用以下“选择2”方式手动下载静态库并导入项目。将静态库及相关头文件添加到项目中的时候，需要同时勾选项目主 target 和 NSNotification Service Extension 扩展 target，否则编译会报错。
 
 **方式 2：手动下载静态库导入**
 
@@ -154,7 +154,8 @@ completionHandler(UNNotificationPresentationOptionBadge
 }
 ```
 
-* 注意：若实现了 Notification Service Extension 扩展，当收到推送时，除了会执行扩展的回调方法，还会执行以上收到推送的回调方法，为避免重复上报，需要将上述上报 PUSH\_RECEIVE 类型的事件注释掉，或者根据项目需要采用宏定义判断的方式来规避掉重复上报。
+* 若实现了 Notification Service Extension 扩展，当收到推送时，除了会执行扩展的回调方法，还会执行以上收到推送的回调方法，为避免重复上报，需要将上述上报 PUSH\_RECEIVE 类型的事件注释掉，或者根据项目需要采用宏定义判断的方式来规避掉重复上报。
+* 若不需要统计推送触达，即不需要实现 Notification Service Extension 扩展，则可以不用添加 APP Groups，对应的 applicationGroupIdentifier 参数传空字符串即可。
 
 ### 5、配置统计推送到达所需的 Notification Service Extension 扩展及 AppGroups
 
@@ -243,7 +244,7 @@ userId：1BCAF1D0-C8C0-46A8-866F-005832024259
 
 | 参数 | 说明 | 必填 | 备注 |
 | :--- | :--- | :--- | :--- |
-| config | 配置 SDK 启动所需要的 appKey 等信息，AnalysysEaConfig 对象实例 | 是 |  |
+| config | 配置 SDK 启动所需要的 appKey 等信息，AnalysysEaConfig 对象实例 | 是 | 具体请参考 AnalysysEaConfig 类中各属性说明 |
 
 **接口返回：**无
 
@@ -266,7 +267,7 @@ userId：1BCAF1D0-C8C0-46A8-866F-005832024259
 | 参数 | 说明 | 必填 | 备注 |
 | :--- | :--- | :--- | :--- |
 | deviceToken | app 启动后由系统返回的用于推送的 NSData 类型的 deviceToken | 是 | 直接传系统回调的 deviceToken ，无需解析 |
-| groupIdentifiler | 创建的 App Groups 分组 id 名称 : group.xxx | 是 |  |
+| groupIdentifiler | 创建的 App Groups 分组 id 名称 : group.xxx | 否 | 若不配置 Notification Service Extension 扩展，即可不创建 APP Groups，此处传空字符串即可 |
 
 **接口返回：**无
 
@@ -292,7 +293,7 @@ userId：1BCAF1D0-C8C0-46A8-866F-005832024259
 | :--- | :--- | :--- | :--- |
 | type | push的事件类型 | 是 |  |
 | msg | push事件的属性信息 | 是 | push属性说明 |
-| groupIdentifier | 创建的 App Groups 分组 id 名称 : group.xxx | 是 |  |
+| groupIdentifier | 创建的 App Groups 分组 id 名称 : group.xxx | 否 | 若不配置 Notification Service Extension 扩展，即可不创建 APP Groups，此处传空字符串即可 |
 
 **接口返回：**无
 
@@ -425,6 +426,10 @@ echo "Executable is $FRAMEWORK_EXECUTABLE_PATH"
 strip_invalid_archs "$FRAMEWORK_EXECUTABLE_PATH"
 done
 ```
+
+### 集成了三方推送 SDK 和 EA SDK 发生冲突
+
+* 若集成了三方推送 SDK，例如集成了极光推送 SDK，同时也集成了 EA SDK，出现某一 SDK 消息推送回调被覆盖或不执行的情况，解决办法是初始化 EA SDK 时将 AnalysysEaConfig 对象的 pushClosed 属性设置为 YES，这样 EA 在启动时将不会注册远程推送，只需实现极光推送的回调方法，EA 和极光推送在收到推送消息或点击推送消息的时候，都会执行极光推送的回调方法，在回调方法里调用 EA 和极光对应的处理推送的方法即可。
 
 ## 六、技术支持
 
