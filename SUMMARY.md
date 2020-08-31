@@ -17,8 +17,8 @@
 
 * [创建 Push 活动的 FAQ](push-faq.md)
 * [创建微信模板消息活动的 FAQ](wechat-faq.md)
-* [创建微信小程序活动的FAQ](chuang-jian-wei-xin-xiao-cheng-xu-huo-dong-de-faq.md)
-* [创建微信客服消息活动的FAQ](chuang-jian-wei-xin-ke-fu-xiao-xi-huo-dong-de-faq.md)
+* [创建微信小程序活动的 FAQ](chuang-jian-wei-xin-xiao-cheng-xu-huo-dong-de-faq.md)
+* [创建微信客服消息活动的 FAQ](chuang-jian-wei-xin-ke-fu-xiao-xi-huo-dong-de-faq.md)
 * [自动化工作流](workflow/README.md)
   * [基本组件介绍](workflow/basic-components.md)
 * [微信粉丝管理](wei-xin-fen-si-guan-li.md)
@@ -27,7 +27,7 @@
 ## SDK 集成文档
 
 * [EA 系统集成文档](sdk-ji-cheng-wen-dang/yi-da-xi-tong-ji-cheng-wen-dang.md)
-* [SDK版本更新说明](sdk-ji-cheng-wen-dang/sdk-ban-ben-geng-xin-shuo-ming.md)
+* [SDK 版本更新说明](sdk-ji-cheng-wen-dang/sdk-ban-ben-geng-xin-shuo-ming.md)
 * [iOS SDK](sdk-ji-cheng-wen-dang/ios-sdk.md)
 * [Android SDK](sdk-ji-cheng-wen-dang/android-sdk.md)
 * [JS SDK](sdk-ji-cheng-wen-dang/js-sdk.md)
