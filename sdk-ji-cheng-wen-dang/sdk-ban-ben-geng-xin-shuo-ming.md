@@ -23,7 +23,7 @@
         <p>3.&#x63A5;&#x6536;&#x4E8B;&#x4EF6;&#x56DE;&#x8C03;&#x63A5;&#x53E3;&#x4FEE;&#x6539;&#xFF0C;&#x517C;&#x5BB9;&#x65E7;&#x7248;&#x65B9;&#x821F;
           SDK&#xFF1B;</p>
       </td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">1.8M</td>
     </tr>
     <tr>
       <td style="text-align:center">1.1.8</td>
@@ -32,7 +32,7 @@
         </p>
         <p>1.&#x4FEE;&#x590D; iPhone6 &#x4E0D;&#x5F39;&#x7A97;&#x95EE;&#x9898;&#xFF1B;</p>
       </td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">1.8M</td>
     </tr>
     <tr>
       <td style="text-align:center">1.1.7</td>
@@ -47,7 +47,7 @@
           &#x53C2;&#x6570;&#x53EF;&#x4E3A;&#x7A7A;&#xFF1B;</p>
         <p>2.&#x4F18;&#x5316;&#x5F39;&#x7A97;&#x5185;&#x90E8;&#x5224;&#x65AD;&#x903B;&#x8F91;&#xFF0C;&#x589E;&#x52A0;&#x7CFB;&#x7EDF;&#x7A33;&#x5B9A;&#x6027;&#xFF1B;</p>
       </td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">1.8M</td>
     </tr>
     <tr>
       <td style="text-align:center">1.1.6</td>
