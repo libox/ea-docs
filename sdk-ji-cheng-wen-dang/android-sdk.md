@@ -350,7 +350,7 @@ public ObserverListener getObserverListener()
     /**
      * 上报推送token
      *
-     * @param type  token的厂商类型
+     * @param type  token的推送类型
      * @param token token值
      */
     public void pushToken(AnalysysEaConfig.pushTokenType type, String token)
@@ -360,8 +360,8 @@ public ObserverListener getObserverListener()
 
 | 参数 | 说明 | 必填 | 备注 |
 | :--- | :--- | :--- | :--- |
-| type | 厂商的类型 | 是 |  |
-| token | 厂商的推送token | 是 |  |
+| type | 推送的类型 | 是 |  |
+| token | 推送token | 是 |  |
 
 ### 4、上报push事件
 
