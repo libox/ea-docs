@@ -337,8 +337,8 @@ userId：1BCAF1D0-C8C0-46A8-866F-005832024259
 在创建弹窗、推送活动时，易达 iOS SDK 支持三种类型的链接配置：
 
 * URL 网址，打开对应的网页。
-* 非 URL scheme 链接，形式为 XXXController?key1=value1&key2=value2 该情形为 SDK 内部实现点击跳转到 APP 内指定页面。
-* URL scheme 链接，形式为 scheme://XXXController?key1=value1&key2=value2 该情形需 APP 客户端自行拦截，在 info.plist 中添加 URL scheme，并实现系统代理方法，在其中做拦截跳转处理：
+* 非 URL scheme 链接，形式为 XXXController?key1=value1&key2=value2 该情形为 SDK 内部实现点击跳转到 APP 内指定页面，其中 XXXController 为要跳转页面的技术标识（类名），key1、key2 为类对应的属性。
+* URL scheme 链接，形式为 scheme://XXXController?key1=value1&key2=value2 该情形需 APP 客户端自行拦截，其中 XXXController 为要跳转页面的技术标识（类名），key1、key2 为类对应的属性。在 info.plist 中添加 URL scheme，并实现系统代理方法，在其中做拦截跳转处理：
 
 ```text
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options;
