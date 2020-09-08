@@ -170,8 +170,8 @@
       <td style="text-align:left">
         <p><b>&#x65B0;&#x589E;:</b>
         </p>
-        <p>1&#x3001;&#x5F39;&#x7A97;&#x529F;&#x80FD;&#xFF1B;</p>
-        <p>2&#x3001;&#x63A8;&#x9001;&#x529F;&#x80FD;&#xFF1B;</p>
+        <p>1&#x3001;&#x5F39;&#x7A97;&#x529F;&#x80FD;&#x589E;&#x5F3A;&#xFF1B;</p>
+        <p>2&#x3001;&#x63A8;&#x9001;&#x529F;&#x80FD;&#x589E;&#x5F3A;&#xFF1B;</p>
         <p></p>
         <p><b>&#x4FEE;&#x590D;:</b>
         </p>
