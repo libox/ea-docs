@@ -39,7 +39,7 @@ AnalysysEaConfig.h
 
 集成易达 SDK 前，需要先集成埋点与数据采集 SDK，方舟易达目前支持：
 
-* [**方舟 SDK**](https://github.com/analysys/ans-ios-sdk/releases)**，方舟 SDK 参考文档：**[**方舟 SDK 文档**](https://docs.analysys.cn/ark/integration/sdk/ios)
+* [**方舟 SDK**](https://github.com/analysys/ans-ios-sdk/releases)**（须 4.4.8 及以上版本），方舟 SDK 参考文档：**[**方舟 SDK 文档**](https://docs.analysys.cn/ark/integration/sdk/ios)
 
 ## 二、快速开始
 
