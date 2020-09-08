@@ -332,6 +332,20 @@ userId：1BCAF1D0-C8C0-46A8-866F-005832024259
 + (void)pushTrack:(PushEventType)type msg:(NSDictionary *)msg groupIdentifier:(NSString *)groupIdentifier;
 ```
 
+### 配置弹窗、推送点击跳转链接
+
+在创建弹窗、推送活动时，易达 iOS SDK 支持三种类型的链接配置：
+
+* URL 网址，打开对应的网页。
+* 非 URL scheme 链接，形式为 XXXController?key1=value1&key2=value2 该情形为 SDK 内部实现点击跳转到 APP 内指定页面。
+* URL scheme 链接，形式为 scheme://XXXController?key1=value1&key2=value2 该情形需 APP 客户端自行拦截，在 info.plist 中添加 URL scheme，并实现系统代理方法，在其中做拦截跳转处理：
+
+```text
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options;
+```
+
+注意：以上非 URL 网址类的 APP 内指定页面跳转，所配置的链接参数，均需与页面所属类及类的真实属性一一对应，在配置时需要与 APP 开发人员核对。
+
 ## 五、FAQ
 
 ### 集成动态库后，添加 Notification Service Extension 扩展并在代理方法中调用 SDK 方法，编译报错
