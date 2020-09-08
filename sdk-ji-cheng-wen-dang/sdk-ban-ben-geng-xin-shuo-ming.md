@@ -14,6 +14,24 @@
   </thead>
   <tbody>
     <tr>
+      <td style="text-align:center">1.1.9.3</td>
+      <td style="text-align:left">
+        <p><b>&#x65B0;&#x589E;:</b>
+        </p>
+        <p>1&#x3001;&#x5F39;&#x7A97;&#x3001;&#x63A8;&#x9001;&#x65B0;&#x589E;&#x5BF9;
+          URL scheme &#x5F62;&#x5F0F;&#x8DF3;&#x8F6C;&#x94FE;&#x63A5;&#x7684;&#x652F;&#x6301;&#xFF1B;</p>
+        <p></p>
+        <p><b>&#x4FEE;&#x590D;:</b>
+        </p>
+        <p>1&#x3001;&#x4FEE;&#x590D;&#x82E5;&#x5E72;&#x53EF;&#x80FD;&#x9020;&#x6210;&#x5F39;&#x7A97;&#x95EA;&#x9000;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x589E;&#x5F3A;&#x7CFB;&#x7EDF;&#x7A33;&#x5B9A;&#x6027;&#xFF1B;</p>
+        <p></p>
+        <p><b>&#x4F18;&#x5316;:</b>
+        </p>
+        <p>1&#x3001;&#x4F18;&#x5316;&#x5F39;&#x7A97;&#x3001;&#x63A8;&#x9001;&#x70B9;&#x51FB;&#x8DF3;&#x8F6C;&#x903B;&#x8F91;&#xFF1B;</p>
+      </td>
+      <td style="text-align:left">1.8M</td>
+    </tr>
+    <tr>
       <td style="text-align:center">1.1.9</td>
       <td style="text-align:left">
         <p><b>&#x65B0;&#x589E;</b>
