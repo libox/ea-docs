@@ -189,7 +189,56 @@ self.contentHandler(self.bestAttemptContent);
 * 选择主 target -》 Capabilities，添加 App Groups，填入分组名 **group.xxx**，若分组名显示为红色，点击下方刷新按钮，直至分组名不再为红色
 * 选择 Notification Service Extension target -》 Capabilities，添加 App Groups，勾选分组 **group.xxx**，若分组名显示为红色，点击下方刷新按钮，直至分组名不再为红色
 
-### 6、成功运行
+### 6、集成 banner 信息流广告（可选）
+
+这一步主要针对需要集成信息流广告功能的用户，不需要集成该功能可以跳过。
+
+**在 EA 平台创建 banner 配置**
+
+依次选择 系统设置 -》banner 配置，添加 banner 配置，一条 banner 配置对应 APP 中一条广告位，会生成唯一一个 locationId
+
+**创建 banner 信息流广告** 
+
+创建一条 banner 信息流广告，在第四步展示位置选择某一个 banner 配置对应的名称。
+
+**在 App 列表中对应位置调用 SDK 接口渲染 banner**
+
+这里以使用 UITableView 作为列表视图为例：
+
+* 第一步，创建 UITableViewCell 子类，这里比如为 EABannerCell，并注册
+* 第二步，在对应代理方法里调用 SDK 方法，并传入 locationId 和 bannerCell 作为参数，注意这里在返回 table 行高的代理方法里，AnalysysBannerConfig 对象不要给 container 参数赋值。
+
+```text
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSString *settings_id = _arr[indexPath.section][ea_settings_key_id];
+    if (...) { // 自己的 UITableViewCell
+            UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"];
+            ......
+            return cell;
+    } else { // banner cell
+            EABannerCell *bannerCell = (EABannerCell *)[tableView dequeueReusableCellWithIdentifier:@"EABannerCell"];
+            AnalysysBannerConfig *bannerConfig = [AnalysysBannerConfig defaultConfig];
+            bannerConfig.locationId = locationId; // 传 banner 配置生成的 locationId
+            bannerConfig.container = bannerCell; // 注意：这里需要传入 bannerCell
+            [AnalysysEaManager loadBanner:bannerConfig];
+            return bannerCell;
+        }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (...) { // 自己 cell
+        return 60.f;
+    } else { // banner cell
+        EABannerCell *bannerCell = (EABannerCell *)[tableView dequeueReusableCellWithIdentifier:@"EABannerCell"];
+        AnalysysBannerConfig *bannerConfig = [AnalysysBannerConfig defaultConfig];
+        bannerConfig.locationId = locationId; // 传 banner 配置生成的 locationId，注意：这里返回高度，不需要传入 bannerCell
+        CGFloat height = [AnalysysEaManager loadBanner:bannerConfig].height;
+        return height;
+    }
+}
+```
+
+### 7、成功运行
 
 * 真机调试该项目，如果控制台输出如下日志，代表 SDK 集成成功。
 
@@ -318,6 +367,28 @@ userId：1BCAF1D0-C8C0-46A8-866F-005832024259
 **接口返回：**无
 
 **注意事项：**无
+
+### 6、渲染 banner
+
+**支持的版本：**1.2.0
+
+**接口说明：**渲染 banner 信息流广告。
+
+**接口定义：**
+
+```text
++ (CGSize)loadBanner:(AnalysysBannerConfig *)bannerConfig;
+```
+
+**参数说明：**
+
+| 参数 | 说明 | 必填 | 备注 |
+| :--- | :--- | :--- | :--- |
+| bannerConfig | banner 配置参数 | 是 | 该对象有 locationId 和 container 两个参数，分别为默认 banner 配置对应的位置 ID 和 承载 banner 的容器，若列表为 UITableView，则该容器为一个 UITableViewCell 的子类，注意在返回 table 行高的代理方法里，container 参数需传空。具体参考集成示例。 |
+
+**接口返回：返回 banner 的 size**
+
+**注意事项：无**
 
 ## 四、备注
 
