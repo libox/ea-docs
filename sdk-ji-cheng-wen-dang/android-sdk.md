@@ -100,7 +100,8 @@ apply plugin: 'com.huawei.agconnect'
 AnalysysEaConfig builder = new AnalysysEaConfig();
 //填写自己申请的AppKey
 builder.setAppKey("*******");
-//设置APP的首页地址；包括包名的完整的路径,例如:com.aneesoft.ygqf.common.MainActivity
+//设置APP的首页地址；包括包名的完整的路径.
+//例如:com.aneesoft.ygqf.common.MainActivity
 builder.setMainPage("*******");
 AnalysysEaManager.init(getApplicationContext(), builder);
 //推送厂商的token上报SDK
