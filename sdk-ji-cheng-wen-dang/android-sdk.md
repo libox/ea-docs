@@ -406,7 +406,30 @@ public void setPageTagState(boolean state)
 
 返回值：无
 
-### 6、释放接口
+### 6、加载信息流
+
+接口定义：
+
+```text
+/**
+ * 加载banner
+ *
+ * @param config banner配置
+ * @param layout 布局的ID
+ */
+public void loadBanner(AnalysysBannerConfig config, FrameLayout layout)
+```
+
+参数说明：
+
+| 参数 | 说明 | 必填 | 备注 |
+| :--- | :--- | :--- | :--- |
+| config | 信息流的配置信息 | 是 |  |
+| layout | 信息流的展示位置 | 是 |  |
+
+返回值：无
+
+### 7、释放接口
 
 接口定义：
 
