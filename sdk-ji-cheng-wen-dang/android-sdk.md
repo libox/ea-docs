@@ -624,7 +624,7 @@ VIVO的状态栏通知默认是关闭的。需要提示用户打开通知栏。
 
 地址：[https://developer.huawei.com/consumer/en/doc/development/HMS-Plugin-Guides/push-integrating-cordova-sdk-0000001050135717](https://developer.huawei.com/consumer/en/doc/development/HMS-Plugin-Guides/push-integrating-cordova-sdk-0000001050135717)
 
-9、信息流的集成流程
+### 9、信息流的集成流程
 
 1、登录EA系统，点击右上角设置按钮，进入banner配置，然后添加位置信息；创建成功后会生成一个位置ID，这个位置ID就是APP端要使用。
 
