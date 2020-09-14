@@ -430,6 +430,8 @@ public void loadBanner(AnalysysBannerConfig config, FrameLayout layout)
 
 返回值：无
 
+备注：调用方式：信息流集成方式
+
 ### 7、释放接口
 
 接口定义：
