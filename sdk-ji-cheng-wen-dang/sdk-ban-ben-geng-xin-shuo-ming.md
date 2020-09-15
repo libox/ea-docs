@@ -221,7 +221,7 @@
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">1.2.0</td>
+      <td style="text-align:left">1.2.0.1</td>
       <td style="text-align:left">
         <p><b>&#x65B0;&#x589E;:</b>
         </p>
