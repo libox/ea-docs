@@ -62,7 +62,7 @@ implementation 'cn.com.analysys:analysys-core:4.4.12'
 //EA push SDK集成了华为、小米、OPPO、VIVO、魅族推送SDK
 implementation 'cn.com.analysys:analysys-easytouch-push:0.3.0'
 //EA SDK
-implementation 'cn.com.analysys:analysys-easytouch:1.2.0'
+implementation 'cn.com.analysys:analysys-easytouch:1.2.0.1'
 }
 ```
 
