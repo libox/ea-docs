@@ -14,6 +14,16 @@
   </thead>
   <tbody>
     <tr>
+      <td style="text-align:center">1.2.0</td>
+      <td style="text-align:left">
+        <p><b>&#x65B0;&#x589E;:</b>
+        </p>
+        <p>1&#x3001;&#x589E;&#x52A0;&#x5BF9; banner &#x4FE1;&#x606F;&#x6D41;&#x5E7F;&#x544A;&#xFF08;&#x5927;&#x56FE;&#xFF09;&#x7684;&#x652F;&#x6301;&#x53CA;&#x5BF9;&#x5E94;&#x63A5;&#x53E3;&#xFF1B;</p>
+        <p>2&#x3001;&#x589E;&#x52A0;&#x5BF9;&#x5F39;&#x7A97;&#x6D3B;&#x52A8;&#x65B0;&#x89C4;&#x5219;&#xFF08;&#x70B9;&#x51FB;&#x3001;&#x5173;&#x95ED;&#x540E;&#x7EED;&#x5F39;&#x51FA;&#x9891;&#x7387;&#xFF09;&#x7684;&#x5339;&#x914D;&#xFF1B;</p>
+      </td>
+      <td style="text-align:left">1.9M</td>
+    </tr>
+    <tr>
       <td style="text-align:center">1.1.9.3</td>
       <td style="text-align:left">
         <p><b>&#x65B0;&#x589E;:</b>
