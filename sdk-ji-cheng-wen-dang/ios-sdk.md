@@ -33,6 +33,7 @@ AnalysysEasyTouch.framework
 ```text
 AnalysysEaManager.h
 AnalysysEaConfig.h
+AnalysysBannerConfig.h
 ```
 
 #### 注意事项
@@ -60,7 +61,7 @@ pod 'AnalysysEasyTouch' // 易达 SDK
 * 如果需要安装指定版本，则按照以下方式
 
 ```text
-pod 'AnalysysEasyTouch', '1.1.9' // 示例版本号
+pod 'AnalysysEasyTouch', '1.2.0.1' // 示例版本号
 ```
 
 * 特别注意：由于iOS 10以后苹果系统增加的 NSNotification Service Extension 扩展能够用于统计推送到达率，如果在 APP 中添加了该扩展而无法引入第三方的类文件，则需要使用以下“选择2”方式手动下载静态库并导入项目。将静态库及相关头文件添加到项目中的时候，需要同时勾选项目主 target 和 NSNotification Service Extension 扩展 target，否则编译会报错。
@@ -243,7 +244,7 @@ self.contentHandler(self.bestAttemptContent);
 * 真机调试该项目，如果控制台输出如下日志，代表 SDK 集成成功。
 
 ```text
-******************* [AnalysysEasyTouch][Log] *****************
+************************* [EA][Log] **************************
 AnalysysEasyTouch 启动成功！
 AppKey：ecaaab42502jgdg9870fd0740ce374daa
 userId：1BCAF1D0-C8C0-46A8-866F-005832024259
@@ -403,7 +404,7 @@ userId：1BCAF1D0-C8C0-46A8-866F-005832024259
 + (void)pushTrack:(PushEventType)type msg:(NSDictionary *)msg groupIdentifier:(NSString *)groupIdentifier;
 ```
 
-### 配置弹窗、推送点击跳转链接
+### 配置弹窗、推送、banner 信息流广告点击跳转链接
 
 在创建弹窗、推送活动时，易达 iOS SDK 支持三种类型的链接配置：
 
