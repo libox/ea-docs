@@ -66,7 +66,7 @@ pod 'AnalysysEasyTouch', '1.2.0.1' // 示例版本号
 
 * 特别注意：由于iOS 10以后苹果系统增加的 NSNotification Service Extension 扩展能够用于统计推送到达率，如果在 APP 中添加了该扩展而无法引入第三方的类文件，则需要使用以下“选择2”方式手动下载静态库并导入项目。将静态库及相关头文件添加到项目中的时候，需要同时勾选项目主 target 和 NSNotification Service Extension 扩展 target，否则编译会报错。
 
-**方式 2：手动下载静态库导入**
+**方式 2：手动下载动态库导入**
 
 * [下载最新动态库 SDK](https://github.com/AnalysysSDK/AnalysysEasyTouch_iOS/releases)
 * 解压缩后，拷贝 AnalysysEasyTouch.framework 文件到项目中
@@ -91,6 +91,9 @@ AnalysysEaConfig *config = [AnalysysEaConfig defaultConfiguration];
 config.appKey= @"易达后台创建项目的 AppKey";
 config.applicationGroupIdentifier = @"App 创建的 App Groups ID";
 [AnalysysEaManager startWithConfig:config];
+
+// 在初始化方舟埋点 SDK 的后面添加注册事件监听接口调用（方舟 SDK 4.4.8 及以上版本支持）
+[AnalysysAgent setObserverListener:[AnalysysEaManager getObserverListener:YOUR_GROUP_IDENTIFIER]];
 ```
 
 * 通过方舟 SDK 上报相关用户属性，若您需要手机能收到 SDK 发送的短信、邮件等，需要在获取到手机号、邮箱的地方，比如登录的时候，调用以下方法：
