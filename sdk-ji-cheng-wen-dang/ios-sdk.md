@@ -192,19 +192,21 @@ self.contentHandler(self.bestAttemptContent);
 
 ### 6、集成 banner 信息流广告（可选）
 
+这一步主要针对有需要使用 banner 信息流广告功能的用户。
+
 这一步主要针对需要集成信息流广告功能的用户，不需要集成该功能可以跳过。
 
 **在 EA 平台创建 banner 配置**
 
-依次选择 系统设置 -》banner 配置，添加 banner 配置，一条 banner 配置对应 APP 中一条广告位，会生成唯一一个 locationId
+进入 EA 管理后台，依次选择 系统设置 -》banner 配置，添加 banner 资源。创建的每一条 banner 资源将会对应唯一的一个 locationId，该 locationId 标识用户 APP 中的一个 banner 位置，banner 配置的图片将会在信息流广告无法展示的时候作为默认图展示。
 
-**创建 banner 信息流广告** 
+**创建对应的 banner 信息流活动，并配置 banner 位置** 
 
 创建一条 banner 信息流广告，在第四步展示位置选择某一个 banner 配置对应的名称。
 
 **在 App 列表中对应位置调用 SDK 接口渲染 banner**
 
-这里以使用 UITableView 作为列表视图为例：
+APP 在拿到创建 banner 配置生成的 locationId 后，将其作为参数，在对应列表中向 SDK 发起请求，获取渲染之后的视图。这里以使用 UITableView 作为列表视图的用户使用 banner 信息流广告的场景为例：
 
 * 第一步，创建 UITableViewCell 子类，这里比如为 EABannerCell，并注册
 * 第二步，在对应代理方法里调用 SDK 方法，并传入 locationId 和 bannerCell 作为参数，注意这里在返回 table 行高的代理方法里，AnalysysBannerConfig 对象不要给 container 参数赋值。
