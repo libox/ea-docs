@@ -31,7 +31,7 @@
 
 {% page-ref page="in-app.md" %}
 
-{% page-ref page="wechat.md" %}
+{% page-ref page="template-message.md" %}
 
 {% page-ref page="sms.md" %}
 

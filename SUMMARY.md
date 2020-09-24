@@ -7,9 +7,10 @@
 * [5 分钟快速上手](user-guide/5-minute-playbook/README.md)
   * [创建 Push 消息活动](user-guide/5-minute-playbook/push.md)
   * [创建 App 弹窗活动](user-guide/5-minute-playbook/in-app.md)
-  * [创建微信模板消息活动](user-guide/5-minute-playbook/wechat.md)
-  * [创建微信小程序活动](user-guide/5-minute-playbook/chuang-jian-wei-xin-xiao-cheng-xu-huo-dong.md)
-  * [创建微信客服消息活动](user-guide/5-minute-playbook/chuang-jian-wei-xin-ke-fu-xiao-xi-huo-dong.md)
+  * [创建微信模板消息活动](user-guide/5-minute-playbook/template-message.md)
+  * [创建微信小程序活动](user-guide/5-minute-playbook/wechat-miniprogram.md)
+  * [创建信息流广告活动](user-guide/5-minute-playbook/news-feed-ads.md)
+  * [创建微信客服消息活动](user-guide/5-minute-playbook/customer-service-message.md)
   * [创建短信活动](user-guide/5-minute-playbook/sms.md)
   * [创建 web 弹窗活动](user-guide/5-minute-playbook/web.md)
 
@@ -17,24 +18,28 @@
 
 * [创建 Push 活动的 FAQ](push-faq.md)
 * [创建微信模板消息活动的 FAQ](wechat-faq.md)
-* [创建微信小程序活动的 FAQ](chuang-jian-wei-xin-xiao-cheng-xu-huo-dong-de-faq.md)
-* [创建微信客服消息活动的 FAQ](chuang-jian-wei-xin-ke-fu-xiao-xi-huo-dong-de-faq.md)
+* [创建微信小程序活动的 FAQ](miniprogram-faq.md)
+* [创建微信客服消息活动的 FAQ](customer-service-account-message-faq.md)
 * [自动化工作流](workflow/README.md)
   * [基本组件介绍](workflow/basic-components.md)
-* [微信粉丝管理](wei-xin-fen-si-guan-li.md)
-* [扫码绑定微信](sao-ma-bang-ding-wei-xin.md)
+* [内容管理](content-management/README.md)
+  * [H5编辑器](content-management/h5-editor.md)
+  * [表单编辑器](content-management/form-editor.md)
+  * [H5互动编辑器](content-management/h5-interactive-editor.md)
+* [微信粉丝管理](follower-management.md)
+* [扫码绑定微信](binding.md)
 
 ## SDK 集成文档
 
-* [EA 系统集成文档](sdk-ji-cheng-wen-dang/yi-da-xi-tong-ji-cheng-wen-dang.md)
-* [SDK 版本更新说明](sdk-ji-cheng-wen-dang/sdk-ban-ben-geng-xin-shuo-ming.md)
+* [EA 系统集成文档](sdk-ji-cheng-wen-dang/ea-system-integration-doc.md)
+* [SDK 版本更新说明](sdk-ji-cheng-wen-dang/sdk-version-upgrade.md)
 * [iOS SDK](sdk-ji-cheng-wen-dang/ios-sdk.md)
 * [Android SDK](sdk-ji-cheng-wen-dang/android-sdk.md)
 * [JS SDK](sdk-ji-cheng-wen-dang/js-sdk.md)
-* [微信小程序 SDK](sdk-ji-cheng-wen-dang/wei-xin-xiao-cheng-xu-sdk.md)
+* [微信小程序 SDK](sdk-ji-cheng-wen-dang/wechat-miniprogram-sdk.md)
 
 ## 其它
 
-* [如何配置阿里云短信通道](qi-ta/ru-he-pei-zhieli-yun-duan-xin-tong-dao.md)
-* [名词解释](qi-ta/ming-ci-jie-shi.md)
+* [如何配置阿里云短信通道](qi-ta/sms-configuration.md)
+* [名词解释](qi-ta/illustration.md)
 
