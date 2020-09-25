@@ -559,6 +559,39 @@
   </thead>
   <tbody>
     <tr>
+      <td style="text-align:left">1.2.0</td>
+      <td style="text-align:left">
+        <p><b>&#x65B0;&#x589E;&#xFF1A;</b>
+        </p>
+        <p>1&#x3001;&#x589E;&#x52A0;&#x7528;&#x6237;&#x4F53;&#x9A8C;&#x63A7;&#x5236;&#x9879;&#xFF1B;</p>
+        <p><b>&#x4FEE;&#x590D;&#xFF1A;</b>
+        </p>
+        <p>&#x65E0;</p>
+        <p><b>&#x4F18;&#x5316;&#xFF1A;</b>
+        </p>
+        <p>&#x65E0;</p>
+      </td>
+      <td style="text-align:left">69K</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">1.1.8</td>
+      <td style="text-align:left">
+        <p><b>&#x65B0;&#x589E;&#xFF1A;</b>
+        </p>
+        <p>1&#x3001;&#x652F;&#x6301;&#x8DF3;&#x8F6C;&#x516C;&#x4F17;&#x53F7;&#x6587;&#x7AE0;&#x548C;&#x5176;&#x4ED6;&#x5C0F;&#x7A0B;&#x5E8F;&#xFF1B;
+          <br
+          />2&#x3001;&#x652F;&#x6301;&#x865A;&#x62DF;&#x4E8B;&#x4EF6;&#xFF1B;
+          <br />3&#x3001;&#x65B0;&#x589E;&#x65E5;&#x5FD7;&#x8F93;&#x51FA;&#x53C2;&#x6570;&#xFF1B;</p>
+        <p><b>&#x4FEE;&#x590D;&#xFF1A;</b>
+        </p>
+        <p>&#x65E0;</p>
+        <p><b>&#x4F18;&#x5316;&#xFF1A;</b>
+        </p>
+        <p>&#x65E0;</p>
+      </td>
+      <td style="text-align:left">68K</td>
+    </tr>
+    <tr>
       <td style="text-align:left">1.1.7</td>
       <td style="text-align:left">
         <p><b>&#x65B0;&#x589E;&#xFF1A;</b>
@@ -572,7 +605,7 @@
         <p>1&#x3001;&#x591A;&#x4E8B;&#x4EF6;&#x89E6;&#x53D1;&#x4E00;&#x6B21;&#x5F39;&#x7A97;&#xFF1B;</p>
         <p></p>
       </td>
-      <td style="text-align:left">33</td>
+      <td style="text-align:left">33K</td>
     </tr>
     <tr>
       <td style="text-align:left">1.1.6</td>
@@ -587,7 +620,7 @@
         </p>
         <p>&#x65E0;</p>
       </td>
-      <td style="text-align:left">22</td>
+      <td style="text-align:left">22K</td>
     </tr>
     <tr>
       <td style="text-align:left">1.1.5</td>
