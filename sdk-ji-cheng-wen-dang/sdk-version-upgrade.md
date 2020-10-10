@@ -14,6 +14,21 @@
   </thead>
   <tbody>
     <tr>
+      <td style="text-align:center">1.2.1</td>
+      <td style="text-align:left">
+        <p><b>&#x4FEE;&#x590D;</b>
+        </p>
+        <p>1.&#x4FEE;&#x590D;&#x5F39;&#x7A97;&#x65B0;&#x89C4;&#x5219;&#x4E0B;&#x7B2C;&#x4E00;&#x6B21;&#x89E6;&#x53D1;&#x540E;&#x6740;&#x6B7B;&#x8FDB;&#x7A0B;&#x540E;&#x7EED;&#x4E0D;&#x5F39;&#x7A97;&#x7684;&#x95EE;&#x9898;&#xFF1B;</p>
+        <p></p>
+        <p><b>&#x4F18;&#x5316;</b>
+        </p>
+        <p>1.openURL &#x5904;&#x7406;ios 10.0&#x63A5;&#x53E3;&#xFF1B;</p>
+        <p>2.&#x83B7;&#x53D6; idfa &#x9002;&#x914D; ios 14.0&#xFF1B;</p>
+        <p>3.&#x4F18;&#x5316;&#x5F39;&#x7A97;&#x4F53;&#x9A8C;&#xFF1A;&#x56FE;&#x7247;&#x5F39;&#x7A97;&#x70B9;&#x51FB;&#x8DF3;&#x8F6C;&#x94FE;&#x63A5;&#x4E3A;&#x7A7A;&#x7684;&#x8BDD;&#x70B9;&#x51FB;&#x56FE;&#x7247;&#x4E0D;&#x54CD;&#x5E94;</p>
+      </td>
+      <td style="text-align:left">1.9M</td>
+    </tr>
+    <tr>
       <td style="text-align:center">1.2.0</td>
       <td style="text-align:left">
         <p><b>&#x65B0;&#x589E;:</b>
