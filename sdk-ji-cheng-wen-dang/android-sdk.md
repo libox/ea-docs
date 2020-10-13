@@ -60,15 +60,16 @@ dependencies {
 //analysys-core的版本要大于4.4.12
 implementation 'cn.com.analysys:analysys-core:4.4.12'
 //EA push SDK集成了华为、小米、OPPO、VIVO、魅族推送SDK
+//如果已经集成了厂商的SDK，可以不集成analysys-easytouch-push,将厂商的token通过pushToken接口上报
 implementation 'cn.com.analysys:analysys-easytouch-push:0.3.0'
 //EA SDK
-implementation 'cn.com.analysys:analysys-easytouch:1.2.0.1'
+implementation 'cn.com.analysys:analysys-easytouch:1.2.1'
 }
 ```
 
 * 添加厂商推送依赖
 
-        在应用的Module的build.gradle中添加如下引用：
+        在应用的Module的build.gradle中添加如下引用\(集成analysys-easytouch-push的时候需要如下配置，反之不需要配置\)：
 
 ```text
     defaultConfig {
