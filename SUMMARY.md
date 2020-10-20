@@ -26,7 +26,7 @@
   * [H5编辑器](content-management/h5-editor.md)
   * [表单编辑器](content-management/form-editor.md)
   * [H5互动编辑器](content-management/h5-interactive-editor.md)
-* [微信粉丝管理](follower-management.md)
+* [微信粉丝管理](fans-management.md)
 * [扫码绑定微信](binding.md)
 
 ## SDK 集成文档

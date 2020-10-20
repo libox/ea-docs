@@ -15,11 +15,13 @@
 * 与公众号对应的OpenID
 * 用户的UnionID
 
-![&#x7C89;&#x4E1D;&#x7BA1;&#x7406;&#x9875;&#x793A;&#x4F8B;](.gitbook/assets/ping-mu-kuai-zhao-20200811-shang-wu-11.46.51.png)
+![](.gitbook/assets/wei-xin-fen-si-guan-li-.png)
+
+可以根据用户的性别、地区、关注的公众号名称、来源渠道进行筛选搜索。
 
 同时，EA支持数据同步功能。点击“数据同步”按钮，可获取公众号最近更新的关注者列表。该功能每天可使用一次。
 
-![&#x6570;&#x636E;&#x540C;&#x6B65;&#x529F;&#x80FD;](.gitbook/assets/ping-mu-kuai-zhao-20200811-xia-wu-2.55.00.png)
+![](.gitbook/assets/shu-ju-tong-bu-.png)
 
 ### 粉丝管理功能实现机制
 
