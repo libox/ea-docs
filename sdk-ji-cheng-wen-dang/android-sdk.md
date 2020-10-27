@@ -63,7 +63,7 @@ implementation 'cn.com.analysys:analysys-core:4.4.12'
 //如果已经集成了厂商的SDK，可以不集成analysys-easytouch-push,将厂商的token通过pushToken接口上报
 implementation 'cn.com.analysys:analysys-easytouch-push:0.3.0'
 //EA SDK
-implementation 'cn.com.analysys:analysys-easytouch:1.2.1'
+implementation 'cn.com.analysys:analysys-easytouch:1.2.2'
 }
 ```
 
