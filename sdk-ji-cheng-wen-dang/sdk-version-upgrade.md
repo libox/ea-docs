@@ -14,6 +14,29 @@
   </thead>
   <tbody>
     <tr>
+      <td style="text-align:center">1.2.2</td>
+      <td style="text-align:left">
+        <p><b>&#x65B0;&#x589E;:</b>
+        </p>
+        <p>1&#x3001;banner &#x4FE1;&#x606F;&#x6D41;&#x589E;&#x52A0;&#x8F6E;&#x64AD;&#x56FE;&#x6A21;&#x677F;&#x529F;&#x80FD;&#xFF1B;</p>
+        <p>2&#x3001;banner &#x4FE1;&#x606F;&#x6D41;&#x5C0F;&#x56FE;&#x6807;&#x3001;&#x89C6;&#x9891;&#x6CA1;&#x6D3B;&#x52A8;&#x65F6;&#x652F;&#x6301;&#x5C55;&#x793A;&#x9ED8;&#x8BA4;&#x914D;&#x7F6E;&#xFF1B;</p>
+        <p>3&#x3001;&#x4E2A;&#x6027;&#x5316;&#x6587;&#x672C;&#x53D8;&#x91CF;&#x589E;&#x52A0;&#x9ED8;&#x8BA4;&#x6587;&#x6848;&#xFF1B;</p>
+        <p></p>
+        <p><b>&#x4FEE;&#x590D;:</b>
+        </p>
+        <p>1&#x3001;&#x4FEE;&#x590D;&#x4E2A;&#x6027;&#x5316;&#x6587;&#x672C;&#x5B57;&#x4F53;&#x989C;&#x8272;&#x663E;&#x793A;&#x4E0D;&#x6B63;&#x786E;&#x7684;&#x95EE;&#x9898;&#xFF1B;</p>
+        <p>2&#x3001;&#x4FEE;&#x590D;&#x7CFB;&#x7EDF;&#x9759;&#x97F3;&#x6A21;&#x5F0F;&#x4E0B;
+          banner &#x4FE1;&#x606F;&#x6D41;&#x89C6;&#x9891;&#x64AD;&#x653E;&#x6CA1;&#x6709;&#x58F0;&#x97F3;&#x7684;&#x95EE;&#x9898;&#xFF1B;</p>
+        <p>3&#x3001;&#x4FEE;&#x590D;&#x67D0;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#x6D3B;&#x52A8;&#x7684;
+          URL &#x94FE;&#x63A5;&#x65E0;&#x6CD5;&#x8DF3;&#x8F6C;&#x7684;&#x95EE;&#x9898;&#xFF1B;</p>
+        <p></p>
+        <p><b>&#x4F18;&#x5316;:</b>
+        </p>
+        <p>1&#x3001;&#x4F18;&#x5316;&#x56FE;&#x7247;&#x78C1;&#x76D8;&#x7F13;&#x5B58;&#xFF0C;&#x4FEE;&#x590D;&#x67D0;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#x8BFB;&#x5199;&#x5BFC;&#x81F4;&#x95EA;&#x9000;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x589E;&#x5F3A;&#x7CFB;&#x7EDF;&#x7A33;&#x5B9A;&#x6027;&#xFF1B;</p>
+      </td>
+      <td style="text-align:left">2.1M</td>
+    </tr>
+    <tr>
       <td style="text-align:center">1.2.1</td>
       <td style="text-align:left">
         <p><b>&#x4FEE;&#x590D;</b>
