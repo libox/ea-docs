@@ -14,6 +14,15 @@
   </thead>
   <tbody>
     <tr>
+      <td style="text-align:center">1.2.3</td>
+      <td style="text-align:left">
+        <p><b>&#x65B0;&#x589E;:</b>
+        </p>
+        <p>1&#x3001;banner &#x4FE1;&#x606F;&#x6D41;&#x8F6E;&#x64AD;&#x56FE;&#x652F;&#x6301;&#x5355;&#x5F20;&#x56FE;&#x7247;&#x70B9;&#x51FB;&#x8DF3;&#x8F6C;&#xFF1B;</p>
+      </td>
+      <td style="text-align:left">2.1M</td>
+    </tr>
+    <tr>
       <td style="text-align:center">1.2.2</td>
       <td style="text-align:left">
         <p><b>&#x65B0;&#x589E;:</b>
