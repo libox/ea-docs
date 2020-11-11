@@ -13,24 +13,30 @@
   * [创建微信客服消息活动](user-guide/5-minute-playbook/customer-service-message.md)
   * [创建短信活动](user-guide/5-minute-playbook/sms.md)
   * [创建 web 弹窗活动](user-guide/5-minute-playbook/web.md)
+* [自动化工作流](user-guide/workflow/README.md)
+  * [基本组件介绍](user-guide/workflow/basic-components.md)
+  * [用户类组件详细说明](user-guide/workflow/yong-hu-lei-zu-jian-xiang-xi-shuo-ming.md)
+  * [触达通道类组件详细说明](user-guide/workflow/chu-da-tong-dao-lei-zu-jian-xiang-xi-shuo-ming.md)
+  * [条件类组件详细说明](user-guide/workflow/tiao-jian-lei-zu-jian-xiang-xi-shuo-ming.md)
 
 ---
 
-* [创建 Push 活动的 FAQ](push-faq.md)
-* [创建微信模板消息活动的 FAQ](wechat-faq.md)
-* [创建微信小程序活动的 FAQ](miniprogram-faq.md)
-* [创建微信客服消息活动的 FAQ](customer-service-account-message-faq.md)
-* [自动化工作流](workflow/README.md)
-  * [基本组件介绍](workflow/basic-components.md)
-  * [用户类组件详细说明](workflow/yong-hu-lei-zu-jian-xiang-xi-shuo-ming.md)
-  * [触达通道类组件详细说明](workflow/chu-da-tong-dao-lei-zu-jian-xiang-xi-shuo-ming.md)
-  * [条件类组件详细说明](workflow/tiao-jian-lei-zu-jian-xiang-xi-shuo-ming.md)
 * [内容管理](content-management/README.md)
   * [H5编辑器](content-management/h5-editor.md)
   * [表单编辑器](content-management/form-editor.md)
   * [H5互动编辑器](content-management/h5-interactive-editor.md)
 * [微信粉丝管理](fans-management.md)
-* [扫码绑定微信](binding.md)
+
+## 系统初始化
+
+* [扫码绑定微信](xi-tong-chu-shi-hua/binding.md)
+
+## FAQ
+
+* [创建 Push 活动的 FAQ](faq/push-faq.md)
+* [创建微信模板消息活动的 FAQ](faq/wechat-faq.md)
+* [创建微信小程序活动的 FAQ](faq/miniprogram-faq.md)
+* [创建微信客服消息活动的 FAQ](faq/customer-service-account-message-faq.md)
 
 ## SDK 集成文档
 

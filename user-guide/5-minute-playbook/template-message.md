@@ -65,7 +65,7 @@
 
 预览并执行活动，活动正式运行，状态由“草稿”变为“进行中”或“即将开始”。
 
-{% page-ref page="../../wechat-faq.md" %}
+{% page-ref page="../../faq/wechat-faq.md" %}
 
 
 
