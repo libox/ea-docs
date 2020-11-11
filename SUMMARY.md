@@ -18,14 +18,11 @@
   * [用户类组件详细说明](user-guide/workflow/yong-hu-lei-zu-jian-xiang-xi-shuo-ming.md)
   * [触达通道类组件详细说明](user-guide/workflow/chu-da-tong-dao-lei-zu-jian-xiang-xi-shuo-ming.md)
   * [条件类组件详细说明](user-guide/workflow/tiao-jian-lei-zu-jian-xiang-xi-shuo-ming.md)
-
----
-
-* [内容管理](content-management/README.md)
-  * [H5编辑器](content-management/h5-editor.md)
-  * [表单编辑器](content-management/form-editor.md)
-  * [H5互动编辑器](content-management/h5-interactive-editor.md)
-* [微信粉丝管理](fans-management.md)
+* [内容管理](user-guide/content-management/README.md)
+  * [H5编辑器](user-guide/content-management/h5-editor.md)
+  * [表单编辑器](user-guide/content-management/form-editor.md)
+  * [H5互动编辑器](user-guide/content-management/h5-interactive-editor.md)
+* [微信粉丝管理](user-guide/fans-management.md)
 
 ## 系统初始化
 

@@ -2,7 +2,7 @@
 
 ## 一、进入H5活动列表
 
-![&#x7B2C;&#x4E00;&#x6B65;&#xFF1A;&#x8FDB;&#x5165;H5&#x6D3B;&#x52A8;&#x5217;&#x8868;](../.gitbook/assets/h5-bian-ji-qi-.png)
+![&#x7B2C;&#x4E00;&#x6B65;&#xFF1A;&#x8FDB;&#x5165;H5&#x6D3B;&#x52A8;&#x5217;&#x8868;](../../.gitbook/assets/h5-bian-ji-qi-.png)
 
 点击左侧“H5编辑器“按钮，进入H5活动列表页，查看和新建H5活动。
 
@@ -10,19 +10,19 @@
 
 ## 二、新建H5活动
 
-![&#x7B2C;&#x4E8C;&#x6B65;&#xFF1A;&#x65B0;&#x5EFA;H5&#x6D3B;&#x52A8;](../.gitbook/assets/h5-xin-jian-.png)
+![&#x7B2C;&#x4E8C;&#x6B65;&#xFF1A;&#x65B0;&#x5EFA;H5&#x6D3B;&#x52A8;](../../.gitbook/assets/h5-xin-jian-.png)
 
 点击进入活动新建页面，点击“空白创建“创建新活动，或者选择模版后创建新活动。
 
 ## 三、设置活动内容
 
-![&#x7B2C;&#x4E09;&#x6B65;&#xFF1A;&#x8BBE;&#x7F6E;&#x6D3B;&#x52A8;&#x5185;&#x5BB9;](../.gitbook/assets/h5-nei-rong-.png)
+![&#x7B2C;&#x4E09;&#x6B65;&#xFF1A;&#x8BBE;&#x7F6E;&#x6D3B;&#x52A8;&#x5185;&#x5BB9;](../../.gitbook/assets/h5-nei-rong-.png)
 
 ## 四、预览并发布
 
 预览并发布活动，活动正式运行，状态由“创建中”变为“已发布”。
 
-![](../.gitbook/assets/h5-fen-xiang-.png)
+![](../../.gitbook/assets/h5-fen-xiang-.png)
 
 发布成功后会生成链接，支持复制成为App弹窗的落地页链接，用户点击即可跳转至该H5页面。
 
