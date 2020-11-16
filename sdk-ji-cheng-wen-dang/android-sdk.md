@@ -81,7 +81,7 @@ implementation 'cn.com.analysys:analysys-easytouch:1.2.3'
                 EA_PUSH_PARAM_OPPO_APPKEY:"OPPO推送的appKey",
                 EA_PUSH_PARAM_OPPO_APPSECRET:"OPPO推送的appSecret",
                 EA_PUSH_PARAM_VIVO_APPID:"VIVO推送的appID",
-                EA_PUSH_PARAM_VIVO_APPKEY:"VIVO推送的appID",
+                EA_PUSH_PARAM_VIVO_APPKEY:"VIVO推送的appKey",
                 EA_PUSH_PARAM_MEIZU_APPID:"魅族的appID",
                 EA_PUSH_PARAM_MEIZU_APPKEY:"魅族的appKey",
                 EA_PUSH_PARAM_HUAWEI_APPID:""
