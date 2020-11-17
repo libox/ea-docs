@@ -287,7 +287,7 @@ userId：1BCAF1D0-C8C0-46A8-866F-005832024259
 
 | 参数 | 说明 | 必填 | 备注 |
 | :--- | :--- | :--- | :--- |
-| groupIdentifier | 由客户端创建的 App Groups 名称。若系统不支持推送，可传空字符串 | 是 |  |
+| groupIdentifier | 由客户端创建的 App Groups 名称。若系统不支持推送，可传空字符串 |   是   |  |
 
 **接口返回：**返回事件监听代理对象。
 
@@ -307,9 +307,29 @@ userId：1BCAF1D0-C8C0-46A8-866F-005832024259
 
 **参数说明：**
 
-| 参数 | 说明 | 必填 | 备注 |
-| :--- | :--- | :--- | :--- |
-| config | 配置 SDK 启动所需要的 appKey 等信息，AnalysysEaConfig 对象实例 | 是 | 具体请参考 AnalysysEaConfig 类中各属性说明 |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">&#x53C2;&#x6570;</th>
+      <th style="text-align:left">&#x8BF4;&#x660E;</th>
+      <th style="text-align:left">&#x5FC5;&#x586B;</th>
+      <th style="text-align:left">&#x5907;&#x6CE8;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">config</td>
+      <td style="text-align:left">&#x914D;&#x7F6E; SDK &#x542F;&#x52A8;&#x6240;&#x9700;&#x8981;&#x7684;
+        appKey &#x7B49;&#x4FE1;&#x606F;&#xFF0C;AnalysysEaConfig &#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;</td>
+      <td
+      style="text-align:left">
+        <p>&#x662F;</p>
+        <p></p>
+        </td>
+        <td style="text-align:left">&#x5177;&#x4F53;&#x8BF7;&#x53C2;&#x8003; AnalysysEaConfig &#x7C7B;&#x4E2D;&#x5404;&#x5C5E;&#x6027;&#x8BF4;&#x660E;</td>
+    </tr>
+  </tbody>
+</table>
 
 **接口返回：**无
 
@@ -329,10 +349,37 @@ userId：1BCAF1D0-C8C0-46A8-866F-005832024259
 
 **参数说明：**
 
-| 参数 | 说明 | 必填 | 备注 |
-| :--- | :--- | :--- | :--- |
-| deviceToken | app 启动后由系统返回的用于推送的 NSData 类型的 deviceToken | 是 | 直接传系统回调的 deviceToken ，无需解析 |
-| groupIdentifiler | 创建的 App Groups 分组 id 名称 : group.xxx | 否 | 若不配置 Notification Service Extension 扩展，即可不创建 APP Groups，此处传空字符串即可 |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">&#x53C2;&#x6570;</th>
+      <th style="text-align:left">&#x8BF4;&#x660E;</th>
+      <th style="text-align:left">&#x5FC5;&#x586B;</th>
+      <th style="text-align:left">&#x5907;&#x6CE8;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">deviceToken</td>
+      <td style="text-align:left">app &#x542F;&#x52A8;&#x540E;&#x7531;&#x7CFB;&#x7EDF;&#x8FD4;&#x56DE;&#x7684;&#x7528;&#x4E8E;&#x63A8;&#x9001;&#x7684;
+        NSData &#x7C7B;&#x578B;&#x7684; deviceToken</td>
+      <td style="text-align:left">
+        <p>&#x662F;</p>
+        <p></p>
+      </td>
+      <td style="text-align:left">&#x76F4;&#x63A5;&#x4F20;&#x7CFB;&#x7EDF;&#x56DE;&#x8C03;&#x7684; deviceToken
+        &#xFF0C;&#x65E0;&#x9700;&#x89E3;&#x6790;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">groupIdentifiler</td>
+      <td style="text-align:left">&#x521B;&#x5EFA;&#x7684; App Groups &#x5206;&#x7EC4; id &#x540D;&#x79F0;
+        : group.xxx</td>
+      <td style="text-align:left">&#x5426;</td>
+      <td style="text-align:left">&#x82E5;&#x4E0D;&#x914D;&#x7F6E; Notification Service Extension &#x6269;&#x5C55;&#xFF0C;&#x5373;&#x53EF;&#x4E0D;&#x521B;&#x5EFA;
+        APP Groups&#xFF0C;&#x6B64;&#x5904;&#x4F20;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;&#x5373;&#x53EF;</td>
+    </tr>
+  </tbody>
+</table>
 
 **接口返回：**无
 
@@ -354,11 +401,41 @@ userId：1BCAF1D0-C8C0-46A8-866F-005832024259
 
 **参数说明**
 
-| 参数 | 说明 | 必填 | 备注 |
-| :--- | :--- | :--- | :--- |
-| type | push的事件类型 | 是 |  |
-| msg | push事件的属性信息 | 是 | push属性说明 |
-| groupIdentifier | 创建的 App Groups 分组 id 名称 : group.xxx | 否 | 若不配置 Notification Service Extension 扩展，即可不创建 APP Groups，此处传空字符串即可 |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">&#x53C2;&#x6570;</th>
+      <th style="text-align:left">&#x8BF4;&#x660E;</th>
+      <th style="text-align:left">&#x5FC5;&#x586B;</th>
+      <th style="text-align:left">&#x5907;&#x6CE8;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">type</td>
+      <td style="text-align:left">push&#x7684;&#x4E8B;&#x4EF6;&#x7C7B;&#x578B;</td>
+      <td style="text-align:left">&#x662F;</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">msg</td>
+      <td style="text-align:left">push&#x4E8B;&#x4EF6;&#x7684;&#x5C5E;&#x6027;&#x4FE1;&#x606F;</td>
+      <td style="text-align:left">&#x662F;</td>
+      <td style="text-align:left">push&#x5C5E;&#x6027;&#x8BF4;&#x660E;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">groupIdentifier</td>
+      <td style="text-align:left">&#x521B;&#x5EFA;&#x7684; App Groups &#x5206;&#x7EC4; id &#x540D;&#x79F0;
+        : group.xxx</td>
+      <td style="text-align:left">
+        <p>&#x5426;</p>
+        <p></p>
+      </td>
+      <td style="text-align:left">&#x82E5;&#x4E0D;&#x914D;&#x7F6E; Notification Service Extension &#x6269;&#x5C55;&#xFF0C;&#x5373;&#x53EF;&#x4E0D;&#x521B;&#x5EFA;
+        APP Groups&#xFF0C;&#x6B64;&#x5904;&#x4F20;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;&#x5373;&#x53EF;</td>
+    </tr>
+  </tbody>
+</table>
 
 **接口返回：**无
 
