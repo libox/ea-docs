@@ -18,15 +18,15 @@
       <td style="text-align:left">
         <p><b>&#x65B0;&#x589E;:</b>
         </p>
-        <p>1.banner &#x4FE1;&#x606F;&#x6D41;&#x652F;&#x6301;&#x57FA;&#x4E8E;&#x4E8B;&#x4EF6;&#x89E6;&#x53D1;&#x5C55;&#x793A;&#x521B;&#x5EFA;&#x7684;&#x6D3B;&#x52A8;&#xFF1B;</p>
+        <p>1&#x3001;banner &#x4FE1;&#x606F;&#x6D41;&#x652F;&#x6301;&#x57FA;&#x4E8E;&#x4E8B;&#x4EF6;&#x89E6;&#x53D1;&#x5C55;&#x793A;&#x521B;&#x5EFA;&#x7684;&#x6D3B;&#x52A8;&#xFF1B;</p>
         <p></p>
         <p><b>&#x4FEE;&#x590D;:</b>
         </p>
-        <p>1.&#x4FEE;&#x590D;&#x5F39;&#x7A97;&#x7B49;&#x6D3B;&#x52A8;&#x89C4;&#x5219;&#x5339;&#x914D;&#x82E5;&#x5E72;bug&#xFF1B;</p>
+        <p>1&#x3001;&#x4FEE;&#x590D;&#x5F39;&#x7A97;&#x7B49;&#x6D3B;&#x52A8;&#x89C4;&#x5219;&#x5339;&#x914D;&#x82E5;&#x5E72;bug&#xFF1B;</p>
         <p></p>
         <p><b>&#x4F18;&#x5316;:</b>
         </p>
-        <p>1.&#x4F18;&#x5316;&#x5F39;&#x7A97;&#x5E03;&#x5C40;&#x6E32;&#x67D3;&#xFF0C;&#x652F;&#x6301;&#x56FE;&#x6587;&#x81EA;&#x9002;&#x5E94;&#xFF1B;</p>
+        <p>1&#x3001;&#x4F18;&#x5316;&#x5F39;&#x7A97;&#x5E03;&#x5C40;&#x6E32;&#x67D3;&#xFF0C;&#x652F;&#x6301;&#x56FE;&#x6587;&#x81EA;&#x9002;&#x5E94;&#xFF1B;</p>
       </td>
       <td style="text-align:left">2.2M</td>
     </tr>
