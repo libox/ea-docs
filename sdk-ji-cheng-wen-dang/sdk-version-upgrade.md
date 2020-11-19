@@ -286,6 +286,22 @@
   </thead>
   <tbody>
     <tr>
+      <td style="text-align:left">1.2.4</td>
+      <td style="text-align:left">
+        <p><b>&#x65B0;&#x589E;:</b>
+        </p>
+        <p>&#x65E0;</p>
+        <p><b>&#x4FEE;&#x590D;:</b>
+        </p>
+        <p>&#x65E0;</p>
+        <p><b>&#x4F18;&#x5316;:</b>
+        </p>
+        <p>1&#x3001;&#x5F39;&#x7A97;&#x7684;&#x5C55;&#x793A;&#x6837;&#x5F0F;&#x4F18;&#x5316;&#xFF1B;</p>
+        <p>2&#x3001;banner&#x4FE1;&#x606F;&#x6D41;&#x7684;&#x5C55;&#x793A;&#x6837;&#x5F0F;&#x4F18;&#x5316;&#xFF1B;</p>
+      </td>
+      <td style="text-align:left">340K</td>
+    </tr>
+    <tr>
       <td style="text-align:left">1.2.3</td>
       <td style="text-align:left">
         <p><b>&#x65B0;&#x589E;:</b>
