@@ -163,8 +163,8 @@ config.applicationGroupIdentifier = @"App 创建的 App Groups ID";
 
 // iOS 10 及以后，收到推送
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler {
-    // 若实现了扩展，需注释掉
-    [AnalysysEaManager pushTrack:PUSH_RECEIVE msg:notification.request.content.userInfo];
+    // 注意：若实现 Notification Service Extension，需注释掉改行代码，收到推送会执行扩展中的方法
+//    [AnalysysEaManager pushTrack:PUSH_RECEIVE msg:notification.request.content.userInfo];
 
     completionHandler(UNNotificationPresentationOptionBadge
     |UNNotificationPresentationOptionAlert);
@@ -514,6 +514,7 @@ userId：1BCAF1D0-C8C0-46A8-866F-005832024259
 易达 SDK 接通了极光推送服务，并支持统计推送到达率、点击率。
 
 * 登录极光后台，进行 push 配置，上传推送证书或者配置 token。
+* 若使用极光推送通道，客户端集成了极光 SDK，初始化 EA SDK 时，需配置AnalysysEaConfig 属性 pushClosed 为 YES，避免 EA 重复注册远程推送。
 * 实现极光推送回调接口：
 
 ```text
