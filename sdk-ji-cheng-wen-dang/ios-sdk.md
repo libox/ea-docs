@@ -22,7 +22,7 @@
   4. 文字 + 视频样式，支持视频播放
   5. 轮播图样式，支持每张图片单独点击事件
 
-* 订阅事件，用户在后台如果创建了基于用户事件的触发行为（弹窗除外），SDK 就会在每次启动的时候根据是否有事件更新来拉取订阅列表，并在有订阅事件产生的时候通知易达系统。
+* 订阅事件，用户在后台如果创建了基于用户事件的触发行为（弹窗除外），SDK 就会在每次启动的时候根据是否有事件更新来拉取订阅列表，并在有订阅事件产生的时候通知易达系统（如发送推送消息）。
 
 **iOS 版本支持**
 
@@ -71,7 +71,7 @@ pod 'AnalysysEasyTouch' // 易达 SDK
 * 如果需要安装指定版本，则按照以下方式
 
 ```text
-pod 'AnalysysEasyTouch', '1.2.0.1' // 示例版本号
+pod 'AnalysysEasyTouch', '1.2.4' // 示例版本号
 ```
 
 * 特别注意：由于iOS 10以后苹果系统增加的 NSNotification Service Extension 扩展能够用于统计推送到达率，如果在 APP 中添加了该扩展而无法引入第三方的类文件，则需要使用以下“选择2”方式手动下载静态库并导入项目。将静态库及相关头文件添加到项目中的时候，需要同时勾选项目主 target 和 NSNotification Service Extension 扩展 target，否则编译会报错。
@@ -120,8 +120,11 @@ config.applicationGroupIdentifier = @"App 创建的 App Groups ID";
 * 在收到 deviceToken 的系统回调方法 - \(void\)application:\(UIApplication \*\)application didRegisterForRemoteNotificationsWithDeviceToken:\(NSData \*\)deviceToken 中上报 deviceToken
 
 ```text
-// 上报deviceToken,目前易达 iOS SDK 只支持苹果 APNS 推送通道
-[AnalysysEaManager pushToken:deviceToken];
+// 上报设备唯一标识,目前易达 iOS SDK 支持苹果 APNS 推送通道和极光推送通道
+/// @param deviceId 设备唯一标识 ID（若是 APNS 通道，值为系统直接返回的 deviceToken，若是三方推送通道，比如极光推送，则值为极光返回的 registrationID）
+/// @param provider 推送通道
+/// @param groupIdentifier App Groups Id
++ (void)pushToken:(id _Nullable)deviceId provider:(PushProvider)provider groupIdentifier:(NSString *)groupIdentifier;
 ```
 
 * 若 APP 支持推送功能，在收到推送及点击推送的系统回调方法中，添加对应的方法：
@@ -131,40 +134,50 @@ config.applicationGroupIdentifier = @"App 创建的 App Groups ID";
 
 // iOS 6 及以前，收到推送
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
-// 若实现 Notification Service Extension 扩展，需注释掉，否则可能重复上报
-[AnalysysEaManager pushTrack:PUSH_RECEIVE msg:userInfo];
+    // 若实现 Notification Service Extension 扩展，需注释掉，否则可能重复上报
+    [AnalysysEaManager pushTrack:PUSH_RECEIVE msg:userInfo];
 }
 
 // iOS 7 以后 10 以前，收到推送
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
 
-completionHandler(UIBackgroundFetchResultNewData);
+    completionHandler(UIBackgroundFetchResultNewData);
 
-if (application.applicationState == UIApplicationStateActive) {
+    if (application.applicationState == UIApplicationStateActive) {
 
-// App前台 收到推送消息，追踪"App 消息推送"事件，若实现了扩展，需注释掉
-[AnalysysEaManager pushTrack:PUSH_RECEIVE msg:userInfo];
+        // App前台 收到推送消息，追踪"App 消息推送"事件，若实现了扩展，需注释掉
+        [AnalysysEaManager pushTrack:PUSH_RECEIVE msg:userInfo];
 
-} else if (application.applicationState == UIApplicationStateBackground) {
+    } else if (application.applicationState == UIApplicationStateBackground) {
 
-// App后台 收到推送消息，追踪"App 消息推送"事件，若实现了扩展，需注释掉
-[AnalysysEaManager pushTrack:PUSH_RECEIVE msg:userInfo];
+        // App后台 收到推送消息，追踪"App 消息推送"事件，若实现了扩展，需注释掉
+        [AnalysysEaManager pushTrack:PUSH_RECEIVE msg:userInfo];
 
-} else {
+    } else {
 
-// 点击通知栏打开消息，记录"App 点击通知"事件
-[AnalysysEaManager pushTrack:PUSH_CLICK msg:userInfo];
+        // 点击通知栏打开消息，记录"App 点击通知"事件
+        [AnalysysEaManager pushTrack:PUSH_CLICK msg:userInfo];
 
+    }
 }
-}
 
-// iOS 10 及以后
+// iOS 10 及以后，收到推送
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler {
-// 若实现了扩展，需注释掉
-[AnalysysEaManager pushTrack:PUSH_RECEIVE msg:notification.request.content.userInfo];
+    // 若实现了扩展，需注释掉
+    [AnalysysEaManager pushTrack:PUSH_RECEIVE msg:notification.request.content.userInfo];
 
-completionHandler(UNNotificationPresentationOptionBadge
-|UNNotificationPresentationOptionAlert);
+    completionHandler(UNNotificationPresentationOptionBadge
+    |UNNotificationPresentationOptionAlert);
+}
+
+// iOS 10 及以后，点击推送
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler  API_AVAILABLE(ios(10.0)){
+
+    NSLog(@"didReceiveNotification：%@", response.notification.request.content.userInfo);
+
+    [AnalysysEaManager pushTrack:PUSH_CLICK msg:response.notification.request.content.userInfo groupIdentifier:GROUP_IDENTIFIER];
+
+    completionHandler();
 }
 ```
 
@@ -184,15 +197,15 @@ APP 进程在被杀死的情况下，iOS 10.0 以后可以通过 Notification Se
 
 ```text
 - (void)didReceiveNotificationRequest:(UNNotificationRequest *)request withContentHandler:(void (^)(UNNotificationContent * _Nonnull))contentHandler {
-self.contentHandler = contentHandler;
-self.bestAttemptContent = [request.content mutableCopy];
+    self.contentHandler = contentHandler;
+    self.bestAttemptContent = [request.content mutableCopy];
 
-// Modify the notification content here...
-self.bestAttemptContent.title = [NSString stringWithFormat:@"%@ [方舟易达]", self.bestAttemptContent.title];
+    // Modify the notification content here...
+    self.bestAttemptContent.title = [NSString stringWithFormat:@"%@ [方舟易达]", self.bestAttemptContent.title];
 
-[AnalysysEaManager pushTrack:PUSH_RECEIVE msg:self.bestAttemptContent.userInfo];
+    [AnalysysEaManager pushTrack:PUSH_RECEIVE msg:self.bestAttemptContent.userInfo];
 
-self.contentHandler(self.bestAttemptContent);
+    self.contentHandler(self.bestAttemptContent);
 }
 ```
 
@@ -494,6 +507,38 @@ userId：1BCAF1D0-C8C0-46A8-866F-005832024259
 
 ```text
 + (void)pushTrack:(PushEventType)type msg:(NSDictionary *)msg groupIdentifier:(NSString *)groupIdentifier;
+```
+
+### 极光推送
+
+易达 SDK 接通了极光推送服务，并支持统计推送到达率、点击率。
+
+* 登录极光后台，进行 push 配置，上传推送证书或者配置 token。
+* 实现极光推送回调接口：
+
+```text
+// iOS 10 Support 推送触达
+- (void)jpushNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(NSInteger))completionHandler  API_AVAILABLE(ios(10.0)){
+    // Required
+    NSDictionary * userInfo = notification.request.content.userInfo;
+    if ([notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
+        [JPUSHService handleRemoteNotification:userInfo];
+        // 注意：若实现 Notification Service Extension，需注释掉改行代码，收到推送会执行扩展中的方法
+      //    [AnalysysEaManager pushTrack:PUSH_RECEIVE msg:userInfo groupIdentifier:GROUP_IDENTIFIER];
+    }
+    completionHandler(UNNotificationPresentationOptionAlert); // 需要执行这个方法，选择是否提醒用户，有 Badge、Sound、Alert 三种类型可以选择设置
+}
+
+// iOS 10 Support 推送点击
+- (void)jpushNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler  API_AVAILABLE(ios(10.0)){
+    // Required
+    NSDictionary * userInfo = response.notification.request.content.userInfo;
+    if ([response.notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
+        [JPUSHService handleRemoteNotification:userInfo];
+        [AnalysysEaManager pushTrack:PUSH_CLICK msg:userInfo groupIdentifier:GROUP_IDENTIFIER];
+    }
+    completionHandler();  // 系统要求执行这个方法
+}
 ```
 
 ### 配置弹窗、推送、banner 信息流广告点击跳转链接
