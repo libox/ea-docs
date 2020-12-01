@@ -14,6 +14,20 @@
   </thead>
   <tbody>
     <tr>
+      <td style="text-align:center">1.2.5</td>
+      <td style="text-align:left">
+        <p><b>&#x65B0;&#x589E;:</b>
+        </p>
+        <p>1&#x3001;&#x65B0;&#x589E;&#x63A8;&#x9001;&#x4E0A;&#x62A5;&#x8BBE;&#x5907;&#x552F;&#x4E00;&#x6807;&#x8BC6;&#x63A5;&#x53E3;&#xFF1B;</p>
+        <p>2&#x3001;&#x652F;&#x6301;&#x5BF9;&#x63A5;&#x6781;&#x5149;&#x63A8;&#x9001;&#xFF1B;</p>
+        <p></p>
+        <p><b>&#x4F18;&#x5316;:</b>
+        </p>
+        <p>1&#x3001;&#x589E;&#x52A0;&#x63A5;&#x53E3;&#x53C2;&#x6570;&#x68C0;&#x67E5;&#xFF0C;&#x589E;&#x5F3A;&#x7CFB;&#x7EDF;&#x7A33;&#x5B9A;&#x6027;&#xFF1B;</p>
+      </td>
+      <td style="text-align:left">2.2M</td>
+    </tr>
+    <tr>
       <td style="text-align:center">1.2.4</td>
       <td style="text-align:left">
         <p><b>&#x65B0;&#x589E;:</b>
