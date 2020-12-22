@@ -51,7 +51,7 @@
 
 ## API 调用文档 <a id="api-ji-cheng-wen-dang"></a>
 
-* [活动 API](api-ji-cheng-wen-dang/huo-dong-api/README.md)
+* [短信 API](api-ji-cheng-wen-dang/huo-dong-api/README.md)
   * [获取短信活动详情](api-ji-cheng-wen-dang/huo-dong-api/huo-qu-duan-xin-huo-dong-xiang-qing.md)
   * [拉取短信活动列表](api-ji-cheng-wen-dang/huo-dong-api/la-qu-huo-dong-lie-biao.md)
 

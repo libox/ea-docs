@@ -1,4 +1,4 @@
-# 活动 API
+# 短信 API
 
 ## Getting Super Powers
 

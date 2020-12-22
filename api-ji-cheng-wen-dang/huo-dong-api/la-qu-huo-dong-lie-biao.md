@@ -54,5 +54,14 @@
 }
 ```
 
+## 4. 接口调用示例
 
+```bash
+curl -H "Content-Type:application/json" -H "token:4113c9cad1c301113783f433e254888c" -H "appKey:31abd9593e9983ec" -X POST --data '{
+    "page":{
+        "pageIndex":0,  //分页索引，第N页 
+        "pageSize":10   //每页返回条数
+    }
+}' http://127.0.0.1:4005/ea/api/sms/activityList
+```
 
