@@ -8,27 +8,23 @@
 易达系统是易观基于方舟平台一款触达用户的产品，加强产品的用户体验和提升产品的转化率，易达的 iOS SDK 是此系统中重要的支撑点，提供以下功能：
 
 * 触达用户的弹窗功能，支持弹窗样式：
-
   1. 图片样式，支持点击事件
   2. 文本样式，支持标题、正文、两个按钮。
   3. 图文混合样式，最上面是图片，下面是标题、正文、按钮
   4. 文字 + 视频样式，支持视频播放
-
-*  banner 信息流广告，支持样式：
-
+* banner 信息流广告，支持样式：
   1. 文字 + 大图片样式，支持点击事件
   2. 文字 + 小图片样式，支持点击事件
   3. 文字 + 多图片样式，支持点击事件
   4. 文字 + 视频样式，支持视频播放
   5. 轮播图样式，支持每张图片单独点击事件
-
 * 订阅事件，用户在后台如果创建了基于用户事件的触发行为（弹窗除外），SDK 就会在每次启动的时候根据是否有事件更新来拉取订阅列表，并在有订阅事件产生的时候通知易达系统（如发送推送消息）。
 
 **iOS 版本支持**
 
 支持的 iOS 系统版本为 8.0 及以上版本。
 
-#### 组成
+**组成**
 
 SDK 目录。
 
@@ -42,21 +38,23 @@ AnalysysEasyTouch.framework
 
 ```text
 AnalysysEaManager.h
+
 AnalysysEaConfig.h
+
 AnalysysBannerConfig.h
 ```
 
-#### 注意事项
+**注意事项**
 
 集成易达 SDK 前，需要先集成埋点与数据采集 SDK，方舟易达目前支持：
 
-* [**方舟 SDK**](https://github.com/analysys/ans-ios-sdk/releases)**（须 4.4.8 及以上版本），方舟 SDK 参考文档：**[**方舟 SDK 文档**](https://docs.analysys.cn/ark/integration/sdk/ios)
+* [ **方舟 SDK**](https://github.com/analysys/ans-ios-sdk/releases) **（须 4.4.8 及以上版本），方舟 SDK 参考文档：**[ **方舟 SDK 文档**](https://docs.analysys.cn/ark/integration/sdk/ios) 
 
 ## 二、快速开始
 
 ### 1、获取项目 AppKey
 
-* 登录[易达系统](https://ea.analysys.cn/app.html#/Login)，创建项目，项目创建完成后自动生成对应的AppKey用以标识该项目（应用）。
+* 登录[**易达系统**](https://ea.analysys.cn/app.html#/Login)，创建项目，项目创建完成后自动生成对应的AppKey用以标识该项目（应用）。
 
 ### 2、集成易达 SDK
 
@@ -71,7 +69,7 @@ pod 'AnalysysEasyTouch' // 易达 SDK
 * 如果需要安装指定版本，则按照以下方式
 
 ```text
-pod 'AnalysysEasyTouch', '1.2.4' // 示例版本号
+pod 'AnalysysEasyTouch', '1.2.6' // 示例版本号
 ```
 
 * 特别注意：由于iOS 10以后苹果系统增加的 NSNotification Service Extension 扩展能够用于统计推送到达率，如果在 APP 中添加了该扩展而无法引入第三方的类文件，则需要使用以下“选择2”方式手动下载静态库并导入项目。将静态库及相关头文件添加到项目中的时候，需要同时勾选项目主 target 和 NSNotification Service Extension 扩展 target，否则编译会报错。
@@ -92,17 +90,25 @@ pod 'AnalysysEasyTouch', '1.2.4' // 示例版本号
 
 ### 4、添加初始化代码
 
-* 请将以下代码添加到 - \(BOOL\)application:\(UIApplication \*\)application didFinishLaunchingWithOptions:\(NSDictionary \*\)launchOptions
+* 请将以下代码添加到 - \(BOOL\)application:\(UIApplication _\)application didFinishLaunchingWithOptions:\(NSDictionary_ \)launchOptions
 
 ```text
 /*********** 易达 SDK 初始化 ***********/
+
 // 以下两项为必传参数，更多属性请参考 AnalysysEaConfig 头文件
+
 AnalysysEaConfig *config = [AnalysysEaConfig defaultConfiguration];
+
 config.appKey= @"易达后台创建项目的 AppKey";
+
 config.applicationGroupIdentifier = @"App 创建的 App Groups ID";
+
 [AnalysysEaManager startWithConfig:config];
 
+
+
 // 在初始化方舟埋点 SDK 的后面添加注册事件监听接口调用（方舟 SDK 4.4.8 及以上版本支持）
+
 [AnalysysAgent setObserverListener:[AnalysysEaManager getObserverListener:YOUR_GROUP_IDENTIFIER]];
 ```
 
@@ -110,20 +116,29 @@ config.applicationGroupIdentifier = @"App 创建的 App Groups ID";
 
 ```text
 // 上报用户手机号码
+
 [AnalysysAgent profileSet:@"$PHONE" propertyValue:value];
+
 // 上报用户邮箱
+
 [AnalysysAgent profileSet:@"$EMAIL" propertyValue:value];
+
 // 上报用户微信openID
+
 [AnalysysAgent profileSet:@"$WECHATOPENID" propertyValue:value];
 ```
 
-* 在收到 deviceToken 的系统回调方法 - \(void\)application:\(UIApplication \*\)application didRegisterForRemoteNotificationsWithDeviceToken:\(NSData \*\)deviceToken 中上报 deviceToken
+* 在收到 deviceToken 的系统回调方法 - \(void\)application:\(UIApplication _\)application didRegisterForRemoteNotificationsWithDeviceToken:\(NSData_ \)deviceToken 中上报 deviceToken
 
 ```text
 // 上报设备唯一标识,目前易达 iOS SDK 支持苹果 APNS 推送通道和极光推送通道
+
 /// @param deviceId 设备唯一标识 ID（若是 APNS 通道，值为系统直接返回的 deviceToken，若是三方推送通道，比如极光推送，则值为极光返回的 registrationID）
+
 /// @param provider 推送通道
+
 /// @param groupIdentifier App Groups Id
+
 + (void)pushToken:(id _Nullable)deviceId provider:(PushProvider)provider groupIdentifier:(NSString *)groupIdentifier;
 ```
 
@@ -132,52 +147,100 @@ config.applicationGroupIdentifier = @"App 创建的 App Groups ID";
 ```text
 // 以下系统回调方法仅供参考，具体实现根据您自己的业务需要
 
+
+
 // iOS 6 及以前，收到推送
+
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+
     // 若实现 Notification Service Extension 扩展，需注释掉，否则可能重复上报
+
     [AnalysysEaManager pushTrack:PUSH_RECEIVE msg:userInfo];
+
 }
 
+
+
 // iOS 7 以后 10 以前，收到推送
+
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+
+
 
     completionHandler(UIBackgroundFetchResultNewData);
 
+
+
     if (application.applicationState == UIApplicationStateActive) {
 
+
+
         // App前台 收到推送消息，追踪"App 消息推送"事件，若实现了扩展，需注释掉
+
         [AnalysysEaManager pushTrack:PUSH_RECEIVE msg:userInfo];
+
+
 
     } else if (application.applicationState == UIApplicationStateBackground) {
 
+
+
         // App后台 收到推送消息，追踪"App 消息推送"事件，若实现了扩展，需注释掉
+
         [AnalysysEaManager pushTrack:PUSH_RECEIVE msg:userInfo];
+
+
 
     } else {
 
+
+
         // 点击通知栏打开消息，记录"App 点击通知"事件
+
         [AnalysysEaManager pushTrack:PUSH_CLICK msg:userInfo];
 
+
+
     }
+
 }
+
+
 
 // iOS 10 及以后，收到推送
+
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler {
+
     // 注意：若实现 Notification Service Extension，需注释掉改行代码，收到推送会执行扩展中的方法
+
 //    [AnalysysEaManager pushTrack:PUSH_RECEIVE msg:notification.request.content.userInfo];
 
+
+
     completionHandler(UNNotificationPresentationOptionBadge
+
     |UNNotificationPresentationOptionAlert);
+
 }
 
+
+
 // iOS 10 及以后，点击推送
+
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler  API_AVAILABLE(ios(10.0)){
+
+
 
     NSLog(@"didReceiveNotification：%@", response.notification.request.content.userInfo);
 
+
+
     [AnalysysEaManager pushTrack:PUSH_CLICK msg:response.notification.request.content.userInfo groupIdentifier:GROUP_IDENTIFIER];
 
+
+
     completionHandler();
+
 }
 ```
 
@@ -188,7 +251,7 @@ config.applicationGroupIdentifier = @"App 创建的 App Groups ID";
 
 配置这两项，主要针对 APP 支持推送，在进程被杀死的情况下统计推送到达率，若 APP 不支持推送功能，可忽略。若 APP 支持推送功能，不配置扩展和 AppGroups 会导致 APP 在进程被杀死的情况下推送到达无法统计，并可能使其它功能受到影响，应用在前、后台的情况不受影响。建议您按照如下步骤进行配置。
 
-**配置 Notification Service Extension 扩展** 
+**配置 Notification Service Extension 扩展**
 
 APP 进程在被杀死的情况下，iOS 10.0 以后可以通过 Notification Service Extension 扩展服务处理推送到达的统计，10.0 以下版本不支持。APP 客户端需要做如下配置：
 
@@ -196,25 +259,30 @@ APP 进程在被杀死的情况下，iOS 10.0 以后可以通过 Notification Se
 * 在系统生成的 NotificationService.m 文件中 didReceiveNotificationRequest 方法里调用 pushTrack 方法追踪推送到达事件
 
 ```text
-- (void)didReceiveNotificationRequest:(UNNotificationRequest *)request withContentHandler:(void (^)(UNNotificationContent * _Nonnull))contentHandler {
-    self.contentHandler = contentHandler;
-    self.bestAttemptContent = [request.content mutableCopy];
+-(void)didReceiveNotificationRequest(UNNotificationRequest *)request withContentHandler:(void (^)(UNNotificationContent * _Nonnull))contentHandler {
 
-    // Modify the notification content here...
-    self.bestAttemptContent.title = [NSString stringWithFormat:@"%@ [方舟易达]", self.bestAttemptContent.title];
 
-    [AnalysysEaManager pushTrack:PUSH_RECEIVE msg:self.bestAttemptContent.userInfo];
+   self.contentHandler = contentHandler;
 
-    self.contentHandler(self.bestAttemptContent);
+   self.bestAttemptContent = [request.content mutableCopy];
+
+   // Modify the notification content here...
+
+   self.bestAttemptContent.title = [NSString stringWithFormat:@"%@ [方舟易达]", self.bestAttemptContent.title];
+
+   [AnalysysEaManager pushTrack:PUSH_RECEIVE msg:self.bestAttemptContent.userInfo];
+
+   self.contentHandler(self.bestAttemptContent);
+
 }
 ```
 
-**配置 App Groups** 
+**配置 App Groups**
 
 为保证主 APP 进程被杀死的情况下，扩展进程能正常访问主 APP 的某些数据，从而使 SDK 能正常工作，APP 客户端需要添加进程间数据共享：
 
-* 选择主 target -》 Capabilities，添加 App Groups，填入分组名 **group.xxx**，若分组名显示为红色，点击下方刷新按钮，直至分组名不再为红色
-* 选择 Notification Service Extension target -》 Capabilities，添加 App Groups，勾选分组 **group.xxx**，若分组名显示为红色，点击下方刷新按钮，直至分组名不再为红色
+* 选择主 target -》 Capabilities，添加 App Groups，填入分组名 **group.xxx** ，若分组名显示为红色，点击下方刷新按钮，直至分组名不再为红色
+* 选择 Notification Service Extension target -》 Capabilities，添加 App Groups，勾选分组 **group.xxx** ，若分组名显示为红色，点击下方刷新按钮，直至分组名不再为红色
 
 ### 6、集成 banner 信息流广告（可选）
 
@@ -226,7 +294,7 @@ APP 进程在被杀死的情况下，iOS 10.0 以后可以通过 Notification Se
 
 进入 EA 管理后台，依次选择 系统设置 -》banner 配置，添加 banner 资源。创建的每一条 banner 资源将会对应唯一的一个 locationId，该 locationId 标识用户 APP 中的一个 banner 位置，banner 配置的图片将会在信息流广告无法展示的时候作为默认图展示。
 
-**创建对应的 banner 信息流活动，并配置 banner 位置** 
+**创建对应的 banner 信息流活动，并配置 banner 位置**
 
 创建一条 banner 信息流广告，在第四步展示位置选择某一个 banner 配置对应的名称。
 
@@ -238,20 +306,25 @@ APP 在拿到创建 banner 配置生成的 locationId 后，将其作为参数�
 * 第二步，在对应代理方法里调用 SDK 方法，并传入 locationId 和 bannerCell 作为参数，注意这里在返回 table 行高的代理方法里，AnalysysBannerConfig 对象不要给 container 参数赋值。
 
 ```text
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *settings_id = _arr[indexPath.section][ea_settings_key_id];
     if (...) { // 自己的 UITableViewCell
-            UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"];
+        UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"];
             ......
-            return cell;
+        return cell;
     } else { // banner cell
-            EABannerCell *bannerCell = (EABannerCell *)[tableView dequeueReusableCellWithIdentifier:@"EABannerCell"];
-            AnalysysBannerConfig *bannerConfig = [AnalysysBannerConfig defaultConfig];
-            bannerConfig.locationId = locationId; // 传 banner 配置生成的 locationId
-            bannerConfig.container = bannerCell; // 注意：这里需要传入 bannerCell
-            [AnalysysEaManager loadBanner:bannerConfig];
-            return bannerCell;
-        }
+        EABannerCell *bannerCell = (EABannerCell *)[tableView dequeueReusableCellWithIdentifier:@"EABannerCell"];
+
+        AnalysysBannerConfig *bannerConfig = [AnalysysBannerConfig defaultConfig];
+
+        bannerConfig.locationId = locationId; // 传 banner 配置生成的 locationId
+
+        bannerConfig.container = bannerCell; // 注意：这里需要传入 bannerCell
+
+        [AnalysysEaManager loadBanner:bannerConfig];
+
+        return bannerCell;
+     }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -259,11 +332,15 @@ APP 在拿到创建 banner 配置生成的 locationId 后，将其作为参数�
         return 60.f;
     } else { // banner cell
         EABannerCell *bannerCell = (EABannerCell *)[tableView dequeueReusableCellWithIdentifier:@"EABannerCell"];
+
         AnalysysBannerConfig *bannerConfig = [AnalysysBannerConfig defaultConfig];
+
         bannerConfig.locationId = locationId; // 传 banner 配置生成的 locationId，注意：这里返回高度，不需要传入 bannerCell
+
         CGFloat height = [AnalysysEaManager loadBanner:bannerConfig].height;
+
         return height;
-    }
+     }
 }
 ```
 
@@ -273,9 +350,13 @@ APP 在拿到创建 banner 配置生成的 locationId 后，将其作为参数�
 
 ```text
 ************************* [EA][Log] **************************
+
 AnalysysEasyTouch 启动成功！
+
 AppKey：ecaaab42502jgdg9870fd0740ce374daa
+
 userId：1BCAF1D0-C8C0-46A8-866F-005832024259
+
 **************************************************************
 ```
 
@@ -284,123 +365,70 @@ userId：1BCAF1D0-C8C0-46A8-866F-005832024259
 * 方舟 SDK 接口请参考 AnalysysAgent 对应文档
 * 这里只列举易达 AnalysysEasyTouch 相关接口
 
-### 1、获取事件监听对象
+### 1、获取事件监听对象
 
-**支持的版本：**1.1.1.2 
+**支持的版本：** 1.1.1.2
 
-**接口说明：**获取事件监听对象，用于监听方舟回调的事件。
+**接口说明：** 获取事件监听对象，用于监听方舟回调的事件。
 
 **接口定义：**
 
-```text
-+ (id)getObserverListener:(NSString *)groupIdentifier;
-```
+* \(id\)getObserverListener:\(NSString \*\)groupIdentifier;
 
 **参数说明：**
 
 | 参数 | 说明 | 必填 | 备注 |
 | :--- | :--- | :--- | :--- |
-| groupIdentifier | 由客户端创建的 App Groups 名称。若系统不支持推送，可传空字符串 |   是   |  |
+| groupIdentifier | 由客户端创建的 App Groups 名称。若系统不支持推送，可传空字符串 | 是 |  |
 
-**接口返回：**返回事件监听代理对象。
+**接口返回：** 返回事件监听代理对象。
 
-**注意事项：**调用方舟 AnalysysAgent 注册事件监听对象的接口时，传入该接口返回对象。
+**注意事项：** 调用方舟 AnalysysAgent 注册事件监听对象的接口时，传入该接口返回对象。
 
 ### 2、启动 SDK
 
-**支持的版本：**1.0.0 
+**支持的版本：** 1.0.0
 
-**接口说明：**启动易达 SDK。
+**接口说明：** 启动易达 SDK。
 
 **接口定义：**
 
-```text
-+ (void)startWithConfig:(AnalysysEaConfig *)config;
-```
+* \(void\)startWithConfig:\(AnalysysEaConfig \*\)config;
 
 **参数说明：**
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">&#x53C2;&#x6570;</th>
-      <th style="text-align:left">&#x8BF4;&#x660E;</th>
-      <th style="text-align:left">&#x5FC5;&#x586B;</th>
-      <th style="text-align:left">&#x5907;&#x6CE8;</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">config</td>
-      <td style="text-align:left">&#x914D;&#x7F6E; SDK &#x542F;&#x52A8;&#x6240;&#x9700;&#x8981;&#x7684;
-        appKey &#x7B49;&#x4FE1;&#x606F;&#xFF0C;AnalysysEaConfig &#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;</td>
-      <td
-      style="text-align:left">
-        <p>&#x662F;</p>
-        <p></p>
-        </td>
-        <td style="text-align:left">&#x5177;&#x4F53;&#x8BF7;&#x53C2;&#x8003; AnalysysEaConfig &#x7C7B;&#x4E2D;&#x5404;&#x5C5E;&#x6027;&#x8BF4;&#x660E;</td>
-    </tr>
-  </tbody>
-</table>
+| 参数 | 说明 | 必填 | 备注 |
+| :--- | :--- | :--- | :--- |
+| config | 配置 SDK 启动所需要的 appKey 等信息，AnalysysEaConfig 对象实例 | 是 | 具体请参考 AnalysysEaConfig 类中各属性说明 |
 
-**接口返回：**无
+**接口返回：** 无
 
-**注意事项：**无
+**注意事项：** 无
 
 ### 3、上报推送 deviceToken
 
-**支持的版本：**1.1.5.6
+**支持的版本：** 1.1.5.6
 
-**接口说明：**上报注册 APP 启动后由系统返回的推送deviceToken。
+**接口说明：** 上报注册 APP 启动后由系统返回的推送deviceToken。
 
 **接口定义：**
 
-```text
-+ (void)pushToken:(NSData *)deviceToken groupIdentifier:(NSString *)groupIdentifier;
-```
+* \(void\)pushToken:\(NSData _\)deviceToken groupIdentifier:\(NSString_ \)groupIdentifier;
 
 **参数说明：**
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">&#x53C2;&#x6570;</th>
-      <th style="text-align:left">&#x8BF4;&#x660E;</th>
-      <th style="text-align:left">&#x5FC5;&#x586B;</th>
-      <th style="text-align:left">&#x5907;&#x6CE8;</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">deviceToken</td>
-      <td style="text-align:left">app &#x542F;&#x52A8;&#x540E;&#x7531;&#x7CFB;&#x7EDF;&#x8FD4;&#x56DE;&#x7684;&#x7528;&#x4E8E;&#x63A8;&#x9001;&#x7684;
-        NSData &#x7C7B;&#x578B;&#x7684; deviceToken</td>
-      <td style="text-align:left">
-        <p>&#x662F;</p>
-        <p></p>
-      </td>
-      <td style="text-align:left">&#x76F4;&#x63A5;&#x4F20;&#x7CFB;&#x7EDF;&#x56DE;&#x8C03;&#x7684; deviceToken
-        &#xFF0C;&#x65E0;&#x9700;&#x89E3;&#x6790;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">groupIdentifiler</td>
-      <td style="text-align:left">&#x521B;&#x5EFA;&#x7684; App Groups &#x5206;&#x7EC4; id &#x540D;&#x79F0;
-        : group.xxx</td>
-      <td style="text-align:left">&#x5426;</td>
-      <td style="text-align:left">&#x82E5;&#x4E0D;&#x914D;&#x7F6E; Notification Service Extension &#x6269;&#x5C55;&#xFF0C;&#x5373;&#x53EF;&#x4E0D;&#x521B;&#x5EFA;
-        APP Groups&#xFF0C;&#x6B64;&#x5904;&#x4F20;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;&#x5373;&#x53EF;</td>
-    </tr>
-  </tbody>
-</table>
+| 参数 | 说明 | 必填 | 备注 |
+| :--- | :--- | :--- | :--- |
+| deviceToken | app 启动后由系统返回的用于推送的 NSData 类型的 deviceToken | 是 | 直接传系统回调的 deviceToken ，无需解析 |
+| groupIdentifiler | 创建的 App Groups 分组 id 名称 : group.xxx | 否 | 若不配置 Notification Service Extension 扩展，即可不创建 APP Groups，此处传空字符串即可 |
 
-**接口返回：**无
+**接口返回：** 无
 
 **注意事项：无**
 
 ### 4、上报推送事件
 
-**支持的版本：**1.1.1 
+**支持的版本：** 1.1.1
 
 **接口说明：**
 
@@ -408,61 +436,27 @@ userId：1BCAF1D0-C8C0-46A8-866F-005832024259
 
 **接口定义：**
 
-```text
-+ (void)pushTrack:(PushEventType)type msg:(NSDictionary *)msg groupIdentifier:(NSString *)groupIdentifier;
-```
+* \(void\)pushTrack:\(PushEventType\)type msg:\(NSDictionary _\)msg groupIdentifier:\(NSString_ \)groupIdentifier;
 
 **参数说明**
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">&#x53C2;&#x6570;</th>
-      <th style="text-align:left">&#x8BF4;&#x660E;</th>
-      <th style="text-align:left">&#x5FC5;&#x586B;</th>
-      <th style="text-align:left">&#x5907;&#x6CE8;</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">type</td>
-      <td style="text-align:left">push&#x7684;&#x4E8B;&#x4EF6;&#x7C7B;&#x578B;</td>
-      <td style="text-align:left">&#x662F;</td>
-      <td style="text-align:left"></td>
-    </tr>
-    <tr>
-      <td style="text-align:left">msg</td>
-      <td style="text-align:left">push&#x4E8B;&#x4EF6;&#x7684;&#x5C5E;&#x6027;&#x4FE1;&#x606F;</td>
-      <td style="text-align:left">&#x662F;</td>
-      <td style="text-align:left">push&#x5C5E;&#x6027;&#x8BF4;&#x660E;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">groupIdentifier</td>
-      <td style="text-align:left">&#x521B;&#x5EFA;&#x7684; App Groups &#x5206;&#x7EC4; id &#x540D;&#x79F0;
-        : group.xxx</td>
-      <td style="text-align:left">
-        <p>&#x5426;</p>
-        <p></p>
-      </td>
-      <td style="text-align:left">&#x82E5;&#x4E0D;&#x914D;&#x7F6E; Notification Service Extension &#x6269;&#x5C55;&#xFF0C;&#x5373;&#x53EF;&#x4E0D;&#x521B;&#x5EFA;
-        APP Groups&#xFF0C;&#x6B64;&#x5904;&#x4F20;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;&#x5373;&#x53EF;</td>
-    </tr>
-  </tbody>
-</table>
+| 参数 | 说明 | 必填 | 备注 |
+| :--- | :--- | :--- | :--- |
+| type | push的事件类型 | 是 |  |
+| msg | push事件的属性信息 | 是 | push属性说明 |
+| groupIdentifier | 创建的 App Groups 分组 id 名称 : group.xxx | 否 | 若不配置 Notification Service Extension 扩展，即可不创建 APP Groups，此处传空字符串即可 |
 
-**接口返回：**无
+**接口返回：** 无
 
 ### 5、设置页面别名
 
-**支持的版本：**1.1.1.1 
+**支持的版本：** 1.1.1.1
 
-**接口说明：**开启或关闭别名设置功能，若开启，则可以给APP内任何页面设置具体名称。
+**接口说明：** 开启或关闭别名设置功能，若开启，则可以给APP内任何页面设置具体名称。
 
 **接口定义:**
 
-```text
-+ (void)setPageTagState:(BOOL)state;
-```
+* \(void\)setPageTagState:\(BOOL\)state;
 
 **参数说明:**
 
@@ -470,21 +464,19 @@ userId：1BCAF1D0-C8C0-46A8-866F-005832024259
 | :--- | :--- | :--- | :--- |
 | state | 设置别名的开关状态,true是打开；false是关闭 | 是 |  |
 
-**接口返回：**无
+**接口返回：** 无
 
-**注意事项：**无
+**注意事项：** 无
 
 ### 6、渲染 banner
 
-**支持的版本：**1.2.0
+**支持的版本：** 1.2.0
 
-**接口说明：**渲染 banner 信息流广告。
+**接口说明：** 渲染 banner 信息流广告。
 
 **接口定义：**
 
-```text
-+ (CGSize)loadBanner:(AnalysysBannerConfig *)bannerConfig;
-```
+* \(CGSize\)loadBanner:\(AnalysysBannerConfig \*\)bannerConfig;
 
 **参数说明：**
 
@@ -506,7 +498,7 @@ userId：1BCAF1D0-C8C0-46A8-866F-005832024259
 * 对应接口，详细参考 iOS API
 
 ```text
-+ (void)pushTrack:(PushEventType)type msg:(NSDictionary *)msg groupIdentifier:(NSString *)groupIdentifier;
++(void)pushTrack:(PushEventType)type msg:(NSDictionary *)msg groupIdentifier:(NSString *)groupIdentifier;
 ```
 
 ### 极光推送
@@ -519,26 +511,47 @@ userId：1BCAF1D0-C8C0-46A8-866F-005832024259
 
 ```text
 // iOS 10 Support 推送触达
+
 - (void)jpushNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(NSInteger))completionHandler  API_AVAILABLE(ios(10.0)){
+
     // Required
+
     NSDictionary * userInfo = notification.request.content.userInfo;
+
     if ([notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
+
         [JPUSHService handleRemoteNotification:userInfo];
+
         // 注意：若实现 Notification Service Extension，需注释掉改行代码，收到推送会执行扩展中的方法
+
       //    [AnalysysEaManager pushTrack:PUSH_RECEIVE msg:userInfo groupIdentifier:GROUP_IDENTIFIER];
+
     }
+
     completionHandler(UNNotificationPresentationOptionAlert); // 需要执行这个方法，选择是否提醒用户，有 Badge、Sound、Alert 三种类型可以选择设置
+
 }
 
+
+
 // iOS 10 Support 推送点击
+
 - (void)jpushNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler  API_AVAILABLE(ios(10.0)){
+
     // Required
+
     NSDictionary * userInfo = response.notification.request.content.userInfo;
+
     if ([response.notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
+
         [JPUSHService handleRemoteNotification:userInfo];
+
         [AnalysysEaManager pushTrack:PUSH_CLICK msg:userInfo groupIdentifier:GROUP_IDENTIFIER];
+
     }
+
     completionHandler();  // 系统要求执行这个方法
+
 }
 ```
 
@@ -549,10 +562,7 @@ userId：1BCAF1D0-C8C0-46A8-866F-005832024259
 * URL 网址，打开对应的网页。
 * 非 URL scheme 链接，形式为 XXXController?key1=value1&key2=value2 该情形为 SDK 内部实现点击跳转到 APP 内指定页面，其中 XXXController 为要跳转页面的技术标识（类名），key1、key2 为类对应的属性。
 * URL scheme 链接，形式为 scheme://XXXController?key1=value1&key2=value2 该情形需 APP 客户端自行拦截，其中 XXXController 为要跳转页面的技术标识（类名），key1、key2 为类对应的属性。在 info.plist 中添加 URL scheme，添加 LSApplicationQueriesSchemes 白名单，并实现系统代理方法，在其中做拦截跳转处理：
-
-```text
-- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options;
-```
+* \(BOOL\)application:\(UIApplication _\)app openURL:\(NSURL_ \)url options:\(NSDictionary \*\)options;
 
 注意：以上非 URL 网址类的 APP 内指定页面跳转，所配置的链接参数，均需与页面所属类及类的真实属性一一对应，在配置时需要与 APP 开发人员核对。
 
@@ -577,9 +587,13 @@ userId：1BCAF1D0-C8C0-46A8-866F-005832024259
 
 ```text
 Undefined symbols for architecture arm64:
+
 "_OBJC_CLASS_$_AnalysysEaManager", referenced from:
+
 objc-class-ref in NotificationService.o
+
 ld: symbol(s) not found for architecture arm64
+
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 ```
 
@@ -589,6 +603,7 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)
 
 ```text
 d: '/Users/guoyongqing/code/ea-ios-sdk/eaApp/AnalysysEasyTouch.framework/AnalysysEasyTouch' does not contain bitcode. You must rebuild it with bitcode enabled (Xcode setting ENABLE_BITCODE), obtain an updated library from the vendor, or disable bitcode for this target. file '/Users/guoyongqing/code/ea-ios-sdk/eaApp/AnalysysEasyTouch.framework/AnalysysEasyTouch' for architecture arm64
+
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 ```
 
@@ -598,62 +613,117 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)
 
 ```text
 1.使用终端进入到SDK内部
+
 cd /Users/xxx/xxx/xxx/AnalysysEasyTouch.framework
 
+
+
 2.查看当前支持的架构
+
 lipo -info AnalysysEasyTouch
+
 可以看到AnalysysEasyTouch当前支持的架构：
+
 Architectures in the fat file: AnalysysEasyTouch are: i386 x86\_64 armv7 arm64
 
+
+
 3.删掉i386，x86\_86架构
+
 lipo -remove i386 AnalysysEasyTouch -o AnalysysEasyTouch
+
 lipo -remove x86\_64 AnalysysEasyTouch -o AnalysysEasyTouch
 ```
 
-解决方式二：Target -&gt; Build Phases -&gt; Add Run Script，添加以下脚本，并勾选 Run script only when installing（该选项意思是在 Archive 打包时才会执行脚本）
+* 解决方式二：Target -&gt; Build Phases -&gt; Add Run Script，添加以下脚本，并勾选 Run script only when
+
+  installing（该选项意思是在 Archive 打包时才会执行脚本）
 
 ```text
 #!/bin/sh
 
+
+
 # Strip invalid architectures
 
+
+
 strip_invalid_archs() {
+
 binary="$1"
+
 echo "current binary ${binary}"
+
 # Get architectures for current file
+
 archs="$(lipo -info "$binary" | rev | cut -d ':' -f1 | rev)"
+
 stripped=""
+
 for arch in $archs; do
+
 if ! [[ "${ARCHS}" == *"$arch"* ]]; then
+
 if [ -f "$binary" ]; then
+
 # Strip non-valid architectures in-place
+
 lipo -remove "$arch" -output "$binary" "$binary" || exit 1
+
 stripped="$stripped $arch"
+
 fi
+
 fi
+
 done
+
 if [[ "$stripped" ]]; then
+
 echo "Stripped $binary of architectures:$stripped"
+
 fi
+
 }
+
+
 
 APP_PATH="${TARGET_BUILD_DIR}/${WRAPPER_NAME}"
 
+
+
 # This script loops through the frameworks embedded in the application and
+
 # removes unused architectures.
+
 find "$APP_PATH" -name '*.framework' -type d | while read -r FRAMEWORK
+
 do
+
 FRAMEWORK_EXECUTABLE_NAME=$(defaults read "$FRAMEWORK/Info.plist" CFBundleExecutable)
+
 FRAMEWORK_EXECUTABLE_PATH="$FRAMEWORK/$FRAMEWORK_EXECUTABLE_NAME"
+
 echo "Executable is $FRAMEWORK_EXECUTABLE_PATH"
 
+
+
 strip_invalid_archs "$FRAMEWORK_EXECUTABLE_PATH"
+
 done
 ```
 
 ### 集成了三方推送 SDK 和 EA SDK 发生冲突
 
 * 若集成了三方推送 SDK，例如集成了极光推送 SDK，同时也集成了 EA SDK，出现某一 SDK 消息推送回调被覆盖或不执行的情况，解决办法是初始化 EA SDK 时将 AnalysysEaConfig 对象的 pushClosed 属性设置为 YES，这样 EA 在启动时将不会注册远程推送，只需实现极光推送的回调方法，EA 和极光推送在收到推送消息或点击推送消息的时候，都会执行极光推送的回调方法，在回调方法里调用 EA 和极光对应的处理推送的方法即可。
+
+### 动态库包含模拟器和真机架构，编译时报错
+
+* 若报错提示信息类似如下，则将对应 target 中 building settings 中  Validate Workspace 设置为 YES 即可，后续恢复设置也不会报错了
+
+```text
+Building for iOS, but the linked and embedded framework  was built for iOS + iOS Simulator.
+```
 
 ## 六、技术支持
 
