@@ -26,6 +26,7 @@
 
 ## 系统初始化
 
+* [配置方舟数据平台](xi-tong-chu-shi-hua/pei-zhi-fang-zhou-shu-ju-ping-tai.md)
 * [扫码绑定微信](xi-tong-chu-shi-hua/binding.md)
 
 ## FAQ
