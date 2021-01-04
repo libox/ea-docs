@@ -1,4 +1,6 @@
-# iOS SDK
+# index
+
+## iOS SDK
 
 * iOS 常见问题
 * iOS 客户端 SDK 下载：[动态库](https://github.com/AnalysysSDK/AnalysysEasyTouch_iOS/releases)
@@ -97,7 +99,7 @@ pod 'AnalysysEasyTouch', '1.2.6' // 示例版本号
 
 // 以下两项为必传参数，更多属性请参考 AnalysysEaConfig 头文件
 
-AnalysysEaConfig *config = [AnalysysEaConfig defaultConfiguration];
+AnalysysEaConfig *config = [AnalysysEaConfig defaultConfig];
 
 config.appKey= @"易达后台创建项目的 AppKey";
 
@@ -286,8 +288,6 @@ APP 进程在被杀死的情况下，iOS 10.0 以后可以通过 Notification Se
 
 ### 6、集成 banner 信息流广告（可选）
 
-这一步主要针对有需要使用 banner 信息流广告功能的用户。
-
 这一步主要针对需要集成信息流广告功能的用户，不需要集成该功能可以跳过。
 
 **在 EA 平台创建 banner 配置**
@@ -362,7 +362,7 @@ userId：1BCAF1D0-C8C0-46A8-866F-005832024259
 
 ## 三、iOS API
 
-* 方舟 SDK 接口请参考 AnalysysAgent 对应文档
+* 方舟 SDK 接口请参考：[易观方舟 iOS SDK 文档](https://docs.analysys.cn/integration/sdk/ios)
 * 这里只列举易达 AnalysysEasyTouch 相关接口
 
 ### 1、获取事件监听对象
