@@ -1,4 +1,4 @@
-# index
+# iOS SDK
 
 ## iOS SDK
 

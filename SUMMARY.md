@@ -40,7 +40,7 @@
 
 * [EA 系统集成文档](sdk-ji-cheng-wen-dang/ea-system-integration-doc.md)
 * [SDK 版本更新说明](sdk-ji-cheng-wen-dang/sdk-version-upgrade.md)
-* [index](sdk-ji-cheng-wen-dang/ios-sdk.md)
+* [iOS SDK](sdk-ji-cheng-wen-dang/ios-sdk.md)
 * [Android SDK](sdk-ji-cheng-wen-dang/android-sdk.md)
 * [JS SDK](sdk-ji-cheng-wen-dang/js-sdk.md)
 * [微信小程序 SDK](sdk-ji-cheng-wen-dang/wechat-miniprogram-sdk.md)
