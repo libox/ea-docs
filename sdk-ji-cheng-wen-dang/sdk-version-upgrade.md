@@ -701,6 +701,14 @@
   </thead>
   <tbody>
     <tr>
+      <td style="text-align:left">1.2.6</td>
+      <td style="text-align:left">
+        <p><b>&#x65B0;&#x589E;&#xFF1A;<br /></b>&#x65E0;<b><br />&#x4FEE;&#x590D;&#xFF1A;<br /></b>&#x65E0;</p>
+        <p><b>&#x4F18;&#x5316;&#xFF1A;<br /></b>1&#x3001;&#x5C06;&#x4E0A;&#x62A5;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x7684;&#x5B57;&#x6BB5;appid&#x4FEE;&#x6539;&#x6210;wx_appid</p>
+      </td>
+      <td style="text-align:left">85</td>
+    </tr>
+    <tr>
       <td style="text-align:left">1.2.0</td>
       <td style="text-align:left">
         <p><b>&#x65B0;&#x589E;&#xFF1A;</b>
@@ -713,7 +721,7 @@
         </p>
         <p>&#x65E0;</p>
       </td>
-      <td style="text-align:left">69K</td>
+      <td style="text-align:left">84K</td>
     </tr>
     <tr>
       <td style="text-align:left">1.1.8</td>
@@ -731,7 +739,7 @@
         </p>
         <p>&#x65E0;</p>
       </td>
-      <td style="text-align:left">68K</td>
+      <td style="text-align:left">80K</td>
     </tr>
     <tr>
       <td style="text-align:left">1.1.7</td>
@@ -798,6 +806,8 @@
 </table>
 {% endtab %}
 {% endtabs %}
+
+
 
 
 
