@@ -14,6 +14,16 @@
   </thead>
   <tbody>
     <tr>
+      <td style="text-align:center">1.26.2</td>
+      <td style="text-align:left">
+        <p><b>&#x4FEE;&#x590D;:</b>
+        </p>
+        <p>1&#x3001;&#x4FEE;&#x590D; pushToken &#x63A5;&#x53E3;&#x67D0;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#x53EF;&#x80FD;&#x5BFC;&#x81F4;&#x7684;&#x95EA;&#x9000;&#x95EE;&#x9898;&#xFF1B;</p>
+        <p>2&#x3001;&#x4FEE;&#x590D;&#x67D0;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#x63A8;&#x9001;&#x89E6;&#x8FBE;&#x4E0A;&#x62A5;&#x4E0D;&#x51C6;&#x7684;&#x95EE;&#x9898;&#xFF1B;</p>
+      </td>
+      <td style="text-align:left">2.2M</td>
+    </tr>
+    <tr>
       <td style="text-align:center">1.2.5</td>
       <td style="text-align:left">
         <p><b>&#x65B0;&#x589E;:</b>
