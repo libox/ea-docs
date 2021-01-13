@@ -310,6 +310,21 @@
   </thead>
   <tbody>
     <tr>
+      <td style="text-align:left">1.26.0</td>
+      <td style="text-align:left">
+        <p><b>&#x65B0;&#x589E;:</b>
+        </p>
+        <p>&#x65E0;</p>
+        <p><b>&#x4FEE;&#x590D;:</b>
+        </p>
+        <p>&#x65E0;</p>
+        <p><b>&#x4F18;&#x5316;:</b>
+        </p>
+        <p>1&#x3001;&#x4F18;&#x5316;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;&#xFF1B;</p>
+      </td>
+      <td style="text-align:left">340K</td>
+    </tr>
+    <tr>
       <td style="text-align:left">1.2.4</td>
       <td style="text-align:left">
         <p><b>&#x65B0;&#x589E;:</b>
