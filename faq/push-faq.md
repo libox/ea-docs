@@ -3,7 +3,7 @@
 ## 1. 厂商 Push 通道与极光等第三方 Push 通道的区别？
 
 {% hint style="info" %}
-EA 目前已经针对 Android 机型对接了华为、小米、vivo、OPPO、魅族等 5 家厂商 Push 通道，支持苹果 APNs 通道，并且支持极光、个推等第三方 Push 服务商。
+EA 目前已经针对 Android 机型对接了华为、小米、vivo、OPPO、魅族等 5 家厂商 Push 通道，支持苹果 APNs 通道，并且支持极光等第三方 Push 服务商。
 {% endhint %}
 
 5 家厂商 Push 通道都是系统级通道，而第三方 Push 服务是应用级通道，当 App 后台进程被杀死（系统自动清理、用户主动清理等）时，第三方 Push 服务就无法触达用户，但是此时通过厂商 Push 通道依然可以向用户发送 Push 消息。
