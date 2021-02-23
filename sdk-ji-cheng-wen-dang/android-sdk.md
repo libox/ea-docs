@@ -109,6 +109,8 @@ apply plugin: 'com.huawei.agconnect'
 AnalysysEaConfig builder = new AnalysysEaConfig();
 //填写自己申请的AppKey
 builder.setAppKey("*******");
+//如果是私有化部署的EA，需要设置访问的url地址
+//builder.setUrl("https://*****");
 //设置APP的首页地址；包括包名的完整的路径.
 //例如:com.aneesoft.ygqf.common.MainActivity
 builder.setMainPage("*******");
