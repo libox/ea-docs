@@ -50,9 +50,3 @@
 * [如何配置阿里云短信通道](qi-ta/sms-configuration.md)
 * [名词解释](qi-ta/illustration.md)
 
-## API 调用文档 <a id="api-ji-cheng-wen-dang"></a>
-
-* [短信 API](api-ji-cheng-wen-dang/huo-dong-api/README.md)
-  * [获取短信活动详情](api-ji-cheng-wen-dang/huo-dong-api/huo-qu-duan-xin-huo-dong-xiang-qing.md)
-  * [拉取短信活动列表](api-ji-cheng-wen-dang/huo-dong-api/la-qu-huo-dong-lie-biao.md)
-
