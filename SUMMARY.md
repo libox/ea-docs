@@ -1,6 +1,6 @@
 # Table of contents
 
-* [概述](README.md)
+* [使用指南](README.md)
 
 ## 智能运营产品使用手册 <a id="user-guide"></a>
 
