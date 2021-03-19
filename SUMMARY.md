@@ -43,7 +43,7 @@
   * [名词解释](kai-fa-zhe-zhi-nan/qi-ta/illustration.md)
   * [如何配置阿里云短信通道](kai-fa-zhe-zhi-nan/qi-ta/sms-configuration.md)
 
-## FAQ
+## ❓FAQ
 
 * [创建 Push 活动的 FAQ](faq/push-faq.md)
 * [创建微信模板消息活动的 FAQ](faq/wechat-faq.md)
