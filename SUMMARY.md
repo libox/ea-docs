@@ -39,6 +39,9 @@
   * [iOS SDK](kai-fa-zhe-zhi-nan/sdk-ji-cheng-wen-dang/ios-sdk.md)
   * [SDK 版本更新说明](kai-fa-zhe-zhi-nan/sdk-ji-cheng-wen-dang/sdk-version-upgrade.md)
   * [EA 系统集成文档](kai-fa-zhe-zhi-nan/sdk-ji-cheng-wen-dang/ea-system-integration-doc.md)
+* [其他](kai-fa-zhe-zhi-nan/qi-ta/README.md)
+  * [名词解释](kai-fa-zhe-zhi-nan/qi-ta/illustration.md)
+  * [如何配置阿里云短信通道](kai-fa-zhe-zhi-nan/qi-ta/sms-configuration.md)
 
 ## FAQ
 
@@ -46,9 +49,4 @@
 * [创建微信模板消息活动的 FAQ](faq/wechat-faq.md)
 * [创建微信小程序活动的 FAQ](faq/miniprogram-faq.md)
 * [创建微信客服消息活动的 FAQ](faq/customer-service-account-message-faq.md)
-
-## 其它
-
-* [如何配置阿里云短信通道](qi-ta/sms-configuration.md)
-* [名词解释](qi-ta/illustration.md)
 
