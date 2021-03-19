@@ -1,4 +1,4 @@
-# 5 分钟快速上手
+# ⏰ 5 分钟快速上手
 
 用户可以通过方舟智能运营快速创建运营活动，不同触点的活动在创建流程上大体一致，一共分为 5 步：
 
@@ -27,15 +27,15 @@
 * 已结束：当前时间已经超过活动有效期，活动已经结束，不再触达用户
 * 草稿：活动已保存，但是未开始执行，处于草稿状态，不会触达用户
 
-{% page-ref page="push.md" %}
+{% page-ref page="wo-yao-fa-bu-huo-dong/push.md" %}
 
-{% page-ref page="in-app.md" %}
+{% page-ref page="wo-yao-fa-bu-huo-dong/in-app.md" %}
 
-{% page-ref page="template-message.md" %}
+{% page-ref page="wo-yao-fa-bu-huo-dong/template-message.md" %}
 
-{% page-ref page="sms.md" %}
+{% page-ref page="wo-yao-fa-bu-huo-dong/sms.md" %}
 
-{% page-ref page="web.md" %}
+{% page-ref page="wo-yao-fa-bu-huo-dong/web.md" %}
 
 
 

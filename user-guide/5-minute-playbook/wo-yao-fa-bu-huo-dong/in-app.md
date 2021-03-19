@@ -2,13 +2,13 @@
 
 ### 一、设置活动信息
 
-![&#x7B2C;&#x4E00;&#x6B65;&#xFF1A;&#x8BBE;&#x7F6E;&#x6D3B;&#x52A8;&#x4FE1;&#x606F;](../../.gitbook/assets/image%20%289%29.png)
+![&#x7B2C;&#x4E00;&#x6B65;&#xFF1A;&#x8BBE;&#x7F6E;&#x6D3B;&#x52A8;&#x4FE1;&#x606F;](../../../.gitbook/assets/image%20%289%29.png)
 
 填写活动名称、活动有效期以及是否开启转化跟踪功能。
 
 ### 二、选择目标人群
 
-![&#x7B2C;&#x4E8C;&#x6B65;&#xFF1A;&#x9009;&#x62E9;&#x76EE;&#x6807;&#x4EBA;&#x7FA4;](../../.gitbook/assets/app-dan-chuang-yong-hu-fen-qun-.png)
+![&#x7B2C;&#x4E8C;&#x6B65;&#xFF1A;&#x9009;&#x62E9;&#x76EE;&#x6807;&#x4EBA;&#x7FA4;](../../../.gitbook/assets/app-dan-chuang-yong-hu-fen-qun-.png)
 
 通过下拉菜单选择本次 App 弹窗活动将要触达的人群，这些人群可以来自“用户行为分析系统”、“用户标签系统”、“CDP 系统”、“CRM 系统”等。
 
@@ -16,7 +16,7 @@
 
 ### 三、设置活动的触发条件
 
-![&#x7B2C;&#x4E09;&#x6B65;&#xFF1A;&#x8BBE;&#x7F6E;&#x6D3B;&#x52A8;&#x89E6;&#x53D1;&#x6761;&#x4EF6;](../../.gitbook/assets/ping-mu-kuai-zhao-20200806-xia-wu-4.41.53.png)
+![&#x7B2C;&#x4E09;&#x6B65;&#xFF1A;&#x8BBE;&#x7F6E;&#x6D3B;&#x52A8;&#x89E6;&#x53D1;&#x6761;&#x4EF6;](../../../.gitbook/assets/ping-mu-kuai-zhao-20200806-xia-wu-4.41.53.png)
 
 通过设置好的触发条件，当用户满足条件时，系统自动触发活动并将 App 弹窗推送给用户。
 
@@ -31,7 +31,7 @@
 
 * 点击/关闭弹窗后限制次数弹出：
 
-![](../../.gitbook/assets/xiao-cheng-xu-yong-hu-ti-yan-.png)
+![](../../../.gitbook/assets/xiao-cheng-xu-yong-hu-ti-yan-.png)
 
         1）设置弹出次数上限：针对用户的点击/关闭弹窗行为，分别设置弹出次数上限。在活动
 
@@ -43,7 +43,7 @@
 
 * 点击/关闭弹窗后每次弹出：
 
-![](../../.gitbook/assets/xiao-cheng-xu-mei-ci-dan-chu-.png)
+![](../../../.gitbook/assets/xiao-cheng-xu-mei-ci-dan-chu-.png)
 
         针对用户的点击/关闭弹窗行为，分别设置是否每次都弹出弹窗。当设置每次都弹出弹窗 
 
@@ -53,7 +53,7 @@
 
 ### 四、设置 App 弹窗的内容及样式
 
-![&#x7B2C;&#x56DB;&#x6B65;&#xFF1A;&#x53D1;&#x9001;&#x4EC0;&#x4E48;&#x5185;&#x5BB9;](../../.gitbook/assets/ping-mu-kuai-zhao-20200806-xia-wu-4.57.31.png)
+![&#x7B2C;&#x56DB;&#x6B65;&#xFF1A;&#x53D1;&#x9001;&#x4EC0;&#x4E48;&#x5185;&#x5BB9;](../../../.gitbook/assets/ping-mu-kuai-zhao-20200806-xia-wu-4.57.31.png)
 
 选择 App 样式模板并填写相关内容信息：
 

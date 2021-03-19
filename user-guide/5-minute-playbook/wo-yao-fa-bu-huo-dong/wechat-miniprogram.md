@@ -2,19 +2,19 @@
 
 在接入小程序之前，需先完成小程序的相关设置。
 
-![&#x8BBE;&#x7F6E;&#x5C0F;&#x7A0B;&#x5E8F;](../../.gitbook/assets/ping-mu-kuai-zhao-20200731-xia-wu-3.28.08%20%281%29.png)
+![&#x8BBE;&#x7F6E;&#x5C0F;&#x7A0B;&#x5E8F;](../../../.gitbook/assets/ping-mu-kuai-zhao-20200731-xia-wu-3.28.08%20%281%29.png)
 
 点击按钮进入小程序配置指南界面，完成相关配置。
 
 ## 一、设置活动信息
 
-![&#x7B2C;&#x4E00;&#x6B65;&#xFF1A;&#x8BBE;&#x7F6E;&#x6D3B;&#x52A8;&#x4FE1;&#x606F;](../../.gitbook/assets/xiao-cheng-xu-huo-dong-ming-cheng-.png)
+![&#x7B2C;&#x4E00;&#x6B65;&#xFF1A;&#x8BBE;&#x7F6E;&#x6D3B;&#x52A8;&#x4FE1;&#x606F;](../../../.gitbook/assets/xiao-cheng-xu-huo-dong-ming-cheng-.png)
 
 填写活动名称、活动周期以及是否开启转化跟踪功能。
 
 ## 二、选择目标人群
 
-![&#x7B2C;&#x4E8C;&#x6B65;&#xFF1A;&#x9009;&#x62E9;&#x76EE;&#x6807;&#x4EBA;&#x7FA4;](../../.gitbook/assets/xiao-cheng-xu-tian-jia-fen-qun-.png)
+![&#x7B2C;&#x4E8C;&#x6B65;&#xFF1A;&#x9009;&#x62E9;&#x76EE;&#x6807;&#x4EBA;&#x7FA4;](../../../.gitbook/assets/xiao-cheng-xu-tian-jia-fen-qun-.png)
 
 通过下拉菜单选择本次小程序弹窗将要触达的人群，这些人群可以来自“用户行为分析系统“、”用户标签系统“、“CDP系统”、“CRM”系统等。
 
@@ -22,7 +22,7 @@
 
 ## 三、设置活动的触发条件
 
-![&#x7B2C;&#x4E09;&#x6B65;&#xFF1A;&#x8BBE;&#x7F6E;&#x6D3B;&#x52A8;&#x7684;&#x89E6;&#x53D1;&#x6761;&#x4EF6;](../../.gitbook/assets/chu-fa-tiao-jian-.png)
+![&#x7B2C;&#x4E09;&#x6B65;&#xFF1A;&#x8BBE;&#x7F6E;&#x6D3B;&#x52A8;&#x7684;&#x89E6;&#x53D1;&#x6761;&#x4EF6;](../../../.gitbook/assets/chu-fa-tiao-jian-.png)
 
 通过设置好的触发条件，当用户满足条件时，系统自动触发活动并将小程序弹窗推送给用户。
 
@@ -37,7 +37,7 @@
 
 * 点击/关闭弹窗后限制次数弹出：
 
-![](../../.gitbook/assets/xiao-cheng-xu-yong-hu-ti-yan-.png)
+![](../../../.gitbook/assets/xiao-cheng-xu-yong-hu-ti-yan-.png)
 
         1）设置弹出次数上限：针对用户的点击/关闭弹窗行为，分别设置弹出次数上限。在活动
 
@@ -49,7 +49,7 @@
 
 * 点击/关闭弹窗后每次弹出：
 
-![](../../.gitbook/assets/xiao-cheng-xu-mei-ci-dan-chu-.png)
+![](../../../.gitbook/assets/xiao-cheng-xu-mei-ci-dan-chu-.png)
 
         针对用户的点击/关闭弹窗行为，分别设置是否每次都弹出弹窗。当设置每次都弹出弹窗 
 
@@ -59,7 +59,7 @@
 
 ## 四、设置小程序弹窗的内容及样式
 
-![](../../.gitbook/assets/xiao-cheng-xu-dan-chuang-nei-rong-she-zhi-.png)
+![](../../../.gitbook/assets/xiao-cheng-xu-dan-chuang-nei-rong-she-zhi-.png)
 
 选择小程序弹窗样式模板并填写相关内容信息，同时配置小程序弹窗的跳转链接。
 

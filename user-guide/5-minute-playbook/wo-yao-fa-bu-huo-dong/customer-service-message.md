@@ -2,35 +2,35 @@
 
 ## 一、进入活动创建页面
 
-![&#x8FDB;&#x5165;&#x5FAE;&#x4FE1;&#x6D3B;&#x52A8;&#x521B;&#x5EFA;&#x9875;&#x9762;](../../.gitbook/assets/ke-fu-huo-dong-chuang-jian-.png)
+![&#x8FDB;&#x5165;&#x5FAE;&#x4FE1;&#x6D3B;&#x52A8;&#x521B;&#x5EFA;&#x9875;&#x9762;](../../../.gitbook/assets/ke-fu-huo-dong-chuang-jian-.png)
 
 点击左侧活动列表中的“微信群发助手”，进入微信活动页面，点击“创建微信群发活动”按钮后进入活动创建页面。
 
-![&#x8FDB;&#x5165;&#x5BA2;&#x670D;&#x6D88;&#x606F;&#x6D3B;&#x52A8;&#x521B;&#x5EFA;&#x9875;&#x9762;](../../.gitbook/assets/wei-xin-huo-dong-ye-mian-.png)
+![&#x8FDB;&#x5165;&#x5BA2;&#x670D;&#x6D88;&#x606F;&#x6D3B;&#x52A8;&#x521B;&#x5EFA;&#x9875;&#x9762;](../../../.gitbook/assets/wei-xin-huo-dong-ye-mian-.png)
 
 点击“客服消息”选项，进入微信客服消息活动创建页面，选择需要发布活动的公众号后，开始创建活动。
 
 ## 二、设置活动信息
 
-![&#x7B2C;&#x4E8C;&#x6B65;&#xFF1A;&#x8BBE;&#x7F6E;&#x6D3B;&#x52A8;&#x4FE1;&#x606F;](../../.gitbook/assets/ke-fu-xiao-xi-she-zhi-ming-cheng-.png)
+![&#x7B2C;&#x4E8C;&#x6B65;&#xFF1A;&#x8BBE;&#x7F6E;&#x6D3B;&#x52A8;&#x4FE1;&#x606F;](../../../.gitbook/assets/ke-fu-xiao-xi-she-zhi-ming-cheng-.png)
 
 填写活动名称以及是否开启转化跟踪功能。
 
 ## 三、选择目标人群
 
-![&#x7B2C;&#x4E09;&#x6B65;&#xFF1A;&#x9009;&#x62E9;&#x76EE;&#x6807;&#x4EBA;&#x7FA4;](../../.gitbook/assets/ke-fu-xiao-xi-tian-jia-fen-qun-.png)
+![&#x7B2C;&#x4E09;&#x6B65;&#xFF1A;&#x9009;&#x62E9;&#x76EE;&#x6807;&#x4EBA;&#x7FA4;](../../../.gitbook/assets/ke-fu-xiao-xi-tian-jia-fen-qun-.png)
 
 通过下拉菜单选择本次微信客服消息活动将要触达的人群，这些人群可以来自“用户行为分析系统”、“用户标签系统”、“CDP 系统”、“CRM 系统”等。
 
 点击“添加分群“按钮可同时设置多个目标人群。
 
-![&#x9009;&#x62E9;&#x5FAE;&#x4FE1;&#x5185;&#x6807;&#x7B7E;&#x5206;&#x7EC4;](../../.gitbook/assets/image%20%2817%29.png)
+![&#x9009;&#x62E9;&#x5FAE;&#x4FE1;&#x5185;&#x6807;&#x7B7E;&#x5206;&#x7EC4;](../../../.gitbook/assets/image%20%2817%29.png)
 
 同时，EA 已经同微信完成数据同步，可以直接在目标人群中选择微信标签用户。
 
 ## 四、设置活动的触发条件
 
-![&#x7B2C;&#x56DB;&#x6B65;&#xFF1A;&#x8BBE;&#x7F6E;&#x6D3B;&#x52A8;&#x7684;&#x89E6;&#x53D1;&#x6761;&#x4EF6;](../../.gitbook/assets/ke-fu-chu-fa-tiao-jian-%20%281%29.png)
+![&#x7B2C;&#x56DB;&#x6B65;&#xFF1A;&#x8BBE;&#x7F6E;&#x6D3B;&#x52A8;&#x7684;&#x89E6;&#x53D1;&#x6761;&#x4EF6;](../../../.gitbook/assets/ke-fu-chu-fa-tiao-jian-%20%281%29.png)
 
 通过设置好的触发条件，当用户满足条件时，系统自动触发活动并将微信客服消息推送给用户。
 
@@ -57,7 +57,7 @@
 
 ## 五、选择消息模版并填写消息内容
 
-![&#x7B2C;&#x4E94;&#x6B65;&#xFF1A;&#x9009;&#x62E9;&#x6D88;&#x606F;&#x6A21;&#x7248;&#x5E76;&#x586B;&#x5199;&#x6D88;&#x606F;&#x5185;&#x5BB9;](../../.gitbook/assets/ke-fu-xiao-xi-yu-lan-ye-mian-.png)
+![&#x7B2C;&#x4E94;&#x6B65;&#xFF1A;&#x9009;&#x62E9;&#x6D88;&#x606F;&#x6A21;&#x7248;&#x5E76;&#x586B;&#x5199;&#x6D88;&#x606F;&#x5185;&#x5BB9;](../../../.gitbook/assets/ke-fu-xiao-xi-yu-lan-ye-mian-.png)
 
 * 文本消息：纯文本消息。
 
@@ -104,11 +104,11 @@
 
 同时，上述五种消息模版支持组合发送，在 “发送什么内容” 页面左侧点击 “新建” 按钮即可进行设置。默认所有客服消息按顺序全部发送。
 
-![&#x6D88;&#x606F;&#x7EC4;&#x5408;&#x53D1;&#x9001;](../../.gitbook/assets/ke-fu-zu-he-tian-jia-.png)
+![&#x6D88;&#x606F;&#x7EC4;&#x5408;&#x53D1;&#x9001;](../../../.gitbook/assets/ke-fu-zu-he-tian-jia-.png)
 
 上述功能中的文字信息模块均支持添加emoji表情，在消息编辑框上方进行选择即可添加。
 
-![&#x6DFB;&#x52A0;emoji&#x8868;&#x60C5;](../../.gitbook/assets/emoji-biao-qing-.png)
+![&#x6DFB;&#x52A0;emoji&#x8868;&#x60C5;](../../../.gitbook/assets/emoji-biao-qing-.png)
 
 ## 六、预览并执行
 

@@ -2,13 +2,13 @@
 
 ### 一、设置活动信息
 
-![](../../.gitbook/assets/ping-mu-kuai-zhao-20200805-shang-wu-11.27.25.png)
+![](../../../.gitbook/assets/ping-mu-kuai-zhao-20200805-shang-wu-11.27.25.png)
 
 填写活动名称以及是否开启转化跟踪功能。
 
 ### 二、选择目标人群
 
-![&#x7B2C;&#x4E8C;&#x6B65;&#xFF1A;&#x9009;&#x62E9;&#x76EE;&#x6807;&#x4EBA;&#x7FA4;](../../.gitbook/assets/push-tian-jia-fen-qun-.png)
+![&#x7B2C;&#x4E8C;&#x6B65;&#xFF1A;&#x9009;&#x62E9;&#x76EE;&#x6807;&#x4EBA;&#x7FA4;](../../../.gitbook/assets/push-tian-jia-fen-qun-.png)
 
 通过下拉菜单选择本次 Push 消息活动将要触达的人群，这些人群可以来自“用户行为分析系统”、“用户标签系统”、“CDP 系统”、“CRM 系统”等。
 
@@ -16,7 +16,7 @@
 
 ### 三、设置活动的触发条件
 
-![](../../.gitbook/assets/ping-mu-kuai-zhao-20200805-shang-wu-11.29.47.png)
+![](../../../.gitbook/assets/ping-mu-kuai-zhao-20200805-shang-wu-11.29.47.png)
 
 通过设置好的触发条件，当用户满足条件时，系统自动触发活动并将 Push 消息推送给用户。
 
@@ -29,7 +29,7 @@
 * 立即发送：活动开始执行后，立即向用户发送 Push 消息
 * 延时发送：达到设定的时间后，才会向用户发送 Push 消息
 
-![](../../.gitbook/assets/ping-mu-kuai-zhao-20200805-shang-wu-11.33.16.png)
+![](../../../.gitbook/assets/ping-mu-kuai-zhao-20200805-shang-wu-11.33.16.png)
 
 Push 消息无法触达时，支持短信补发：对于消息下发失败或用户已经卸载 App 的情况，能够自动通过短信补发消息内容，保证用户可以收到活动通知。
 
@@ -45,7 +45,7 @@ Push 消息无法触达时，支持短信补发：对于消息下发失败或用
 
 ### 四、设置 Push 消息内容
 
-![](../../.gitbook/assets/ping-mu-kuai-zhao-20200805-shang-wu-11.33.32.png)
+![](../../../.gitbook/assets/ping-mu-kuai-zhao-20200805-shang-wu-11.33.32.png)
 
 填写 Push 消息的标题和内容，以及用户点击 Push 消息后触发的操作：
 
@@ -73,7 +73,7 @@ Push 消息无法触达时，支持短信补发：对于消息下发失败或用
 
 预览并执行活动，活动正式运行，状态由“草稿”变为“进行中”或“即将开始”。
 
-{% page-ref page="../../faq/push-faq.md" %}
+{% page-ref page="../../../faq/push-faq.md" %}
 
 
 
