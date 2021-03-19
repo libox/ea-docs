@@ -25,7 +25,9 @@
     * [H5互动编辑器](user-guide/5-minute-playbook/content-management/h5-interactive-editor.md)
   * [👬 微信粉丝管理](user-guide/5-minute-playbook/fans-management.md)
 * [📄 更新日志](user-guide/geng-xin-ri-zhi/README.md)
-  * [功能更新](user-guide/geng-xin-ri-zhi/gong-neng-geng-xin.md)
+  * [功能更新](user-guide/geng-xin-ri-zhi/gong-neng-geng-xin/README.md)
+    * [用户管理](user-guide/geng-xin-ri-zhi/gong-neng-geng-xin/yong-hu-guan-li.md)
+    * [审批功能](user-guide/geng-xin-ri-zhi/gong-neng-geng-xin/shen-pi-gong-neng.md)
   * [版本更新](user-guide/geng-xin-ri-zhi/ban-ben-geng-xin.md)
 
 ## 开发者指南
