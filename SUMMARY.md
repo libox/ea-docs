@@ -32,6 +32,13 @@
 * [系统初始化](kai-fa-zhe-zhi-nan/xi-tong-chu-shi-hua/README.md)
   * [扫码绑定微信](kai-fa-zhe-zhi-nan/xi-tong-chu-shi-hua/binding.md)
   * [配置方舟数据平台](kai-fa-zhe-zhi-nan/xi-tong-chu-shi-hua/pei-zhi-fang-zhou-shu-ju-ping-tai.md)
+* [SDK集成文档](kai-fa-zhe-zhi-nan/sdk-ji-cheng-wen-dang/README.md)
+  * [微信小程序 SDK](kai-fa-zhe-zhi-nan/sdk-ji-cheng-wen-dang/wechat-miniprogram-sdk.md)
+  * [JS SDK](kai-fa-zhe-zhi-nan/sdk-ji-cheng-wen-dang/js-sdk.md)
+  * [Android SDK](kai-fa-zhe-zhi-nan/sdk-ji-cheng-wen-dang/android-sdk.md)
+  * [iOS SDK](kai-fa-zhe-zhi-nan/sdk-ji-cheng-wen-dang/ios-sdk.md)
+  * [SDK 版本更新说明](kai-fa-zhe-zhi-nan/sdk-ji-cheng-wen-dang/sdk-version-upgrade.md)
+  * [EA 系统集成文档](kai-fa-zhe-zhi-nan/sdk-ji-cheng-wen-dang/ea-system-integration-doc.md)
 
 ## FAQ
 
@@ -39,15 +46,6 @@
 * [创建微信模板消息活动的 FAQ](faq/wechat-faq.md)
 * [创建微信小程序活动的 FAQ](faq/miniprogram-faq.md)
 * [创建微信客服消息活动的 FAQ](faq/customer-service-account-message-faq.md)
-
-## SDK 集成文档
-
-* [EA 系统集成文档](sdk-ji-cheng-wen-dang/ea-system-integration-doc.md)
-* [SDK 版本更新说明](sdk-ji-cheng-wen-dang/sdk-version-upgrade.md)
-* [iOS SDK](sdk-ji-cheng-wen-dang/ios-sdk.md)
-* [Android SDK](sdk-ji-cheng-wen-dang/android-sdk.md)
-* [JS SDK](sdk-ji-cheng-wen-dang/js-sdk.md)
-* [微信小程序 SDK](sdk-ji-cheng-wen-dang/wechat-miniprogram-sdk.md)
 
 ## 其它
 

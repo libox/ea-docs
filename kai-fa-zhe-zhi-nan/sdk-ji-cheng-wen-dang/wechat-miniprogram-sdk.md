@@ -151,13 +151,13 @@ AnalysysAgent.profileSet({
 
 集成成功后，可以看到控制台有打印内容，如下:
 
-![](../.gitbook/assets/she-zhi-appkey.jpg)
+![](../../.gitbook/assets/she-zhi-appkey.jpg)
 
 2、接入成功，没有弹窗？
 
 在方舟用户分群中查看本地的用户是否在配置的弹窗活动用户分群中，如果不存在，将本地用户加入分群中。
 
-![](../.gitbook/assets/yong-hu-id.jpg)
+![](../../.gitbook/assets/yong-hu-id.jpg)
 
 ## 六、如何支持小程序弹窗跳转到公众号文章
 

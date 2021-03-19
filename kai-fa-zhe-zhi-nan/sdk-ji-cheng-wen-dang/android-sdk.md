@@ -249,17 +249,17 @@ android 8以上版本需要配置通道：
 * [登录OPPO推送平台](https://push.oppo.com/top/application-list)
 * 左侧边栏选配置管理下的新建通道，如下图：
 
-![](../.gitbook/assets/d308301c-1be2-4413-9ecf-fe746b76022c.png)
+![](../../.gitbook/assets/d308301c-1be2-4413-9ecf-fe746b76022c.png)
 
 * 在右侧编辑通道信息并提交，如下图：
 
-![](../.gitbook/assets/26be8387-55fb-4154-80c3-d07b38f9a451.png)
+![](../../.gitbook/assets/26be8387-55fb-4154-80c3-d07b38f9a451.png)
 
 通道ID\(1001\)，是EA默认的通道；
 
 如果已经在OPPO创建过通道，可以在EA的后台的系统设置中配置相关通道信息。如下图：
 
-![](../.gitbook/assets/9daf5d48-0be0-4e3b-af94-a1ca48bc520c.png)
+![](../../.gitbook/assets/9daf5d48-0be0-4e3b-af94-a1ca48bc520c.png)
 
 在application的派生类中注册通道信息，代码如下（如果使用默认通道，就不需要注册了）：
 
@@ -313,7 +313,7 @@ VIVO推送：
 
 SDK仅支持下表中的机型和对应的系统及以上系统:
 
-![](../.gitbook/assets/20191204113508202986.png)
+![](../../.gitbook/assets/20191204113508202986.png)
 
 魅族推送：
 
