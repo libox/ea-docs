@@ -23,6 +23,9 @@
   * [表单编辑器](user-guide/content-management/form-editor.md)
   * [H5互动编辑器](user-guide/content-management/h5-interactive-editor.md)
 * [微信粉丝管理](user-guide/fans-management.md)
+* [更新日志](user-guide/geng-xin-ri-zhi/README.md)
+  * [版本更新](user-guide/geng-xin-ri-zhi/ban-ben-geng-xin.md)
+  * [功能更新](user-guide/geng-xin-ri-zhi/gong-neng-geng-xin.md)
 
 ## 系统初始化
 
