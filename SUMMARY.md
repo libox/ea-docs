@@ -27,10 +27,11 @@
   * [版本更新](user-guide/geng-xin-ri-zhi/ban-ben-geng-xin.md)
   * [功能更新](user-guide/geng-xin-ri-zhi/gong-neng-geng-xin.md)
 
-## 系统初始化
+## 开发者指南
 
-* [配置方舟数据平台](xi-tong-chu-shi-hua/pei-zhi-fang-zhou-shu-ju-ping-tai.md)
-* [扫码绑定微信](xi-tong-chu-shi-hua/binding.md)
+* [系统初始化](kai-fa-zhe-zhi-nan/xi-tong-chu-shi-hua/README.md)
+  * [扫码绑定微信](kai-fa-zhe-zhi-nan/xi-tong-chu-shi-hua/binding.md)
+  * [配置方舟数据平台](kai-fa-zhe-zhi-nan/xi-tong-chu-shi-hua/pei-zhi-fang-zhou-shu-ju-ping-tai.md)
 
 ## FAQ
 

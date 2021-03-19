@@ -6,11 +6,11 @@
 
 进入EA 产品中的系统配置，选择方舟数据平台，填入方舟数据平台的相关信息，如图
 
-![](../.gitbook/assets/image%20%2851%29.png)
+![](../../.gitbook/assets/image%20%2851%29.png)
 
 AppKey 和 API AccessKey：取自方舟数据平台项目概览，如图
 
-![](../.gitbook/assets/image%20%2850%29.png)
+![](../../.gitbook/assets/image%20%2850%29.png)
 
 项目地址和上报地址：填写您部署 UBA 产品所在环境的地址，示例如上图填写
 

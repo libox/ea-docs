@@ -4,13 +4,13 @@
 
 ## 一、进入设置界面
 
-![&#x7B2C;&#x4E00;&#x6B65;&#xFF1A;&#x8FDB;&#x5165;&#x8BBE;&#x7F6E;&#x754C;&#x9762;](../.gitbook/assets/she-zhi-jie-mian-.png)
+![&#x7B2C;&#x4E00;&#x6B65;&#xFF1A;&#x8FDB;&#x5165;&#x8BBE;&#x7F6E;&#x754C;&#x9762;](../../.gitbook/assets/she-zhi-jie-mian-.png)
 
 用户登录完成后，点击右上角“设置”图标，点击“系统设置”进入设置页面。
 
 ## 二、进入扫码界面
 
-![&#x7B2C;&#x4E8C;&#x6B65;&#xFF1A;&#x8FDB;&#x5165;&#x626B;&#x7801;&#x754C;&#x9762;](../.gitbook/assets/sao-ma-jie-mian-.png)
+![&#x7B2C;&#x4E8C;&#x6B65;&#xFF1A;&#x8FDB;&#x5165;&#x626B;&#x7801;&#x754C;&#x9762;](../../.gitbook/assets/sao-ma-jie-mian-.png)
 
 点击”微信配置“进入配置页面后，点击”添加“按钮，显示链接后，点击链接跳转到微信公众号授权页面。
 
