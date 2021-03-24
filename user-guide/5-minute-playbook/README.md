@@ -27,15 +27,15 @@
 * 已结束：当前时间已经超过活动有效期，活动已经结束，不再触达用户
 * 草稿：活动已保存，但是未开始执行，处于草稿状态，不会触达用户
 
-{% page-ref page="wo-yao-fa-bu-huo-dong/push.md" %}
+{% page-ref page="to-launch-event/push.md" %}
 
-{% page-ref page="wo-yao-fa-bu-huo-dong/in-app.md" %}
+{% page-ref page="to-launch-event/in-app.md" %}
 
-{% page-ref page="wo-yao-fa-bu-huo-dong/template-message.md" %}
+{% page-ref page="to-launch-event/template-message.md" %}
 
-{% page-ref page="wo-yao-fa-bu-huo-dong/sms.md" %}
+{% page-ref page="to-launch-event/sms.md" %}
 
-{% page-ref page="wo-yao-fa-bu-huo-dong/web.md" %}
+{% page-ref page="to-launch-event/web.md" %}
 
 
 
