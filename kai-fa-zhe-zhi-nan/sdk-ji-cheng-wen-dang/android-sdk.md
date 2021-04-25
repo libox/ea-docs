@@ -69,9 +69,9 @@ dependencies {
 implementation 'cn.com.analysys:analysys-core:4.4.12'
 //EA push SDK集成了华为、小米、OPPO、VIVO、魅族推送SDK
 //如果已经集成了厂商的SDK，可以不集成analysys-easytouch-push,将厂商的token通过pushToken接口上报
-implementation 'cn.com.analysys:analysys-easytouch-push:0.3.0'
+implementation 'cn.com.analysys:analysys-easytouch-push:latest.release'
 //EA SDK
-implementation 'cn.com.analysys:analysys-easytouch:1.29.0'
+implementation 'cn.com.analysys:analysys-easytouch:latest.release'
 }
 ```
 
@@ -418,7 +418,24 @@ public void setPageTagState(boolean state)
 
 返回值：无
 
-### 6、加载信息流
+### 6、设置是否显示对话框
+
+接口定义：
+
+```text
+//此接口用于全局控制对话框的展示
+public void setDialogVisible(boolean visible)
+```
+
+参数说明：
+
+| 参数 | 说明 | 必填 | 备注 |
+| :---: | :---: | :--- | :--- |
+| visible | 是否显示对话框,true是显示；false是不显示关闭 | 否 | 默认为true |
+
+返回值：无
+
+### 7、加载信息流
 
 接口定义：
 
@@ -443,7 +460,7 @@ public void loadBanner(AnalysysBannerConfig config, FrameLayout layout)
 
 备注：FAQ中的**信息流的集成流程**
 
-### 7、释放接口
+### 8、释放接口
 
 接口定义：
 
