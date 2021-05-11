@@ -488,7 +488,29 @@ userId：1BCAF1D0-C8C0-46A8-866F-005832024259
 
 **注意事项：** 无
 
-### 7、渲染 banner
+### 7、上传公众号的ID
+
+**支持的版本：** 2.2
+
+**接口说明：** 上传公众号的ID。
+
+**接口定义：**
+
+* \(void\)setWeChatId:\(NSString _\)unionId appId:\(NSString_ \)appid openId:\(NSString \*\)openId;
+
+参数说明：
+
+| 参数 | 说明 | 必填 | 备注 |
+| :---: | :---: | :--- | :--- |
+| unionId | 企业unionID | 否 |  |
+| appId | 小程序、公众号的appID | 是 |  |
+| openId | 用户openId | 是 |  |
+
+**接口返回：** 无
+
+**注意事项：** 无
+
+### 8、渲染 banner
 
 **支持的版本：** 1.2.0
 
