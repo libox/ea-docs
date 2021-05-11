@@ -435,7 +435,26 @@ public void setDialogVisible(boolean visible)
 
 返回值：无
 
-### 7、加载信息流
+### 7、上传公众号的ID
+
+接口定义：
+
+```text
+//此接口用于全局控制对话框的展示
+public void setWeChatId(String unionId, String appId, String openId)
+```
+
+参数说明：
+
+| 参数 | 说明 | 必填 | 备注 |
+| :---: | :---: | :--- | :--- |
+| unionId | 企业unionID | 否 |  |
+| appId | 小程序、公众号的appID | 是 |  |
+| openId | 用户openId | 是 |  |
+
+返回值：无
+
+### 8、加载信息流
 
 接口定义：
 
@@ -460,7 +479,7 @@ public void loadBanner(AnalysysBannerConfig config, FrameLayout layout)
 
 备注：FAQ中的**信息流的集成流程**
 
-### 8、释放接口
+### 9、释放接口
 
 接口定义：
 
