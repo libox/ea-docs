@@ -154,7 +154,27 @@ isH5\(可选，默认为false\) 设置弹窗是否是 H5 模式，false-弹窗 w
 {% endtab %}
 {% endtabs %}
 
-### 三、备注
+### 三 SDK接口
+
+### 1、上传公众号的ID
+
+接口定义：
+
+```text
+window.AnalysysEaManager.setWeChatId(unionId, appId, openId)
+```
+
+参数说明：
+
+| 参数 | 说明 | 必填 | 备注 |
+| :---: | :---: | :--- | :--- |
+| unionId | 企业unionID | 是 | 可为空字符串 |
+| appId | 小程序、公众号的appID | 是 |  |
+| openId | 用户openId | 是 |  |
+
+返回值：无
+
+### 四、备注
 
 1、监听事件 window.AnalysysModal\(data\) 说明
 
