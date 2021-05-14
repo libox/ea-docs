@@ -49,7 +49,7 @@
 | title | 是 | 字符串 | 推送标题 |
 | content | 是 | 字符串 | 推送内容 |
 | openType | 是 | 整型 | 点击通知消息打开APP的方式，0：打开APP；2：打开APP内页面 |
-| certificateType | 是 | 整型 | IOS是否为测试证书，0：生产证书；1：测试证书 |
+| certificateType | 是 | 整型 | IOS是否为测试证书，1：生产证书；0：测试证书 |
 | extraMsg | 否 | 键值对 | 自定义扩展字段 |
 | timestamp | 是 | 字符串 | 创建时间 |
 | triggerStartTime | 是 | 字符串 | 开始时间 |
