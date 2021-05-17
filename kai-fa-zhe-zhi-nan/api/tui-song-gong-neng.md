@@ -22,6 +22,7 @@
         "androidPackageName":"com.analysys.eaApp",
         "iosUrl":"testControler",
         "androidUrl":"com.analysys.eaApp.testActivity",
+        "tags":"api活动",
         "title":"你好",
         "content":"你好",
         "openType":0,
@@ -46,6 +47,7 @@
 | androidPackageName | 否 | 字符串 | android包名 |
 | iosUrl | 否 | 字符串 | ios页面跳转的ur地址 |
 | androidUrl | 否 | 字符串 | android页面跳转的ur地址 |
+| tags | 是 | 字符串 | api发送的标识，可以通过这个字段进行统计 |
 | title | 是 | 字符串 | 推送标题 |
 | content | 是 | 字符串 | 推送内容 |
 | openType | 是 | 整型 | 点击通知消息打开APP的方式，0：打开APP；2：打开APP内页面 |
