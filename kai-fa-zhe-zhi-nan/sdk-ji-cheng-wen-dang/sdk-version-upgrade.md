@@ -310,6 +310,51 @@
   </thead>
   <tbody>
     <tr>
+      <td style="text-align:left">2.2.1</td>
+      <td style="text-align:left">
+        <p><b>&#x65B0;&#x589E;:</b>
+        </p>
+        <p>&#x65E0;</p>
+        <p><b>&#x4FEE;&#x590D;:</b>
+        </p>
+        <p>&#x65E0;</p>
+        <p><b>&#x4F18;&#x5316;:</b>
+        </p>
+        <p>1&#x3001;token&#x5931;&#x6548;&#x903B;&#x8F91;&#x4F18;&#x5316;&#xFF1B;</p>
+      </td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">2.2.0</td>
+      <td style="text-align:left">
+        <p><b>&#x65B0;&#x589E;:</b>
+        </p>
+        <p>1&#x3001;&#x6DFB;&#x52A0;&#x4E0A;&#x62A5;&#x5FAE;&#x4FE1;id&#x63A5;&#x53E3;&#xFF1B;</p>
+        <p><b>&#x4FEE;&#x590D;:</b>
+        </p>
+        <p>&#x65E0;</p>
+        <p><b>&#x4F18;&#x5316;:</b>
+        </p>
+        <p>1&#x3001;&#x4F18;&#x5316;&#x5BF9;&#x8BDD;&#x6846;&#x663E;&#x793A;&#xFF1B;</p>
+      </td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">1.29.2</td>
+      <td style="text-align:left">
+        <p><b>&#x65B0;&#x589E;:</b>
+        </p>
+        <p>&#x65E0;</p>
+        <p><b>&#x4FEE;&#x590D;:</b>
+        </p>
+        <p>&#x65E0;</p>
+        <p><b>&#x4F18;&#x5316;:</b>
+        </p>
+        <p>1&#x3001;&#x4FE1;&#x606F;&#x6D41;&#x903B;&#x8F91;&#x7684;&#x4F18;&#x5316;&#xFF1B;</p>
+      </td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
       <td style="text-align:left">1.29.0</td>
       <td style="text-align:left">
         <p><b>&#x65B0;&#x589E;:</b>
