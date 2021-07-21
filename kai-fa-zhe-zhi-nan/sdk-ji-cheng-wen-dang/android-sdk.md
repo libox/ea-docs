@@ -183,7 +183,7 @@ MAC平台：
 
 ```text
 <intent-filter>
-    <action android:name="包名.personcenter.message.MessageView" />
+    <action android:name="activity全名" />
     <category android:name="android.intent.category.DEFAULT" />
     <category android:name="android.intent.category.BROWSABLE"/>
 </intent-filter>
