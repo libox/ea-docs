@@ -648,7 +648,7 @@ VIVO的状态栏通知默认是关闭的。需要提示用户打开通知栏。
             android:name=".personcenter.message.MessageView"
             android:screenOrientation="portrait" >
             <intent-filter>
-                <action android:name="包名.personcenter.message.MessageView" />
+                <action android:name="activity全名" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE"/>
             </intent-filter>
