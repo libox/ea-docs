@@ -772,5 +772,5 @@ Building for iOS, but the linked and embedded framework  was built for iOS + iOS
 当出现问题时：
 
 * 请仔细阅读文档，查看是否有遗漏。
-* 给我们的技术 support 发邮件：guoyongqing@analysys.com.cn
+* 给我们的技术 support 发邮件：wangjian@analysys.com.cn
 
