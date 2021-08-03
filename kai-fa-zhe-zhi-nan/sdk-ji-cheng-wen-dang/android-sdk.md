@@ -64,9 +64,8 @@ allprojects {
 
 ```text
 dependencies {
-//如果已经集成方舟SDK，
-//analysys-core的版本要大于4.4.12
-implementation 'cn.com.analysys:analysys-core:4.4.12'
+//集成方舟SDK
+implementation 'cn.com.analysys:analysys-arkanalysys:latest.release'
 //EA push SDK集成了华为、小米、OPPO、VIVO、魅族推送SDK
 //如果已经集成了厂商的SDK，可以不集成analysys-easytouch-push,将厂商的token通过pushToken接口上报
 implementation 'cn.com.analysys:analysys-easytouch-push:latest.release'
