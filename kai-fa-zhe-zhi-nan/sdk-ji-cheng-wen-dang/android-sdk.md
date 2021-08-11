@@ -108,8 +108,6 @@ apply plugin: 'com.huawei.agconnect'
 AnalysysEaConfig builder = new AnalysysEaConfig();
 //填写自己申请的AppKey
 builder.setAppKey("*******");
-//如果是私有化部署的EA，需要设置访问的url地址
-//builder.setUrl("https://*****");
 //设置APP的首页地址；包括包名的完整的路径.
 //例如:com.aneesoft.ygqf.common.MainActivity
 builder.setMainPage("*******");
@@ -120,16 +118,7 @@ AnalysysEaManager.init(getApplicationContext(), builder);
 AnalysysEaPushManager.getInstance().init(getApplicationContext());
 ```
 
-### 4、将监听接口注册到方舟SDK中
-
-```text
-//mode设置为2，保证上报的数据是存库
-AnalysysAgent.setDebugMode(this, 2);
-//先要初始化方舟SDK和EA SDK后在注册监听
-AnalysysAgent.setObserverListener(this, AnalysysEaManager.getObserverListener());
-```
-
-### 5、上报相关用户属性
+### 4、上报相关用户属性
 
 通过方舟SDK上报如下的用户属性可以方便APP触达到用户
 
@@ -141,15 +130,15 @@ AnalysysAgent.setObserverListener(this, AnalysysEaManager.getObserverListener())
 上报用户邮箱：
    AnalysysAgent.profileSet(context, "$EMAIL", email);
 上报微信OPENID：
-    AnalysysAgent.profileSet(context, "$WECHATOPENID", openid);
+   AnalysysAgent.profileSet(context, "$WECHATOPENID", openid);
 ```
 
-### 6、添加混淆设置
+### 5、添加混淆设置
 
 如果APP在打包的时候开启了混淆，请在proguard-rules.pro中添加如下设置
 
 ```text
--keep class com.analysys.easdk.**{*;}
+-keep class com.analysys.** {*;}
 -keep class * extends com.raizlabs.android.dbflow.config.DatabaseHolder { *; }
 -keep class com.flyco.** {*;}
 ```
