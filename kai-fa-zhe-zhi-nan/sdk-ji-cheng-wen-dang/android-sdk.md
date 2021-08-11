@@ -113,6 +113,8 @@ builder.setAppKey("*******");
 //设置APP的首页地址；包括包名的完整的路径.
 //例如:com.aneesoft.ygqf.common.MainActivity
 builder.setMainPage("*******");
+//数据上报url
+builder.setUploadURL("*******");
 AnalysysEaManager.init(getApplicationContext(), builder);
 //推送厂商的token上报SDK
 AnalysysEaPushManager.getInstance().init(getApplicationContext());

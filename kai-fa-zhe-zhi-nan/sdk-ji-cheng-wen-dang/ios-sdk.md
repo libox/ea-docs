@@ -105,9 +105,10 @@ config.appKey= @"易达后台创建项目的 AppKey";
 
 config.applicationGroupIdentifier = @"App 创建的 App Groups ID";
 
+// 数据上报url
+config.uploadUrl= @"*******";
+
 [AnalysysEaManager startWithConfig:config];
-
-
 
 // 在初始化方舟埋点 SDK 的后面添加注册事件监听接口调用（方舟 SDK 4.4.8 及以上版本支持）
 
