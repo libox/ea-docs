@@ -105,6 +105,9 @@ config.appKey= @"易达后台创建项目的 AppKey";
 
 config.applicationGroupIdentifier = @"App 创建的 App Groups ID";
 
+//私有化部署的情况下，设置EA服务的地址URL
+//config.url= @"*******";
+
 // 数据上报url
 config.uploadUrl= @"*******";
 

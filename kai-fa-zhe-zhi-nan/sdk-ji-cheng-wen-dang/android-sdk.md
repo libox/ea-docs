@@ -111,6 +111,8 @@ builder.setAppKey("*******");
 //设置APP的首页地址；包括包名的完整的路径.
 //例如:com.aneesoft.ygqf.common.MainActivity
 builder.setMainPage("*******");
+//私有化部署的情况下，设置EA服务的地址URL
+//builder.setUrl("*******");
 //数据上报url
 builder.setUploadURL("*******");
 AnalysysEaManager.init(getApplicationContext(), builder);
