@@ -679,6 +679,15 @@
   </thead>
   <tbody>
     <tr>
+      <td style="text-align:left">2.0.7</td>
+      <td style="text-align:left"><b>&#x65B0;&#x589E;&#xFF1A;</b>
+        <br />1&#x3001;&#x4E8B;&#x4EF6;&#x5C5E;&#x6027;&#x89E6;&#x53D1;&#x652F;&#x6301;&#x591A;&#x503C;&#x8FC7;&#x6EE4;&#xFF1B;
+        <br
+        /><b>&#x4FEE;&#x590D;&#xFF1A;</b>
+        <br />&#x65E0;</td>
+      <td style="text-align:left">22</td>
+    </tr>
+    <tr>
       <td style="text-align:left">1.1.7</td>
       <td style="text-align:left">
         <p><b>&#x65B0;&#x589E;&#xFF1A;</b>
@@ -786,6 +795,15 @@
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td style="text-align:left">2.07</td>
+      <td style="text-align:left"><b>&#x65B0;&#x589E;&#xFF1A;</b>
+        <br />1&#x3001;&#x4E8B;&#x4EF6;&#x5C5E;&#x6027;&#x89E6;&#x53D1;&#x652F;&#x6301;&#x591A;&#x503C;&#x8FC7;&#x6EE4;&#xFF1B;
+        <br
+        /><b>&#x4FEE;&#x590D;&#xFF1A;</b>
+        <br />&#x65E0;</td>
+      <td style="text-align:left">85K</td>
+    </tr>
     <tr>
       <td style="text-align:left">1.2.6</td>
       <td style="text-align:left">
