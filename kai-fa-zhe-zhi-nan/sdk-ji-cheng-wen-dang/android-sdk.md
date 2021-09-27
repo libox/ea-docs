@@ -65,12 +65,12 @@ allprojects {
 ```text
 dependencies {
 //集成方舟SDK
-implementation 'cn.com.analysys:analysys-arkanalysys:latest.release'
+implementation 'cn.com.analysys:analysys-arkanalysys:4.5.13'
 //EA push SDK集成了华为、小米、OPPO、VIVO、魅族推送SDK
 //如果已经集成了厂商的SDK，可以不集成analysys-easytouch-push,将厂商的token通过pushToken接口上报
-implementation 'cn.com.analysys:analysys-easytouch-push:latest.release'
+implementation 'cn.com.analysys:analysys-easytouch-push:0.3.3'
 //EA SDK
-implementation 'cn.com.analysys:analysys-easytouch:latest.release'
+implementation 'cn.com.analysys:analysys-easytouch:2.2.5'
 }
 ```
 
