@@ -27,7 +27,6 @@
   * [📲互动玩法](user-guide/5-minute-playbook/interact/README.md)
     * [分销裂变](user-guide/5-minute-playbook/interact/fission.md)
     * [拼团裂变](user-guide/5-minute-playbook/interact/pin-tuan-lie-bian.md)
-    * [邀请有礼](user-guide/5-minute-playbook/interact/yao-qing-you-li.md)
 * [📄 更新日志](user-guide/update-log/README.md)
   * [功能更新](user-guide/update-log/feature-update/README.md)
     * [用户权限管理](user-guide/update-log/feature-update/user-authority-management.md)
